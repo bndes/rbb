@@ -16,9 +16,10 @@ As outras 2 VMs podem ficar numa rede "não-DMZ" e deverão ser capazes de se co
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
 
-Para a RBB:
-ChainID - 
-Inventory - 
+Utilizar na RBB:
+
+- ChainID: 
+- Inventory:
 
 Recomendação é instalar o Orion, mas não startar o serviço.
 
