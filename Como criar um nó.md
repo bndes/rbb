@@ -19,7 +19,7 @@ Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lac
 Utilizar na RBB:
 
 - ChainID: 
-- Inventory:
+- Inventory atual da rede:
 
 Recomendação é instalar o Orion, mas não startar o serviço.
 
