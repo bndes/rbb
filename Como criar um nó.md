@@ -15,6 +15,7 @@ Também possui outras 2 VMs numa rede "não-DMZ", capazes de se conectar com as 
 Não há no momento nó observer.
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
+É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 
 Utilizar na RBB:
 
