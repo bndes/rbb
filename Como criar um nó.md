@@ -6,6 +6,7 @@ A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/be
 
 # Passo 1 - Ambiente Físico
 O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
+
 A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. O BNDES está instalando com RedHat 7.
 
 # Passo 2 - Criação de Nós
