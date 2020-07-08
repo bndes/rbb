@@ -22,16 +22,17 @@ Utilizar na RBB:
 
 Recomendação é instalar o Orion, mas não startar o serviço.
 
-O processo de instalação de cada nó gerará a chave privada em Lacchain/data/privatekey. É necessário ter um mecanismo para gerir essa chave. Importante: pelo que entendi, a chave pode ser regerada se quisermos.
+O processo de instalação de cada nó gerará a chave privada em Lacchain/data/privatekey. É necessário ter um mecanismo interno para gerir essa chave.
+Importante: a chave pode ser regerada.
 
 
 # Passo 3 - Filtros de Rede:
-Os nós internos devem ser conectáveis entre si, ao boot node da DMZ e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP. Falta pegar IPs dos nós do BID.
+Os nós internos devem ser conectáveis entre si, ao boot node da DMZ e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP. 
 
 - A porta 60606 do writer deve estar aberta para o boot node do BNDES e do BID.
 - A porta 60606 do boot node deve estar aberta para aceitar conexão de qualquer IP.
 - O writer node deve também ter aberta para a Internet a porta aberta 4545. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó writter para enviar transações e fazer consultas. 
-- Não é necessário abrir a porta 4040, pois não temos a previsão de usar o Orion para transações privadas.
+- Não é necessário abrir a porta 4040, pois não temos a previsão de usar transações privadas (Orion) nesse momento.
 
 # Passo 4 (opcional) - Ferramentas adicionais
 Instalação de:
