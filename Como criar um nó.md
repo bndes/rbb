@@ -3,16 +3,15 @@ Os três primeiros tipos são nós que requerem permissão prévia, enquanto que
 
 A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/besu-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
 
-O BNDES possui 4 nós: 2 expostos para internet na DMZ de blockchain, chamada de dmz2-blockchain, e 2 que poderiam ficar numa rede "não-DMZ", sempre conectáveis aos nós expostos da DMZ.
-Os papéis a serem colocados na DMZ são Boot e Writer. Na rede "não-DMZ", serão instalados 2 nós Validadores. No momento não teremos nós com o tipo Observer.
 
 # Passo 1 - Criação das Ambiente Físico
 O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
-A recomendação do BID é uma VM por nó e que seja um SO Ubuntu 18.4 ou CentOS7. O BNDES está instalando com RedHat 7.
+A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. O BNDES está instalando com RedHat 7.
 
 # Passo 2 - Criação de Nós
-2 VMs deverão ser alocadas na DMZ de blockchain, com conectividade para Internet/IPs externos, ter o mesmo IP outbound e inbound. 
-As outras 2 VMs podem ficar numa rede "não-DMZ" e deverão ser capazes de se conectar com as VMs da DMZ.
+BNDES possui 2 VMs alocadas na DMZ de blockchain, com conectividade para Internet/IPs externos, ter o mesmo IP outbound e inbound. São os validadores.
+Também possui outras 2 VMs numa rede "não-DMZ", capazes de se conectar com as VMs da DMZ. Um nó é registrador (writer) e outro é conector (boot node).
+Não há no momento nó observer.
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
 
