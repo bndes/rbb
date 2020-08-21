@@ -31,7 +31,7 @@ Importante: a chave pode ser regerada.
 
 
 # Passo 3 - Filtros de Rede
-Os nós internos devem ser conectáveis entre si, ao boot node da DMZ e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP. 
+Os nós do validadores devem ser conectáveis entre si, ao boot node e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP. 
 
 - A porta 60606 do writer deve estar aberta para o boot node do BNDES e do BID.
 - A porta 60606 do boot node deve estar aberta para aceitar conexão de qualquer IP.
