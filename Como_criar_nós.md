@@ -9,7 +9,7 @@ O procedimento da Lacchain contém configuração mínima de hardware: https://g
 
 A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. 
 
-O BNDES instalou está tentando instalação com RedHat 7, por similaridade com CentOS7.
+O BNDES instalou com RedHat 7, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente "homologada" pela Lacchain, nenhum problema foi encontrado.
 
 # Passo 2 - Criação de Nós
 BNDES possui 2 VMs alocadas na DMZ de blockchain, com conectividade para Internet/IPs externos, ter o mesmo IP outbound e inbound. São os validadores.
