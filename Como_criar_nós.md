@@ -1,11 +1,11 @@
 A RBB é uma rede público-permissionada. Há quatro tipos de nós: Boot, Validator, Writer e Observer. 
 Os três primeiros tipos são nós que requerem permissão prévia, enquanto que o Observer é para o público em geral. 
 
-A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/besu-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
+A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/bndes-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
 
 
 # Passo 1 - Ambiente Físico
-O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
+O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
 
 A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. 
 
@@ -16,13 +16,11 @@ BNDES possui 2 VMs Validator, 1 VM Boot e 1 VM Writer. Todas elas estão DMZ de 
 Os nós validadores precisam ter o mesmo IP outbound e inbound. 
 Não há no momento nenhum nó Observer.
 
-Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/besu-network/blob/master/DEPLOY_NODE.md
+Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 <<FALTA INCLUIR AS NOSSAS DIFERENÇAS>>
 
-Utilizar na RBB:
-
-- ChainID: 648629
+ChainID da RBB: 648629
 
 ![GitHub Logo](./network_diagram_rbb.png)
 
