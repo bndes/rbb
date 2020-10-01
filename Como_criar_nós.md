@@ -43,12 +43,20 @@ Os nós do validadores devem ser conectáveis entre si, ao boot node e aos nós 
 - O writer node deve também ter aberta para a Internet a porta aberta 4545. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó writter para enviar transações e fazer consultas. <<REAVALIAR ESSA RECOMENDAÇÃO>>
 
 # Passo 4 (opcional) - Instalação de Dapp de permissionamento
-O BNDES deci
+
+O Dapp de permissionamento permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
+
+A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu. Para instalar o Dapp siga o seguinte procedimento: https://github.com/lacchain/permissioning-smart-contracts
+Atenção: é necessário implantar o branch beta1.
+
+Endereço do contrato de permissionamento de nós: 0x0000000000000000000000000000000000009999.
+Não está sendo utilizado um contrato de permissionamento de contas ainda.
+
+# Passo 5 (opcional) - Instalação de outras ferramentas
 
 Instalação de:
 - transaction explorer (aleth.io), 
 - monitoring tools (grafana e prometheus) - precisa mudar arquivo de configuração para indicar onde está prometheus
-- dapp de permissionamento.
 
 
 
