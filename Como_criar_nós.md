@@ -45,7 +45,9 @@ Os nós do validadores devem ser conectáveis entre si, ao boot node e aos nós 
 O Dapp de permissionamento permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
 
 A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu. Para instalar o Dapp siga o seguinte procedimento: https://github.com/lacchain/permissioning-smart-contracts
+
 Atenção: é necessário implantar o branch beta1.
+
 
 Endereço do contrato de permissionamento de nós: 0x0000000000000000000000000000000000009999.
 
