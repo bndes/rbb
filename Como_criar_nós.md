@@ -23,8 +23,8 @@ Utilizar na RBB:
 
 - ChainID: 648629
 
-![Topologia da rede]
-(https://raw.githubusercontent.com/bndes/rbb/master/network_diagram_rbb.png)
+![GitHub Logo](https://raw.githubusercontent.com/bndes/rbb/master/network_diagram_rbb.png)
+Format: ![Alt Text](url)
 
 Recomendação é instalar o Orion, mas não startar o serviço.
 
