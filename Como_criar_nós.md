@@ -49,6 +49,7 @@ A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu.
 Atenção: é necessário implantar o branch beta1.
 
 Endereço do contrato de permissionamento de nós: 0x0000000000000000000000000000000000009999
+
 Endereço do contrato de permissionamento de contas: 0x0000000000000000000000000000000000008888
 
 Embora exista, o contrato de permissionamento de contas ainda não está sendo utilizado na prática.
