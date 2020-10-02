@@ -27,8 +27,7 @@ Recomendação é instalar o Orion, mas não iniciar o serviço.
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
-O processo de instalação de cada nó gera a chave privada em Lacchain/data/privatekey. É necessário ter um mecanismo interno para gerir essa chave.
-Importante: a chave pode ser regerada. <<REVER APÓS CONVERSA COM LACCHAIN>>
+O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la. 
 
 
 # Passo 3 - Filtros de Rede
