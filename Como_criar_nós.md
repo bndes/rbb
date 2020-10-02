@@ -27,7 +27,7 @@ Recomendação é instalar o Orion, mas não iniciar o serviço.
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
-O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la. 
+O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la (ver passo 5). 
 
 
 # Passo 3 - Filtros de Rede
@@ -55,8 +55,12 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 
 Caso precise gerar uma conta admin, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain. 
 
+# Passo 5 - Gestão de chaves
 
-# Passo 5 (opcional) - Instalação de outras ferramentas
+Conforme mencionado no passo 2, é necessário ter um procedimento interno para gerir as chaves privadas associadas a RBB. Essas chaves podem ser de nodes, do app de permissionamento ou associadas ao uso de smart contracts específicos. 
+
+
+# Passo 6 (opcional) - Instalação de outras ferramentas
 
 Instalação de:
 - transaction explorer (aleth.io), 
