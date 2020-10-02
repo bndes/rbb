@@ -16,7 +16,7 @@ Não há no momento nenhum nó Observer.
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
-<<FALTA INCLUIR AS NOSSAS DIFERENÇAS>>
+<<FALTA INCLUIR AS NOSSAS DIFERENÇAS APÓS ANÁLISE DA LACCHAIN>>
 
 ChainID da RBB: 648629
 
