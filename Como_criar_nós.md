@@ -14,7 +14,7 @@ BNDES possui 2 VMs Validator, 1 VM Boot e 1 VM Writer.
 As VMs precisam ter IPs públicos para serem acessível na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
 Não há no momento nenhum nó Observer.
 
-Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md e o procedimento ./Detalhamento-comandos-instacao-Besu.md.
+Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md e o [esse procedimento] (./Detalhamento-comandos-instacao-Besu.md).
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 <<FALTA INCLUIR AS NOSSAS DIFERENÇAS APÓS ANÁLISE DA LACCHAIN>>
 
