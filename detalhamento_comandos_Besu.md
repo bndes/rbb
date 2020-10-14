@@ -93,14 +93,11 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 18898dbb8211        alethio/ethstats-cli   "./bin/ethstats-cli.…"   3 weeks ago         Up 4 minutes                            inspiring_murdock
 ```
 ​
-## Instalação
+## Comentários apenas para BNDES
 ​
 - Clonar o branch develop do repositório: https://gitlab.bndes.net/sist-aps/rbb-network
 ​
-- Criar o seguinte arquivo:
-​
-`Arquivo: inventory`
-(removido por segurança)
+- Criar o arquivo de inventory
 ​
 ######
 ## You don't need to touch anything below this point
