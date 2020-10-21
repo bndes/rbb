@@ -31,7 +31,7 @@ O processo de instalação de cada nó gera a chave privada em lacchain/data/key
 
 
 # Passo 3 - Filtros de Rede
-Os nós do validadores devem ser conectáveis entre si, ao boot node e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP (ver figura acima da rede). 
+Os nós validadores devem ser conectáveis entre si, ao boot node e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP (ver figura acima da rede). 
 
 - A porta 60606 do writer deve estar aberta para o boot node do BNDES e do BID.
 - A porta 60606 do boot node deve estar aberta para aceitar conexão de qualquer IP.
