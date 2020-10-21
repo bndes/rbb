@@ -71,6 +71,9 @@ BID disponibiliza block explorer da rede.
 BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
 
 
+# Comentário adicionais
+
+BNDES e BID conversaram sobre algumas possibilidades de aumentar a resilência dos nós. Infelizmente, não é possível configurar mais de um IP para o mesmo nó (dado que o IP é usado para o enode) ou fazer um DNS para deixar os nós independentes de IP. Uma possibilidade natural é configurar vários nós de um mesmo tipo e usar um Load Balancer de forma a deixar os vários IPs transparente para o usuário. 
 
 
 
