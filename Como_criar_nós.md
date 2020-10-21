@@ -60,11 +60,16 @@ Caso precise gerar uma conta admin, é possível fazê-lo usando qualquer forma 
 Conforme mencionado no passo 2, é necessário ter um procedimento interno para gerir as chaves privadas associadas a RBB. Essas chaves podem ser de nodes, do app de permissionamento ou associadas ao uso de smart contracts específicos. 
 
 
-# Passo 6 (opcional) - Instalação de outras ferramentas
+# Passo 6 (opcional) - Instalação de Ferramenta de Monitoração
 
-Instalação de:
-- transaction explorer (aleth.io), 
-- monitoring tools (grafana e prometheus) - precisa mudar arquivo de configuração para indicar onde está prometheus
+A monitoração da rede está disponível pelo Grafana do BID.
+BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para exibir um dashboard bonito) e Zabbix (para monitoração interna e alarmes).
+
+# Passo 7 (opcional) - Instalação de Block Explorer
+
+BID disponibiliza block explorer da rede.
+BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
+
 
 
 
