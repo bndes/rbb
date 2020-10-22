@@ -1,6 +1,6 @@
-# rbb-network
+# RBB
 ​
-## Introdução
+## Navegando por um nó já instalado
 ​
 Todos os nodes possuem uma estrutura similar, aparentemente armazenando todos arquivos relevantes, inclusive scripts, em `/root/lacchain/`, exemplo:
 ​
