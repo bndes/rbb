@@ -37,7 +37,7 @@ Os nós validadores devem ser conectáveis entre si, ao boot node e aos nós val
 - A porta 60606 do boot node deve estar aberta para aceitar conexão de qualquer IP.
 - Não é necessário abrir a porta 4040, pois não temos a previsão de usar transações privadas (Orion) nesse momento.
 
-- O writer node deve também ter aberta para a Internet a porta aberta 4545. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó writter para enviar transações e fazer consultas. <<REAVALIAR ESSA RECOMENDAÇÃO>>
+- O writer node deve também ter aberta a porta aberta 4545 para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
 
 # Passo 4 (opcional) - Instalação de Dapp de permissionamento
 
