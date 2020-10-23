@@ -39,7 +39,7 @@ Os nós validadores devem ser conectáveis entre si, ao boot node e aos nós val
 
 - O writer node deve também ter aberta a porta aberta 4545 para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
 
-Importante: O DApp de permissionamento (em ativação) serve de proteção no acesso à rede. É necessário incluir os nodes nele.
+Importante: O DApp de permissionamento (em ativação) serve de proteção no acesso à rede. É necessário incluir os nodes de cada instituição participante da RBB nele.
 
 # Passo 4 (opcional) - Instalação de Dapp de permissionamento
 
