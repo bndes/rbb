@@ -93,38 +93,3 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 18898dbb8211        alethio/ethstats-cli   "./bin/ethstats-cli.…"   3 weeks ago         Up 4 minutes                            inspiring_murdock
 ```
 ​
-## Comentários apenas para BNDES
-​
-- Clonar o branch develop do repositório: https://gitlab.bndes.net/sist-aps/rbb-network
-​
-- Criar o arquivo de inventory
-​
-######
-## You don't need to touch anything below this point
-######
-​
-[all:vars]
-password=default_password
-node_email=default@email
-bootnode=false
-validator=false
-first_node=false
-install=false
-besu_release_version='1.5.2'
-orion_release_version='1.5.2'
-dns_name=lacchain.com
-​
-[bootnodes:vars]
-bootnode=true
-​
-[validators:vars]
-validator=true
-```
-​
-- Executar os seguintes comandos:
-​
-```shell
-ansible-playbook -i inventory --private-key=~/.ssh/id_rsa site-lacchain-bootnode.yml
-ansible-playbook -i inventory --private-key=~/.ssh/id_rsa site-lacchain-validator.yml
-ansible-playbook -i inventory --private-key=~/.ssh/id_rsa site-lacchain-writer.yml
-```
