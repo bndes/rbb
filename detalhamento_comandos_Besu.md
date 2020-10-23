@@ -1,6 +1,6 @@
 # RBB
 ​
-## Conferindo a instalação feito no nó
+## Conferindo a instalação feita no nó
 ​
 Todos os nodes possuem uma estrutura similar, aparentemente armazenando todos arquivos relevantes, inclusive scripts, em `/root/lacchain/`, exemplo:
 ​
