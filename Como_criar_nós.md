@@ -54,6 +54,8 @@ Endereço do contrato de permissionamento de contas: 0x0000000000000000000000000
 
 Embora exista, o contrato de permissionamento de contas ainda não está sendo utilizado na prática.
 
+O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
+
 Caso precise gerar uma conta admin, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain. 
 
 # Passo 5 - Gestão de chaves
@@ -70,6 +72,10 @@ BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para 
 
 BID disponibiliza block explorer da rede.
 BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
+
+# Passo 8 - Permissionamento dos novos nós
+
+É necessário permissionar o(s) novo(s) nó(s) para ter participar na rede. É possível fazer isso usando o Dapp instalado no Passo 4 utilizando via metamask uma conta adm de permissionamento.
 
 
 # Comentário adicionais
