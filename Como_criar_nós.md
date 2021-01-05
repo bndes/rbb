@@ -19,16 +19,15 @@ Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lac
 
 ChainID da RBB: 648629
 
-A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós.
-
-![GitHub Logo](./network_diagram_rbb.png)
-
-
 Recomendação é instalar o Orion, mas não iniciar o serviço.
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
 O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la (ver passo 5). 
+
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós.
+
+![GitHub Logo](./network_diagram_rbb.png)
 
 
 # Passo 3 - Filtros de Rede
