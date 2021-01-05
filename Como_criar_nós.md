@@ -47,6 +47,11 @@ Para a porta 4040:
 Para a porta 4545:
 - O writer node deve também ter aberta a porta aberta 4545 (ou 443, em evolução) para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
 
+Para a porta 9091:
+- Todos os nós precisam poder enviar estatísticas via a porta 9091.
+
+Para obter os detalhes de IPs de máquinas -> favor entrar em contato com algum nó já em funcionamento da RBB.
+
 # Passo 4 (opcional) - Instalação de Dapp de permissionamento
 
 O Dapp de permissionamento é um frontend que permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
