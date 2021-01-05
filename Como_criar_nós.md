@@ -10,7 +10,7 @@ O procedimento da Lacchain contém configuração mínima de hardware: https://g
 A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. O BNDES instalou com RedHat 7, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente "homologada" pela Lacchain, nenhum problema foi encontrado.
 
 # Passo 2 - Criação de Nós
-BNDES possui 2 VMs Validator, 1 VM Boot e 1 VM Writer. 
+
 As VMs precisam ter IPs públicos para serem acessível na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
 Não há no momento nenhum nó Observer.
 
@@ -18,6 +18,8 @@ Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lac
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 
 ChainID da RBB: 648629
+
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós.
 
 ![GitHub Logo](./network_diagram_rbb.png)
 
