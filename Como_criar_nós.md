@@ -25,21 +25,27 @@ Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os n�
 
 O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la (ver passo 5). 
 
-A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós.
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP.
 
 ![GitHub Logo](./network_diagram_rbb.png)
 
 
 # Passo 3 - Filtros de Rede
-Os nós validadores devem ser conectáveis entre si, ao boot node e aos nós validadores e boot node do BID pelas portas 60606 TCP/UDP (ver figura acima da rede). 
 
-- A porta 60606 do writer deve estar aberta para o boot node do BNDES e do BID.
-- A porta 60606 do boot node deve estar aberta para aceitar conexão de qualquer IP.
-- Não é necessário abrir a porta 4040, pois não temos a previsão de usar transações privadas (Orion) nesse momento.
+As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
 
-- O writer node deve também ter aberta a porta aberta 4545 para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
+Para a porta 60606:
+- R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
+- R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
+- R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
+- R4 - Todos os validadores da instituição precisam se conectar a todos os validadores de outras instituições
+- R5 - Todos os validadores de outras instituições precisam se conectar a todos os validadores da instituição
 
-Importante: O DApp de permissionamento (em ativação) serve de proteção no acesso à rede. É necessário incluir os nodes de cada instituição participante da RBB nele.
+Para a porta 4040:
+- Não é necessário abrir, pois não temos a previsão de usar transações privadas (Orion) nesse momento.
+
+Para a porta 4545:
+- O writer node deve também ter aberta a porta aberta 4545 (ou 443, em evolução) para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
 
 # Passo 4 (opcional) - Instalação de Dapp de permissionamento
 
