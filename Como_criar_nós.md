@@ -1,4 +1,4 @@
-A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi implementada utilizando a tecnologia do projeto Lacchain (https://www.lacchain.net/), mas nós predominantemente nacionais. O BID, como líder do projeto Lacchain, está na rede para auxiliar no desenvolvimento do projeto.
+A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi implementada utilizando a tecnologia do projeto Lacchain (https://www.lacchain.net/), mas com nós predominantemente nacionais. O BID, como líder do projeto Lacchain, está na rede para auxiliar no desenvolvimento do projeto.
 
 Há quatro tipos de nós: Boot, Validator, Writer e Observer. 
 Os três primeiros tipos são nós que requerem permissão prévia, enquanto que o Observer é para o público em geral. 
