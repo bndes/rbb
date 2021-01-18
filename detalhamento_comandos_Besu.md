@@ -21,7 +21,7 @@ dr--r----- 4 root root   75 Aug 10 16:53 orion
 dr--r----- 2 root root   26 Jul 27 17:38 tmp
 ```
 
-Já os arquivos binários estão armazenados em `/usr/local/besu`.
+Verifique se o binário besu está armazenado em `/usr/local/besu/bin`.
 
 ​
 Como pode ser notado, o serviço do Pantheon está rodando nessa máquina (writer node):
