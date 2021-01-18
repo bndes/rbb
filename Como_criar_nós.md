@@ -74,11 +74,15 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 
 O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
 
-Caso precise gerar uma conta admin, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain. 
+Caso precise gerar uma conta permissionamento, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain (como explicado no passo 4). 
 
 # Passo 6 - Permissionamento dos novos nós
 
-É necessário permissionar o(s) novo(s) nó(s) para ter participar na rede. É possível fazer isso usando o Dapp instalado no Passo 4 utilizando via metamask uma conta adm de permissionamento.
+É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada utilizando o Dapp de permissionamento.
+É possível ser permissionado de duas formas:
+
+* solicitando para uma instituição participante da RBB com conta blockchain de permissionamento ou 
+* usando o Dapp instalado no Passo 5 com conta blockchain de permissionamento. 
 
 # Passo 7 (opcional) - Instalação de Ferramenta de Monitoração
 
