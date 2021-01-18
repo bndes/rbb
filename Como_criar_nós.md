@@ -51,7 +51,7 @@ Para obter os detalhes de IPs de máquinas -> favor entrar em contato com algum 
 
 O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. 
 
-Além das chaves dos nós, no futuro podem ser criadas chaves privadas para permissionamento ou para o uso de smart contracts específicos.
+Além das chaves dos nós, no futuro podem ser criadas chaves privadas para permissionamento (ver passo 5) ou para o uso de smart contracts específicos.
 
 É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc. 
 
@@ -71,7 +71,8 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 
 O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
 
-Caso precise gerar uma conta permissionamento, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain (como explicado no passo 4). 
+Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada. 
+É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask. 
 
 # Passo 6 - Permissionamento dos novos nós
 
