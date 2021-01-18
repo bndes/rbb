@@ -1,4 +1,6 @@
 # RBB
+
+Este procedimento verifica que os programas foram instalados. A conectividade entre nós não está sendo verificada. 
 ​
 ## Conferindo a instalação feita no nó
 ​
