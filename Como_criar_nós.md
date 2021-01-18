@@ -24,8 +24,6 @@ Ao fim da instalação, veja como conferir o resultado com este [procedimento](d
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
-O processo de instalação de cada nó gera a chave privada em lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Assim como qualquer chave privada da rede, é necessário ter um mecanismo interno para geri-la (ver passo 5). 
-
 A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP.
 
 ![GitHub Logo](./network_diagram_rbb.png)
@@ -55,7 +53,10 @@ Para obter os detalhes de IPs de máquinas -> favor entrar em contato com algum 
 
 # Passo 4 - Gestão de chaves
 
-Conforme mencionado no passo 2, é necessário ter um procedimento interno para gerir as chaves privadas associadas a RBB. Essas chaves podem ser de nodes, do app de permissionamento ou associadas ao uso de smart contracts específicos. 
+O processo de instalação de cada nó gera a chave privada em /root/lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. 
+Além de nodes, podem existir chaves privadas do app de permissionamento ou associadas ao uso de smart contracts específicos.
+
+É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc. 
 
 # Passo 5 (opcional) - Instalação de Dapp de permissionamento
 
