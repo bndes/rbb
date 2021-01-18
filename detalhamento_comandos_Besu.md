@@ -34,7 +34,8 @@ Como pode ser notado, o serviço do Pantheon está rodando nessa máquina (write
    Memory: 687.9M (limit: 2.0G)
    CGroup: /system.slice/pantheon.service
            ├─4198 /bin/bash /root/lacchain/start-pantheon.sh
-           └─4200 java -Dvertx.disableFileCPResolving=true -Dbesu.home=/usr/local/besu -Dlog4j.shutdownHookEnabled=false --add-opens java.base/sun.security.provider=ALL-UNNAMED --add-opens java.base/java.util...```
+           └─4200 java -Dvertx.disableFileCPResolving=true -Dbesu.home=/usr/local/besu -Dlog4j.shutdownHookEnabled=false --add-opens java.base/sun.security.provider=ALL-UNNAMED --add-opens java.base/java.util...
+```
 
 ​
 E cada node escuta em portas diferentes, de acordo com os serviços em execução:
