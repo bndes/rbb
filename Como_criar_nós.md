@@ -84,7 +84,7 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 
 # Passo 7 - Verificar Conexão na Rede
 
-Siga o procedimento de "Checking your connection" da Lacchain: https://github.com/suzigit/bndes-network/blob/master/DEPLOY_NODE.md#checking-your-connection. 
+Siga o procedimento de "Checking your connection" da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md#checking-your-connection. 
 
 
 # Passo 8 (opcional) - Instalação de Ferramenta de Monitoração
