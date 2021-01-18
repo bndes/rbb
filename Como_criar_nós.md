@@ -88,7 +88,7 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 
 Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
 
-É possível que esse link ajude: https://github.com/lacchain/besu-network/issues/33
+Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
 
 
 # Passo 8 (opcional) - Instalação de Ferramenta de Monitoração
