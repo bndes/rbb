@@ -1,10 +1,5 @@
 A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi implementada utilizando a tecnologia do projeto Lacchain (https://www.lacchain.net/), mas com nós predominantemente nacionais. O BID, como líder do projeto Lacchain, está na rede para auxiliar no desenvolvimento do projeto.
 
-Há quatro tipos de nós: Boot, Validator, Writer e Observer. 
-Os três primeiros tipos são nós que requerem permissão prévia, enquanto que o Observer é para o público em geral. 
-
-A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/bndes-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
-
 
 # Passo 1 - Ambiente Físico
 O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
@@ -13,8 +8,9 @@ A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 1
 
 # Passo 2 - Criação de Nós
 
-As VMs precisam ter IPs públicos para serem acessível na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
-Não há no momento nenhum nó Observer.
+Há quatro tipos de nós: Boot, Validator, Writer e Observer. Cada instituição participante pode ter zero, um ou mais nós de um mesmo tipo.
+
+As VMs precisam ter IPs públicos para serem acessíveis na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md, até a parte "Checking your connection". Orion será instalado, mas não inicializado. Não será possível verificar a conexão ainda. 
 
@@ -24,12 +20,12 @@ Ao fim da instalação, veja como conferir o resultado com este [procedimento](d
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
-A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP.
-
-![GitHub Logo](./network_diagram_rbb.png)
-
 
 # Passo 3 - Filtros de Rede
+
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/bndes-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
+
+![GitHub Logo](./network_diagram_rbb.png)
 
 As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
 
