@@ -54,7 +54,11 @@ Para a porta 9091:
 
 Para obter os detalhes de IPs de máquinas -> favor entrar em contato com algum nó já em funcionamento da RBB.
 
-# Passo 4 (opcional) - Instalação de Dapp de permissionamento
+# Passo 4 - Gestão de chaves
+
+Conforme mencionado no passo 2, é necessário ter um procedimento interno para gerir as chaves privadas associadas a RBB. Essas chaves podem ser de nodes, do app de permissionamento ou associadas ao uso de smart contracts específicos. 
+
+# Passo 5 (opcional) - Instalação de Dapp de permissionamento
 
 O Dapp de permissionamento é um frontend que permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
 
@@ -72,24 +76,19 @@ O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.ds
 
 Caso precise gerar uma conta admin, é possível fazê-lo usando qualquer forma de geração de conta Ethereum, como via Metamask. É importante ter um processo interno para gerir as contas blockchain. 
 
-# Passo 5 - Gestão de chaves
+# Passo 6 - Permissionamento dos novos nós
 
-Conforme mencionado no passo 2, é necessário ter um procedimento interno para gerir as chaves privadas associadas a RBB. Essas chaves podem ser de nodes, do app de permissionamento ou associadas ao uso de smart contracts específicos. 
+É necessário permissionar o(s) novo(s) nó(s) para ter participar na rede. É possível fazer isso usando o Dapp instalado no Passo 4 utilizando via metamask uma conta adm de permissionamento.
 
-
-# Passo 6 (opcional) - Instalação de Ferramenta de Monitoração
+# Passo 7 (opcional) - Instalação de Ferramenta de Monitoração
 
 A monitoração da rede está disponível pelo Grafana do BID.
 BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para exibir um dashboard bonito) e Zabbix (para monitoração interna e alarmes).
 
-# Passo 7 (opcional) - Instalação de Block Explorer
+# Passo 8 (opcional) - Instalação de Block Explorer
 
 BID disponibiliza block explorer da rede.
 BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
-
-# Passo 8 - Permissionamento dos novos nós
-
-É necessário permissionar o(s) novo(s) nó(s) para ter participar na rede. É possível fazer isso usando o Dapp instalado no Passo 4 utilizando via metamask uma conta adm de permissionamento.
 
 
 # Comentário adicionais
