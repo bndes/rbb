@@ -54,7 +54,8 @@ Para obter os detalhes de IPs de máquinas -> favor entrar em contato com algum 
 # Passo 4 - Gestão de chaves
 
 O processo de instalação de cada nó gera a chave privada em /root/lacchain/data/key. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. 
-Além de nodes, podem existir chaves privadas do app de permissionamento ou associadas ao uso de smart contracts específicos.
+
+Além de nodes, no futuro serão criadas chaves privadas do app de permissionamento ou associadas ao uso de smart contracts específicos.
 
 É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc. 
 
