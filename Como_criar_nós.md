@@ -17,7 +17,9 @@ As VMs precisam ter IPs públicos para serem acessível na Internet. Além disso
 Não há no momento nenhum nó Observer.
 
 Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md, até a parte "Checking your connection". Não será possível verificar a conexão ainda. 
+
 Ao fim da instalação, veja como conferir o resultado com este [procedimento](detalhamento_comandos_Besu.md).
+
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 
 ChainID da RBB: 648629
