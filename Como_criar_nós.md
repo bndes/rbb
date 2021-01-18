@@ -16,7 +16,8 @@ A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 1
 As VMs precisam ter IPs públicos para serem acessível na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
 Não há no momento nenhum nó Observer.
 
-Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. Ao fim da instalação, veja como conferir o resultado com este [procedimento](detalhamento_comandos_Besu.md).
+Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md, até a parte "Checking your connection". Não será possível verificar a conexão ainda. 
+Ao fim da instalação, veja como conferir o resultado com este [procedimento](detalhamento_comandos_Besu.md).
 É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain.
 
 ChainID da RBB: 648629
@@ -84,12 +85,17 @@ Caso precise gerar uma conta permissionamento, é possível fazê-lo usando qual
 * solicitando para uma instituição participante da RBB com conta blockchain de permissionamento ou 
 * usando o Dapp instalado no Passo 5 com conta blockchain de permissionamento. 
 
-# Passo 7 (opcional) - Instalação de Ferramenta de Monitoração
+# Passo 7 - Verificar Conexão na Rede
+
+Siga o procedimento de "Checking your connection" da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
+
+
+# Passo 8 (opcional) - Instalação de Ferramenta de Monitoração
 
 A monitoração da rede está disponível pelo Grafana do BID.
 BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para exibir um dashboard bonito) e Zabbix (para monitoração interna e alarmes).
 
-# Passo 8 (opcional) - Instalação de Block Explorer
+# Passo 9 (opcional) - Instalação de Block Explorer
 
 BID disponibiliza block explorer da rede.
 BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
