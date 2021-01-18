@@ -2,7 +2,7 @@
 ​
 ## Conferindo a instalação feita no nó
 ​
-Todos os nodes possuem uma estrutura similar, aparentemente armazenando todos arquivos relevantes, inclusive scripts, em `/root/lacchain/`, exemplo:
+Todos os nodes possuem uma estrutura similar, aparentemente armazenando arquivos relevantes em `/root/lacchain/`. Lá estão arquivos de configuração (incluindo genesis file), logs e arquivos de dados. Exemplo:
 ​
 ```shell
 [root@vrt2059 ~]# ll /root/lacchain/
@@ -18,6 +18,9 @@ dr--r----- 4 root root   75 Aug 10 16:53 orion
 -rwxrwxr-x 1 root root  455 Aug 18 16:34 start-pantheon.sh
 dr--r----- 2 root root   26 Jul 27 17:38 tmp
 ```
+
+Já os arquivos binários estão armazenados em `/usr/local/besu`.
+
 ​
 Como pode ser notado, existem 2 serviços nessa máquina (writer node):
 ​
@@ -85,7 +88,7 @@ tcp        0      0 127.0.0.1:4546          0.0.0.0:*               LISTEN      
 tcp        0      0 0.0.0.0:4547            0.0.0.0:*               LISTEN      4200/java           
 ```
 ​
-Existe também um container docker em cada node, que fui informado de que será descontinuado, mas não sei ao certo a função dele:
+Existe também um container docker em cada node para coleta de dados para estatísticas:
 ​
 ```shell
 [root@vrt2059 ~]# docker ps
