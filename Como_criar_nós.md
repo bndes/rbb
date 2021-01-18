@@ -4,7 +4,9 @@ A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi 
 # Passo 1 - Ambiente Físico
 O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
 
-A recomendação do BID é uma VM por nó, sem docker, e que seja um SO Ubuntu 18.4 ou CentOS7. O BNDES instalou com RedHat 7, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente "homologada" pela Lacchain, nenhum problema foi encontrado.
+A recomendação do BID é uma VM por nó, sem docker, e que seja um SO **Ubuntu 18.4** ou **CentOS7**. 
+
+O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado.
 
 # Passo 2 - Criação de Nós
 
