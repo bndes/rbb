@@ -98,7 +98,7 @@ BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para 
 BID disponibiliza block explorer da rede.
 BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
 
-## Contacto
+# Contacto
 
 Em caso de dúvidas ou comentários, por favor, enviem e-mail para blockchaingov@bndes.gov.br.
 
