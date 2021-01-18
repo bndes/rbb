@@ -22,10 +22,10 @@ dr--r----- 2 root root   26 Jul 27 17:38 tmp
 Já os arquivos binários estão armazenados em `/usr/local/besu`.
 
 ​
-Como pode ser notado, existem 2 serviços nessa máquina (writer node):
+Como pode ser notado, o serviço do Pantheon está rodando nessa máquina (writer node):
 ​
 ```shell
-[root@vrt2059 ~]# systemctl status -n0 pantheon orion 
+[root@vrt2059 ~]# systemctl status -n0 pantheon 
 ● pantheon.service - Ethereum Pantheon client
    Loaded: loaded (/usr/lib/systemd/system/pantheon.service; enabled; vendor preset: disabled)
    Active: active (running) since Thu 2020-09-10 16:26:36 -03; 1 day 1h ago
@@ -35,17 +35,6 @@ Como pode ser notado, existem 2 serviços nessa máquina (writer node):
    CGroup: /system.slice/pantheon.service
            ├─4198 /bin/bash /root/lacchain/start-pantheon.sh
            └─4200 java -Dvertx.disableFileCPResolving=true -Dbesu.home=/usr/local/besu -Dlog4j.shutdownHookEnabled=false --add-opens java.base/sun.security.provider=ALL-UNNAMED --add-opens java.base/java.util...
-​
-● orion.service - Orion client
-   Loaded: loaded (/usr/lib/systemd/system/orion.service; enabled; vendor preset: disabled)
-   Active: active (running) since Tue 2020-08-18 16:39:58 -03; 3 weeks 3 days ago
- Main PID: 91861 (start-orion.sh)
-    Tasks: 28
-   Memory: 209.5M (limit: 2.0G)
-   CGroup: /system.slice/orion.service
-           ├─91861 /bin/bash /root/lacchain/start-orion.sh
-           └─91862 java -Dvertx.disableFileCPResolving=true -Dvertx.logger-delegate-factory-class-name=io.vertx.core.logging.Log4j2LogDelegateFactory -classpath /usr/local/orion/lib/orion-1.5.2.jar:/usr/local...
-```
 ​
 E cada node escuta em portas diferentes, de acordo com os serviços em execução:
 ​
