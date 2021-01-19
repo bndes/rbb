@@ -105,7 +105,7 @@ bootnodes=[  "enode://c1c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb4830
 
 Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. 
 
-Confirme que esses são os bootnodes que você julga adequado. Por exemplo, confirme que, caso você esteja subindo um Bootnode, confirme que o enode dele aparece nesta listagem. 
+Confirme que esses são os bootnodes que você julga adequado. Por exemplo, caso você esteja subindo um Bootnode, confirme que o enode dele aparece nesta listagem. 
 
 Para testar a mudança, reinicialize o nó. 
 
