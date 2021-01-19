@@ -116,8 +116,9 @@ BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para 
 
 # Passo 10 (opcional) - Instalação de Block Explorer
 
-BID disponibiliza block explorer da rede.
-BNDES ainda não fez instalação de Block Explorer da Lacchain (aleth.io)
+BID disponibiliza block explorer da rede, chamado aleth.io. O block explorer pode ser acessado em: http://35.184.17.253
+
+A instalação do Block Explorer pode ser realizada pelo seguinte procedimento: https://github.com/Alethio/ethereum-lite-explorer
 
 # Contato
 
