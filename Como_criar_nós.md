@@ -84,14 +84,28 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 * solicitando para uma instituição participante da RBB com conta blockchain de permissionamento ou 
 * usando o Dapp instalado no Passo 5 com conta blockchain de permissionamento. 
 
-# Passo 7 - Verificar Conexão na Rede
+# Passo 7 - Primeira sincronização
+
+Apesar do permissionamento feito no DApp, a transação será processada num bloco o qual o nó recém instalado ainda não enxerga (ele está no bloco 0).
+
+Portanto, para a primeira sincronização, é preciso:
+1. Remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh``
+
+2. Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer``. Exemplo:
+``admin_addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
+262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
+@[127.0.0.1]:30301')``
+
+3. Restartar o serviços dos nós. A sincronização deve começar.
+
+# Passo 8 - Verificar Conexão na Rede
 
 Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
 
 Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
 
 
-# Passo 8 (opcional) - Verificar Boot Nodes em Uso
+# Passo 9 (opcional) - Verificar Boot Nodes em Uso
 
 Para cada um dos nós Validators e Writers, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
 
@@ -109,12 +123,12 @@ Confirme que esses são os bootnodes que você julga adequado. Por exemplo, caso
 
 Para testar a mudança, reinicialize o nó. 
 
-# Passo 9 (opcional) - Instalação de Ferramenta de Monitoração
+# Passo 10 (opcional) - Instalação de Ferramenta de Monitoração
 
 A monitoração da rede está disponível pelo Grafana do BID.
 BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para exibir um dashboard bonito) e Zabbix (para monitoração interna e alarmes).
 
-# Passo 10 (opcional) - Instalação de Block Explorer
+# Passo 11 (opcional) - Instalação de Block Explorer
 
 BID disponibiliza block explorer da rede, chamado aleth.io. O block explorer pode ser acessado em: http://35.184.17.253
 
