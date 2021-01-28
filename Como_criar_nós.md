@@ -86,6 +86,8 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 
 Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
+Se novos validadores forem adicionados é necessário disparar uma votação de forma a inclui-los no algoritmo de consenso. Para isso, deve-se utilizar o comando ibft_proposeValidatorVote. 
+
 
 # Passo 7 - Primeira sincronização
 
