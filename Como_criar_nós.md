@@ -96,8 +96,11 @@ Apesar do permissionamento feito no DApp, a transação será processada num blo
 Portanto, para a primeira sincronização, é preciso:
 1. Remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh``
 
+2. Habilitar a API ADMIN editando o config.toml do seu nó recém instalado. Exemplo:
+``rpc-http-api=["ETH","NET","IBFT","EEA","PRIV","ADMIN"] ``
+
 2. Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer``. Exemplo:
-``admin_addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
+``admin.addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
 262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
 @[127.0.0.1]:30301')``
 
