@@ -8,7 +8,7 @@ A recomendação do BID é uma VM por nó, sem docker, e que seja um SO **Ubuntu
 
 O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado.
 
-Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido, por exemplo, o ´´pool.ntp.br´´. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
+Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido (pela porta *123/udp*), por exemplo, o pool.ntp.br. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
 
 # Passo 2 - Criação de Nós
 
