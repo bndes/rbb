@@ -49,6 +49,9 @@ Para a porta 4545:
 Para a porta 9091:
 - Todos os nós precisam poder enviar estatísticas via a porta 9091.
 
+Para a porta 123 (udp):
+- Todos os nós precisam estar com seus relógios sincronizados com um servidor NTP confiável
+
 Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockchaingov@bndes.gov.br.
 
 # Passo 4 - Gestão de chaves
