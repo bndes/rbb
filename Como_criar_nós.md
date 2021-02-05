@@ -8,6 +8,8 @@ A recomendação do BID é uma VM por nó, sem docker, e que seja um SO **Ubuntu
 
 O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado.
 
+Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido, por exemplo, o ´´pool.ntp.br´´. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
+
 # Passo 2 - Criação de Nós
 
 Há quatro tipos de nós: Boot, Validator, Writer e Observer. Cada instituição participante pode ter zero, um ou mais nós de um mesmo tipo.
@@ -89,22 +91,16 @@ Caso algum bootnode seja adicionado, é importante que nós existentes da rede a
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a inclui-los no algoritmo de consenso. Para isso, deve-se utilizar o comando ibft_proposeValidatorVote. 
 
 
-# Passo 7 - Primeira sincronização
+# Passo 7 - Primeira sincronização do bootnode
 
-Apesar do permissionamento feito no DApp, a transação será processada num bloco o qual o nó recém instalado ainda não enxerga (ele está no bloco 0).
+O bootnode pode apresentar um comportamento diferente dos demais nós e não conseguir sincronizar automaticamente.
 
-Portanto, para a primeira sincronização, é preciso:
-1. Remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh``
+Portanto, para a primeira sincronização do bootnode, pode ser necessário remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh`` e depois reativá-lo após o término da sincronização.
 
-2. Habilitar a API ADMIN editando o config.toml do seu nó recém instalado. Exemplo:
-``rpc-http-api=["ETH","NET","IBFT","EEA","PRIV","ADMIN"] ``
-
-2. Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer``. Exemplo:
+Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer`` pode ser útil, embora não seja o desejado. Exemplo:
 ``admin.addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
 262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
 @[127.0.0.1]:30301')``
-
-3. Restartar o serviços dos nós. A sincronização deve começar.
 
 # Passo 8 - Verificar Conexão na Rede
 
