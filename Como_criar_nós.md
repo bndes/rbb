@@ -33,7 +33,7 @@ A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como n�
 
 As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
 
-Para a porta 60606:
+Para a porta 60606 (TCP e UDP):
 - R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
 - R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
 - R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
