@@ -93,8 +93,8 @@ Caso algum bootnode seja adicionado, é importante que nós existentes da rede a
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
 Algumas observações importantes:
-* Os comandos devem ser disparados usando os consoles dos validadores atuais da rede. 
-* Será necessário informar a conta blockchain dos novos validadores, que pode ser encontrada em: /root/lacchain/data/nodeAddress
+* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
+* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: /root/lacchain/data/nodeAddress
 * A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
 
 # Passo 7 - Primeira sincronização do bootnode
