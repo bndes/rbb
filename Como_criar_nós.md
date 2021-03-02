@@ -91,8 +91,9 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 
 Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
-Se novos validadores forem adicionados é necessário disparar uma votação de forma a inclui-los no algoritmo de consenso. Para isso, deve-se utilizar o comando ibft_proposeValidatorVote. 
-
+Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
+Os comandos devem ser disparados usando os consoles dos validadores atuais da rede. 
+Será necessário informar a conta blockchain dos novos validadores, que pode ser encontrada em: /root/lacchain/data/nodeAddress
 
 # Passo 7 - Primeira sincronização do bootnode
 
