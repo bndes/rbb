@@ -91,11 +91,6 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 
 Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
-Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
-Algumas observações importantes:
-* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
-* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: /root/lacchain/data/nodeAddress
-* A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
 
 # Passo 7 - Primeira sincronização do bootnode
 
@@ -107,6 +102,7 @@ Adicionar manualmente os novos nós em nós já sincronizados da rede pela API r
 ``admin.addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
 262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
 @[127.0.0.1]:30301')``
+
 
 # Passo 8 - Verificar Conexão na Rede
 
@@ -133,16 +129,28 @@ Confirme que esses são os bootnodes que você julga adequado. Por exemplo, caso
 
 Para testar a mudança, reinicialize o nó. 
 
-# Passo 10 (opcional) - Instalação de Ferramenta de Monitoração
+
+# Passo 10 - Inclusão de Validadores no Algoritmo de Consenso
+
+Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
+Algumas observações importantes:
+* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
+* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: /root/lacchain/data/nodeAddress
+* A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
+
+
+# Passo 11 (opcional) - Instalação de Ferramenta de Monitoração
 
 A monitoração da rede está disponível pelo Grafana do BID.
 BNDES instalou Prometheus (contém todos os dados monitoráveis), Grafana (para exibir um dashboard bonito) e Zabbix (para monitoração interna e alarmes).
 
-# Passo 11 (opcional) - Instalação de Block Explorer
+
+# Passo 12 (opcional) - Instalação de Block Explorer
 
 BID disponibiliza block explorer da rede, chamado aleth.io. O block explorer pode ser acessado em: http://35.184.17.253
 
 A instalação do Block Explorer pode ser realizada pelo seguinte procedimento: https://github.com/Alethio/ethereum-lite-explorer
+
 
 # Contato
 
