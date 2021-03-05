@@ -56,7 +56,8 @@ Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockc
 
 # Passo 4 - Gestão de chaves
 
-O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. 
+O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó.
+É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando ``admin_nodeInfo``. 
 
 Além das chaves dos nós, no futuro podem ser criadas chaves privadas para permissionamento (ver passo 5) ou para o uso de smart contracts específicos.
 
@@ -135,8 +136,9 @@ Para testar a mudança, reinicialize o nó.
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
 Algumas observações importantes:
 * Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
-* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: /root/lacchain/data/nodeAddress
+* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
 * A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
+
 
 
 # Passo 11 (opcional) - Instalação de Ferramenta de Monitoração
