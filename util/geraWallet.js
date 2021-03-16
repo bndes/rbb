@@ -10,6 +10,3 @@ promisseJSON.then((jsonWallet) => {
     console.log(jsonWallet);
     fs.writeFileSync("teste.json", jsonWallet);
 });
-
-
-
