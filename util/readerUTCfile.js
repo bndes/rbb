@@ -13,7 +13,7 @@ console.log(wallet.address);
 console.log(wallet.privateKey);
 console.log(wallet.publicKey);
 
-const provider  = new ethers.providers.JsonRpcProvider("http://35.239.231.134:4545/");
+const provider  = new ethers.providers.JsonRpcProvider("");
 
 wallet = wallet.connect(provider);
 
