@@ -56,8 +56,10 @@ Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockc
 
 # Passo 4 - Gestão de chaves
 
-O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó.
+O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Perceba que a chave privada é salva sem criptografia.
 É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando ``admin_nodeInfo``. 
+
+A conta blockchain associada ao nó está salva em ``/root/lacchain/data/nodeAddress``. Ela será necessária no momento do permissionamento (Passos 5 e 6).
 
 Além das chaves dos nós, no futuro podem ser criadas chaves privadas para permissionamento (ver passo 5) ou para o uso de smart contracts específicos.
 
