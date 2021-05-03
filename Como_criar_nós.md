@@ -88,7 +88,7 @@ Para criar novas regras de permissionamento, é necessário ter uma conta blockc
 É possível ser permissionado de duas formas:
 
 * solicitando para uma instituição participante da RBB com conta blockchain de permissionamento informando os e-nodes e as contas blockchain dos nós ou 
-* usando o Dapp instalado no Passo 5 com conta blockchain de permissionamento. 
+* usando o Dapp instalado no Passo 5 com a conta blockchain de permissionamento referenciada também no passo 5. 
 
 Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
