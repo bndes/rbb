@@ -73,16 +73,17 @@ A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu.
 
 Atenção: é necessário implantar o branch beta1.
 
+O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
+
+Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada. 
+É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask. 
+
 Endereço do contrato de permissionamento de nós: 0x0000000000000000000000000000000000009999
 
 Endereço do contrato de permissionamento de contas: 0x0000000000000000000000000000000000008888
 
 Embora exista, o contrato de permissionamento de contas ainda não está sendo utilizado na prática.
 
-O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
-
-Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada. 
-É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask. 
 
 # Passo 6 - Permissionamento dos novos nós
 
