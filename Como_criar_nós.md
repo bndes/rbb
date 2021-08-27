@@ -73,7 +73,11 @@ A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu.
 
 Atenção: é necessário implantar o branch beta1.
 
-O Dapp está instalado intermanente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
+Observação: O dapp apresenta as informações truncadas, mas é possível copiar e colar para ver a informação completa. Além disso, atenção porque o dapp exibe a informação de Public_key com um string "0x" no metade do valor. Ex.: a public key
+0xd2c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d6717322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c390 é exibida como 
+0xd2c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d67170x322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c390.
+
+O Dapp está instalado internamente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
 
 Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada. 
 É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask. 
