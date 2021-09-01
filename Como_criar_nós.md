@@ -119,7 +119,7 @@ Siga o procedimento de **"Checking your connection"** da Lacchain: https://githu
 Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
 
 
-# Passo 9 (opcional) - Verificar Boot Nodes em Uso
+# Passo 9 - Verificar Boot Nodes em Uso
 
 Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
 
