@@ -121,21 +121,18 @@ Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-n
 
 # Passo 9 (opcional) - Verificar Boot Nodes em Uso
 
-Para cada um dos nós Validators e Writers, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
+Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
 
 Por exemplo, 
 
 ``
 bootnodes=[  "enode://c1c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d6717322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c328@200.225.100.107:60606",
-"enode://91ca844776cc9bf69cd4eadaeefdf105815b61ec7ba0fef0ab3fc0c954a8af3bfbbdbc9975ca8cd6d1bd366bcd69df2066f2ed17bed4d1c53164d46e94afa03b@35.188.197.198:60606",
-"enode://75f63faf602474d4de328c65a3f2b63a6b50f08b7786446dd43016bc6700889d4f4efb36f600c93fe0ce4ea6d4310a6fa10048e8130a5055c4ef0969c740945e@200.198.62.154:60606",
+"enode://91ca844776cc9bf69cd4eadaeefdf105815b61ec7ba0fef0ab3fc0c954a8af3bfbbdbc9975ca8cd6d1bd366bcd69df2066f2ed17bed4d1c53164d46e94afa03b@35.188.197.198:60606"
 ]``
 
-Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. 
+Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. Idealmente quanto mais bootnodes você listar mais resiliente seus nós estarão. Assim, idealmente você deve incluir o máximo de bootnodes possíveis considerando a lista total de bootnodes da RBB.
 
-Confirme que esses são os bootnodes que você julga adequado. Por exemplo, caso você esteja subindo um Bootnode, confirme que o enode dele aparece nesta listagem. 
-
-Para testar a mudança, reinicialize o nó. 
+Para efetivar a mudança, reinicialize o nó.
 
 
 # Passo 10 - Inclusão de Validadores no Algoritmo de Consenso
