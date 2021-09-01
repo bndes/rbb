@@ -171,4 +171,6 @@ Em caso de dúvidas ou comentários, por favor, enviem e-mail para blockchaingov
 BNDES e BID conversaram sobre algumas possibilidades de aumentar a resilência dos nós. Infelizmente, não é possível configurar mais de um IP para o mesmo nó (dado que o IP é usado para o enode) ou fazer um DNS para deixar os nós independentes de IP. Uma possibilidade natural é configurar vários nós de um mesmo tipo e usar um Load Balancer de forma a deixar os vários IPs transparente para o usuário. 
 
 
+Caso tenha erros durante a instalação e precise aumentar o nível de log do Besu, basta acrescentar `--logging DEBUG` no `start-pantheon.sh` e restartar o Besu. Depois de resolvido, remova essa mudança de forma a minimizar o tamanho de log gerado. Veja mais em: https://besu.hyperledger.org/en/stable/HowTo/Monitor/Logging/.
+
 
