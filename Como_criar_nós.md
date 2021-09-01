@@ -100,7 +100,7 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
 
-# Passo 7 - Primeira sincronização do bootnode
+# Passo 7 - Primeira sincronização do bootnode (apenas para novo nós do tipo bootnode)
 
 O bootnode pode apresentar um comportamento diferente dos demais nós e não conseguir sincronizar automaticamente.
 
