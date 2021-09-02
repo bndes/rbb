@@ -49,6 +49,8 @@ tcp 0 0 127.0.0.1:4545 0.0.0.0:* LISTEN 129341/java
 tcp 0 0 127.0.0.1:4546 0.0.0.0:* LISTEN 129341/java
 tcp 0 0 127.0.0.1:4547 0.0.0.0:* LISTEN 129341/java
 udp 0 0 0.0.0.0:60606 0.0.0.0:* 129341/java```
+```
+
 ​
 Existe também um container docker em cada node para coleta de dados para estatísticas:
 ​
