@@ -40,46 +40,15 @@ Como pode ser notado, o serviço do Pantheon está rodando nessa máquina (write
 ```
 
 ​
-E cada node escuta em portas diferentes, de acordo com os serviços em execução:
+O comando abaixo lista portas tcp e udp de processos java em execução:
 ​
 ```shell
-❯ echo -n vrt{2056..2059}.bndes.net | xargs -rn1 -d' ' -I{} -P3 ssh -qxtt {} sudo netstat -ltnp |  grep -Pv '(dsmc|zabbix|rpc)'
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1008/sshd           
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1271/master         
-tcp        0      0 0.0.0.0:60606           0.0.0.0:*               LISTEN      126074/java         
-tcp        0      0 127.0.0.1:4545          0.0.0.0:*               LISTEN      126074/java         
-tcp        0      0 127.0.0.1:4546          0.0.0.0:*               LISTEN      126074/java         
-tcp        0      0 127.0.0.1:4547          0.0.0.0:*               LISTEN      126074/java         
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1004/sshd           
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1267/master         
-tcp        0      0 0.0.0.0:60606           0.0.0.0:*               LISTEN      111200/java         
-tcp        0      0 127.0.0.1:4545          0.0.0.0:*               LISTEN      111200/java         
-tcp        0      0 127.0.0.1:4546          0.0.0.0:*               LISTEN      111200/java         
-tcp        0      0 127.0.0.1:4547          0.0.0.0:*               LISTEN      111200/java         
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1036/sshd           
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1297/master         
-tcp        0      0 0.0.0.0:60606           0.0.0.0:*               LISTEN      48571/java          
-tcp        0      0 127.0.0.1:4545          0.0.0.0:*               LISTEN      48571/java          
-tcp        0      0 127.0.0.1:4546          0.0.0.0:*               LISTEN      48571/java          
-tcp        0      0 127.0.0.1:4547          0.0.0.0:*               LISTEN      48571/java          
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
-tcp        0      0 0.0.0.0:4040            0.0.0.0:*               LISTEN      91862/java          
-tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1032/sshd           
-tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1286/master         
-tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN      89964/nginx: master 
-tcp        0      0 127.0.0.1:4444          0.0.0.0:*               LISTEN      91862/java          
-tcp        0      0 0.0.0.0:60606           0.0.0.0:*               LISTEN      4200/java           
-tcp        0      0 0.0.0.0:4545            0.0.0.0:*               LISTEN      4200/java           
-tcp        0      0 127.0.0.1:4546          0.0.0.0:*               LISTEN      4200/java           
-tcp        0      0 0.0.0.0:4547            0.0.0.0:*               LISTEN      4200/java           
-```
+❯ netstat -ltunp | grep java
+tcp 0 0 0.0.0.0:60606 0.0.0.0:* LISTEN 129341/java
+tcp 0 0 127.0.0.1:4545 0.0.0.0:* LISTEN 129341/java
+tcp 0 0 127.0.0.1:4546 0.0.0.0:* LISTEN 129341/java
+tcp 0 0 127.0.0.1:4547 0.0.0.0:* LISTEN 129341/java
+udp 0 0 0.0.0.0:60606 0.0.0.0:* 129341/java```
 ​
 Existe também um container docker em cada node para coleta de dados para estatísticas:
 ​
