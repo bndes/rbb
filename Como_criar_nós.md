@@ -122,7 +122,7 @@ Endereço do contrato de permissionamento de contas: 0x0000000000000000000000000
 Embora exista, o contrato de permissionamento de contas ainda não está sendo utilizado na prática.
 
 
-# Passo 10 - Verificar Boot Nodes em Uso
+# Passo 10 (opcional) - Verificar Boot Nodes em Uso
 
 Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
 
