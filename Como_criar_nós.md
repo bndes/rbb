@@ -69,8 +69,6 @@ Além das chaves dos nós, no futuro podem ser criadas chaves privadas para perm
 
 É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada por uma instituição participante da RBB com conta blockchain de permissionamento. Entre em contato informando os e-nodes e as contas blockchain dos nós instalados.
 
-Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
-
 
 # Passo 6 - Primeira sincronização do bootnode (apenas para novo nós do tipo bootnode)
 
@@ -138,6 +136,8 @@ bootnodes=[  "enode://c1c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb4830
 Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. Idealmente quanto mais bootnodes você listar mais resiliente seus nós estarão. Assim, idealmente você deve incluir o máximo de bootnodes possíveis considerando a lista total de bootnodes da RBB. Para obter a lista de todos os boot nodes da rede você pode perguntar a alguma outra instituição ou instalar o dapp de permissionamento referenciado no passo anterior.
 
 Para efetivar a mudança, reinicialize o nó.
+
+Caso a instalação atual envolva a inclusão de algum bootnode, é importante que nós existentes da rede alterem sua configuração do `config.toml` de forma a incluir o enode do novo bootnode. Como explicado anteriormente, é necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
 
 
 # Passo 11 (opcional) - Instalação de Ferramenta de Monitoração
