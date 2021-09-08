@@ -65,7 +65,42 @@ Além das chaves dos nós, no futuro podem ser criadas chaves privadas para perm
 
 É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc. 
 
-# Passo 5 (opcional) - Instalação de Dapp de permissionamento
+# Passo 5 - Permissionamento dos novos nós
+
+É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada por uma instituição participante da RBB com conta blockchain de permissionamento. Entre em contato informando os e-nodes e as contas blockchain dos nós instalados.
+
+Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
+
+
+# Passo 6 - Primeira sincronização do bootnode (apenas para novo nós do tipo bootnode)
+
+O bootnode pode apresentar um comportamento diferente dos demais nós e não conseguir sincronizar automaticamente.
+
+Portanto, para a primeira sincronização do bootnode, pode ser necessário remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh`` e depois reativá-lo após o término da sincronização.
+
+Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer`` pode ser útil, embora não seja o desejado. Exemplo:
+``admin.addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
+262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
+@[127.0.0.1]:30301')``
+
+
+# Passo 7 - Verificar Conexão na Rede
+
+Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
+
+Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
+
+
+# Passo 8 - Inclusão de nós Validadores no Algoritmo de Consenso
+
+Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
+Algumas observações importantes:
+* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
+* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
+* A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
+
+
+# Passo 9 (opcional) - Instalação de Dapp de permissionamento
 
 O Dapp de permissionamento é um frontend que permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
 
@@ -89,37 +124,7 @@ Endereço do contrato de permissionamento de contas: 0x0000000000000000000000000
 Embora exista, o contrato de permissionamento de contas ainda não está sendo utilizado na prática.
 
 
-# Passo 6 - Permissionamento dos novos nós
-
-É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada utilizando o Dapp de permissionamento.
-É possível ser permissionado de duas formas:
-
-* solicitando para uma instituição participante da RBB com conta blockchain de permissionamento informando os e-nodes e as contas blockchain dos nós ou 
-* usando o Dapp instalado no Passo 5 com a conta blockchain de permissionamento referenciada também no passo 5. 
-
-Caso algum bootnode seja adicionado, é importante que nós existentes da rede alterem a configuração do config.toml de forma a incluir o enode do novo bootnode. É necessário reiniciar cada nó para que a leitura do bootnode seja realizada.
-
-
-# Passo 7 - Primeira sincronização do bootnode (apenas para novo nós do tipo bootnode)
-
-O bootnode pode apresentar um comportamento diferente dos demais nós e não conseguir sincronizar automaticamente.
-
-Portanto, para a primeira sincronização do bootnode, pode ser necessário remover temporiamente o parâmetro ``--permissions-nodes-contract-enabled`` do script ``start-pantheon.sh`` e depois reativá-lo após o término da sincronização.
-
-Adicionar manualmente os novos nós em nós já sincronizados da rede pela API rpc com o comando ``admin_addpeer`` pode ser útil, embora não seja o desejado. Exemplo:
-``admin.addPeer('enode://c1a07558238c0b31657450dd34a558752d63150ce334f3e99b9187
-262b612f48a713a083cd1601bfe3bba761a908264320885633fa81d6d6ca0ef7a6e84a2bcd
-@[127.0.0.1]:30301')``
-
-
-# Passo 8 - Verificar Conexão na Rede
-
-Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
-
-Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
-
-
-# Passo 9 - Verificar Boot Nodes em Uso
+# Passo 10 - Verificar Boot Nodes em Uso
 
 Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
 
@@ -130,19 +135,9 @@ bootnodes=[  "enode://c1c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb4830
 "enode://91ca844776cc9bf69cd4eadaeefdf105815b61ec7ba0fef0ab3fc0c954a8af3bfbbdbc9975ca8cd6d1bd366bcd69df2066f2ed17bed4d1c53164d46e94afa03b@35.188.197.198:60606"
 ]``
 
-Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. Idealmente quanto mais bootnodes você listar mais resiliente seus nós estarão. Assim, idealmente você deve incluir o máximo de bootnodes possíveis considerando a lista total de bootnodes da RBB.
+Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. Idealmente quanto mais bootnodes você listar mais resiliente seus nós estarão. Assim, idealmente você deve incluir o máximo de bootnodes possíveis considerando a lista total de bootnodes da RBB. Para obter a lista de todos os boot nodes da rede você pode perguntar a alguma outra instituição ou instalar o dapp de permissionamento referenciado no passo anterior.
 
 Para efetivar a mudança, reinicialize o nó.
-
-
-# Passo 10 - Inclusão de Validadores no Algoritmo de Consenso
-
-Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
-Algumas observações importantes:
-* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
-* Será necessário informar as contas blockchain dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
-* A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h. 
-
 
 
 # Passo 11 (opcional) - Instalação de Ferramenta de Monitoração
