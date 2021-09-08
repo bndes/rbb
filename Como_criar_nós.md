@@ -89,7 +89,7 @@ Siga o procedimento de **"Checking your connection"** da Lacchain: https://githu
 Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
 
 
-# Passo 8 - Inclusão de nós Validadores no Algoritmo de Consenso
+# Passo 8 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novo nós do tipo validadores)
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
 Algumas observações importantes:
