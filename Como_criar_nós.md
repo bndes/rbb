@@ -1,3 +1,5 @@
+Atenção:: Este repositório não está mais sendo utilizado. Veja novo respositório em https://github.com/RBBNet/rbb/
+
 A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi implementada utilizando a tecnologia do projeto Lacchain (https://www.lacchain.net/), mas com nós predominantemente nacionais. O BID, como líder do projeto Lacchain, está na rede para auxiliar no desenvolvimento do projeto.
 
 
