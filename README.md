@@ -1,3 +1,5 @@
+Atenção:: Este repositório não está mais sendo utilizado. Veja novo respositório em https://github.com/RBBNet/rbb/
+
 # rbb
 Repositório de arquivos para a infraestrutura da Rede Blockchain Brasil.
 
