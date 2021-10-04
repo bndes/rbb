@@ -86,7 +86,7 @@ Adicionar manualmente os novos nós em nós já sincronizados da rede pela API r
 
 Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
 
-Esse comando permite verificar que o nó está sincronizado com os outros nós da rede: ``curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://localhost:4545``
+O comando a seguir permite verificar que o nó está sincronizado com os outros nós da rede: ``curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://localhost:4545``
 
 
 Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
