@@ -101,6 +101,7 @@ Algumas observações importantes:
 * Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
 * A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h.
 * A forma como essa atividade é realizada usualmente é enviando um email a todos os participantes da RBB combinando um horário para votação de todas as instituições que possuam nós validadores.
+* Se a votação for bem sucedida, será possível ver no block explorer que o(s) novo(s) validador(es) está(ão) gerando e assinando nós na rede.
 
 
 # Passo 9 (opcional) - Instalação de Dapp de permissionamento
