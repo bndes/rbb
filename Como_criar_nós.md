@@ -88,6 +88,7 @@ Siga o procedimento de **"Checking your connection"** da Lacchain: https://githu
 
 O comando a seguir permite verificar que o nó está sincronizado com os outros nós da rede: ``curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://localhost:4545``
 
+Atualmente, um bloco é gerado a cada 2segundos, então o número retornado pelo comando anterior deve mudar a cada execução do comando.
 
 Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-network/issues/33
 
