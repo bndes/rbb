@@ -95,7 +95,7 @@ Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-n
 
 # Passo 8 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novo nós do tipo validador)
 
-Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/IBFT/#adding-and-removing-validators-by-voting.
+Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/Add-Validators/ (ver seção de IBFT2.0).
 Algumas observações importantes:
 * Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
 * Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
