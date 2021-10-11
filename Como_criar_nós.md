@@ -54,7 +54,7 @@ Para a porta 123 (udp):
 
 Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockchaingov@bndes.gov.br.
 
-Algumas boas práticas para essa atividade:
+Algumas boas práticas para este passo:
 - Sugere-se aumentar a resilência dos nós da rede criando conexões interna entre os nós da mesma instituição. 
 - Sugere-se aumentar a resilência dos nós conectando diferentes nós da rede por diferentes provedores de rede.
 - Sugere-se fortemente alocar aos nós internos máquinas com IPs públicos que não será modificado no futuro. Uma mudança de IP implica em reconfigurações de regras de firewall e reconexão dos nós com novos e-nodes.
