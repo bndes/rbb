@@ -174,4 +174,6 @@ BNDES e BID conversaram sobre algumas possibilidades de aumentar a resilência d
 
 Caso tenha erros durante a instalação e precise aumentar o nível de log do Besu, basta acrescentar `--logging DEBUG` no `start-pantheon.sh` e restartar o Besu. Depois de resolvido, remova essa mudança de forma a minimizar o tamanho de log gerado. Veja mais em: https://besu.hyperledger.org/en/stable/HowTo/Monitor/Logging/.
 
+Algumas vezes o Besu pode parar de sincronizar sem razão aparente. Um motivo pode ser falta de espaço de armazenamento no servidor.
+
 
