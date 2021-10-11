@@ -97,6 +97,7 @@ Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-n
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/Add-Validators/ (ver seção de IBFT2.0 com votação).
 Algumas observações importantes:
+* É uma boa prática utilizar ibft_getSignerMetrics para verificar se existem validadores não-ativos antes de iniciar a votação (https://besu.hyperledger.org/en/stable/Reference/API-Methods/#ibft_getsignermetrics). 
 * Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
 * Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
 * A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h.
