@@ -54,6 +54,8 @@ Para a porta 123 (udp):
 
 Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockchaingov@bndes.gov.br.
 
+Obs.: Uma boa prática para aumentar a resilência dos nós da rede é criar uma conexões interna entre os nós da mesma instituição. Outra recomendação é avaliar a possibilidade de diferentes nós da rede em diferentes provedores de rede.
+
 # Passo 4 - Gestão de chaves
 
 O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Perceba que a chave privada é salva sem criptografia.
