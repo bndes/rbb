@@ -1,0 +1,22 @@
+- hosts: writer
+  gather_facts: yes
+  become: yes
+  vars:
+    install: true
+  vars_prompt:
+    - name: "Please read the terms and conditions before installing this software: https://github.com/lacchain/pantheon-network/blob/master/TERMS_AND_COND_WRITER_NODE.md .Press ENTER  "
+    - name: "haveRead"
+      prompt: "Have you read the Terms and Conditions of use of LACChain Test Network? [Y/N]"
+      private: Y
+    - name: "isAgree"
+      prompt: "Do you agree with the Terms and Conditions of use of LACChain Test Network? [Y/N]"
+      private: Y
+      #  environment:
+      #    HTTP_PROXY: "{{ http_proxy }}"
+      #    HTTPS_PROXY: "{{ https_proxy }}"
+      #    NO_PROXY: localhost,127.,10.,192.168.
+      #    http_proxy: "{{ http_proxy }}"
+      #    https_proxy: "{{ https_proxy }}"
+      #    no_proxy: localhost,127.,10.,192.168.
+  roles:
+    - lacchain-writer-node

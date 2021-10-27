@@ -1,0 +1,19 @@
+- hosts: all
+  gather_facts: yes
+  become: yes
+  vars_prompt:
+    - name: "backup"
+      prompt: "Would you like to backup your node? (yes/no)"
+      private: no
+    - name: "restore"
+      prompt: "Would you like to restore your node? (yes/no)"
+      private: no
+  environment:
+    HTTP_PROXY: "{{ http_proxy }}"
+    HTTPS_PROXY: "{{ https_proxy }}"
+    NO_PROXY: localhost,127.,10.,192.168.
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: localhost,127.,10.,192.168.
+  roles:
+    - lacchain-backup-node

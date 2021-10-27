@@ -1,0 +1,12 @@
+- hosts: writer
+  gather_facts: yes
+  become: yes
+  environment:
+    HTTP_PROXY: "{{ http_proxy }}"
+    HTTPS_PROXY: "{{ https_proxy }}"
+    NO_PROXY: localhost,127.,10.,192.168.
+    http_proxy: "{{ http_proxy }}"
+    https_proxy: "{{ https_proxy }}"
+    no_proxy: localhost,127.,10.,192.168.
+  roles:
+    - lacchain-writer-node

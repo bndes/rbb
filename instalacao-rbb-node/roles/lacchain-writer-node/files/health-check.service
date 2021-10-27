@@ -1,0 +1,10 @@
+[Unit]
+Description=health-check service
+
+[Service]
+Type=notify
+ExecStart=/root/lacchain/health-check/health-check
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
