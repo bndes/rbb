@@ -10,8 +10,8 @@
 
 - name: pull besu binaries
   get_url:
-    url: "https://hyperledger.jfrog.io/ui/api/v1/download?repoKey=besu-binaries&path=besu%2F{{ besu_release_version }}%2Fbesu-{{ besu_release_version }}.tar.gz"
-    dest: "/tmp/besu/besu.tar.gz"
+    url: "https://hyperledger.jfrog.io/ui/api/v1/download?repoKey=besu-binaries&path=besu%2F{{ besu_release_version }}%2Fbesu-{{ besu_release_version }}.zip"      
+    dest: "/tmp/besu/besu_{{ besu_release_version }}.zip"
 
 - name: Preparing temporal folder
   shell: rm -rf /tmp/transit/ && mkdir /tmp/transit #deleting and creating a new
@@ -20,7 +20,7 @@
 
 - name: Extract the Besu tarball  
   unarchive:
-        src: "/tmp/besu/besu.tar.gz"
+        src: "/tmp/besu/besu_{{ besu_release_version }}.zip"
         dest: /tmp/transit #/usr/local
         copy: no
 
