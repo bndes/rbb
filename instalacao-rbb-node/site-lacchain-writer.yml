@@ -11,12 +11,5 @@
     - name: "isAgree"
       prompt: "Do you agree with the Terms and Conditions of use of LACChain Test Network? [Y/N]"
       private: Y
-      environment:
-        HTTP_PROXY: "{{ http_proxy | default(omit) }}"
-        HTTPS_PROXY: "{{ https_proxy | default(omit) }}"
-        NO_PROXY: localhost,127.,10.,192.168.
-        http_proxy: "{{ http_proxy | default(omit) }}"
-        https_proxy: "{{ https_proxy | default(omit) }}"
-        no_proxy: localhost,127.,10.,192.168.
   roles:
     - lacchain-writer-node
