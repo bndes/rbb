@@ -137,7 +137,7 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 
 # Passo 10 - Verificar Boot Nodes em Uso
 
-Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído a variável `bootnodes`.
+Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído à variável `bootnodes`.
 
 Por exemplo, 
 
