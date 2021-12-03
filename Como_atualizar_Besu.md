@@ -1,7 +1,7 @@
 
 
 
-# 1.Prerequisito 
+# 1.Pré-requisitos 
 Para este guia assumimos que você tenha o ansible instalado na sua máquina.
 Documentação de instalação ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 
@@ -15,7 +15,7 @@ Nos vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira 
 
 2.0.2) parar o besu
 
-2.0.3.1) caso voce use o HTTP PROXY, verificar se as variaveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), casa nao esteja as defina.
+2.0.3.1) caso você use o HTTP PROXY, verificar se as variáveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), casa não esteja as defina.
 Exemplo 
 
 http_proxy=http://example.proxy.com:8080
@@ -38,7 +38,7 @@ no local do tipo do seu no
 2.0.6) para terminar basta executar o comando
 ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-<TipoDoNó>.yml 
 
-# Update atraves dos binários 
+# Update através dos binários 
 
 2.1.1)Parar o serviço Pantheon.
 
