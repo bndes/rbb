@@ -5,11 +5,11 @@
 Para este guia assumimos que você tenha o ainsible instalado na sua máquina.
 Documentação de instalação ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 
-# 2.update
+# 2.Update
 
 Nos vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira forma é usando os scripts ansible e a segunda forma é usando diretamente os binarios 
 
-# update atraves do ansible 
+# Update atraves do ansible 
 
 2.0.1) Para fazer o update, é necessário acessar a sua maquina que está rodando o nó
 
@@ -38,7 +38,7 @@ no local do tipo do seu no
 2.0.6) para terminar basta executar o comando
 ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-<TipoDoNó>.yml 
 
-# update atraves dos binarios 
+# Update atraves dos binarios 
 
 2.1.1)Parar o serviço Pantheon.
 
@@ -51,7 +51,7 @@ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-
 https://besu.hyperledger.org/en/stable/HowTo/Get-Started/Installation-Options/Install-Binaries/
 
 
-# obs alguns comando que podem ajudar a verificar se a atualização, terminou corretamente 
+# Obs: alguns comando que podem ajudar a verificar se a atualização, terminou corretamente 
 
 retorna a versão do besu
 
@@ -66,7 +66,7 @@ Verificar se já está sincronizado (deve retornar false quando sincronizar)
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:4545
 
 
-# atualizar o protocolo ethereum
+# Atualizar o protocolo ethereum
 para atualizar o protocolo basta você adicionar uma linha no arquivo genesis file dizendo para qual protocolo a sua rede vai e
 em qual bloco isso vai começar a valer. exemplo estamos usando o protocolo berlin e ele vai iniciar no bloco 974000
  
