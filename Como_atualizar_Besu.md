@@ -2,12 +2,12 @@
 
 
 # 1.Prerequisito 
-Para este guia assumimos que você tenha o ainsible instalado na sua máquina.
+Para este guia assumimos que você tenha o ansible instalado na sua máquina.
 Documentação de instalação ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html
 
 # 2.Update
 
-Nos vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira forma é usando os scripts ansible e a segunda forma é usando diretamente os binarios 
+Nos vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira forma é usando os scripts ansible e a segunda forma é usando diretamente os binários 
 
 # Update atraves do ansible 
 
@@ -38,7 +38,7 @@ no local do tipo do seu no
 2.0.6) para terminar basta executar o comando
 ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-<TipoDoNó>.yml 
 
-# Update atraves dos binarios 
+# Update atraves dos binários 
 
 2.1.1)Parar o serviço Pantheon.
 
