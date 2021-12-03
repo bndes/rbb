@@ -66,4 +66,16 @@ Verificar se já está sincronizado (deve retornar false quando sincronizar)
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:4545
 
 
+# atualizar o protocolo ethereum
+para atualizar o protocolo basta você adicionar uma linha no arquivo genesis file dizendo para qual protocolo a sua rede vai e
+em qual bloco isso vai começar a valer. exemplo estamos usando o protocolo berlin e ele vai iniciar no bloco 974000
+ 
+"config": {
+     ...
+    "constantinopleFixBlock": 0,
+    "berlinBlock":
+    "974000"
+    ...
+}
 
+e para finalizar, de uma restart no besu 
