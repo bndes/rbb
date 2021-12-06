@@ -67,6 +67,7 @@ Verificar se conectou com os outros nós:
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"admin_peers","params":[],"id":1}' http://localhost:4545
  
 Verificar se já está sincronizado (deve retornar false quando sincronizar)
+
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:4545
 
 
