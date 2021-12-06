@@ -29,8 +29,8 @@ HTTPS_PROXY=https://example.proxy.com:8080
 
 2.0.4) agora volte para a sua maquina que tem o ansible instalado e os scripts  ansible
 
-2.0.5) configure o arquivo inventory definindo com o:
-exemplo
+2.0.5) configure o arquivo inventory definindo com o exemplo:
+
 <your node address> node_ip=<besu_public_ip>  node_name=<node name> node_email=<your@email> dns_name=<your dns> 
  
 no local do tipo do seu no 
