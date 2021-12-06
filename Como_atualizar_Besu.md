@@ -31,11 +31,12 @@ HTTPS_PROXY=https://example.proxy.com:8080
 
 2.0.5) configure o arquivo inventory definindo com o exemplo:
 
-<your node address> node_ip=<besu_public_ip>  node_name=<node name> node_email=<your@email> dns_name=<your dns> 
+<your node address> node_ip=<besu_public_ip>  besu_release_version=<besu_version>
  
 no local do tipo do seu no 
  
 2.0.6) para terminar basta executar o comando
+ 
 ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-<TipoDoNó>.yml 
 
 # Update através dos binários 
