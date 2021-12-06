@@ -24,8 +24,8 @@ HTTP_PROXY=http://example.proxy.com:8080
 2.0.3.2) caso você use o HTTPS PROXY, verificar se as variáveis HTTPS_PROXY e https_proxy  estão definidas em /etc/environment(ou no .profile), casa não esteja as defina.
 Exemplo 
 
-https_proxy=http://example.proxy.com:8080
-HTTPS_PROXY=http://example.proxy.com:8080
+https_proxy=https://example.proxy.com:8080
+HTTPS_PROXY=https://example.proxy.com:8080
 
 2.0.4) agora volte para a sua maquina que tem o ansible instalado e os scripts  ansible
 
