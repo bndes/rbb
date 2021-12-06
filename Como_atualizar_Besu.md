@@ -33,7 +33,7 @@ HTTPS_PROXY=https://example.proxy.com:8080
 
 "your node address"  node_ip=<besu_public_ip>  besu_release_version=<besu_version>
  
-no local do tipo do seu no 
+no local do tipo do seu nó 
  
 2.0.6) para terminar basta executar o comando
  
