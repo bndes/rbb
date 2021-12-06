@@ -15,13 +15,13 @@ Nós vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira
 
 2.0.2) parar o besu
 
-2.0.3.1) caso você use o HTTP PROXY, verifique se as variáveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), casa não esteja as defina.
+2.0.3.1) caso você use o HTTP PROXY, verifique se as variáveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), caso não esteja, as defina.
 Exemplo 
 
 http_proxy=http://example.proxy.com:8080
 HTTP_PROXY=http://example.proxy.com:8080
 
-2.0.3.2) caso você use o HTTPS PROXY, verifique se as variáveis HTTPS_PROXY e https_proxy  estão definidas em /etc/environment(ou no .profile), casa não esteja as defina.
+2.0.3.2) caso você use o HTTPS PROXY, verifique se as variáveis HTTPS_PROXY e https_proxy  estão definidas em /etc/environment(ou no .profile), caso não esteja, as defina.
 Exemplo 
 
 https_proxy=https://example.proxy.com:8080
