@@ -31,7 +31,7 @@ HTTPS_PROXY=https://example.proxy.com:8080
 
 2.0.5) configure o arquivo inventory definindo com o exemplo:
 
-<your node address> node_ip=<besu_public_ip>  besu_release_version=<besu_version>
+your node address node_ip=<besu_public_ip>  besu_release_version=<besu_version>
  
 no local do tipo do seu no 
  
