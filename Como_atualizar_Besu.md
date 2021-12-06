@@ -7,27 +7,27 @@ Documentação de instalação ansible: https://docs.ansible.com/ansible/latest/
 
 # 2.Update
 
-Nos vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira forma é usando os scripts ansible e a segunda forma é usando diretamente os binários 
+Nós vamos sugerir duas formas diferentes de fazer o update do  besu, a primeira forma é usando os scripts ansible e a segunda forma é usando diretamente os binários 
 
 # Update através do ansible 
 
-2.0.1) Para fazer o update, é necessário acessar a sua maquina que está rodando o nó
+2.0.1) Para fazer o update, é necessário acessar a sua máquina que está rodando o nó
 
 2.0.2) parar o besu
 
-2.0.3.1) caso você use o HTTP PROXY, verificar se as variáveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), casa não esteja as defina.
+2.0.3.1) caso você use o HTTP PROXY, verifique se as variáveis HTTP_PROXY e http_proxy  estão definidas em /etc/environment (ou no .profile), casa não esteja as defina.
 Exemplo 
 
 http_proxy=http://example.proxy.com:8080
 HTTP_PROXY=http://example.proxy.com:8080
 
-2.0.3.2) caso você use o HTTPS PROXY, verificar se as variáveis HTTPS_PROXY e https_proxy  estão definidas em /etc/environment(ou no .profile), casa não esteja as defina.
+2.0.3.2) caso você use o HTTPS PROXY, verifique se as variáveis HTTPS_PROXY e https_proxy  estão definidas em /etc/environment(ou no .profile), casa não esteja as defina.
 Exemplo 
 
 https_proxy=https://example.proxy.com:8080
 HTTPS_PROXY=https://example.proxy.com:8080
 
-2.0.4) agora volte para a sua maquina que tem o ansible instalado e os scripts  ansible
+2.0.4) agora volte para a sua máquina que tem o ansible instalado e os scripts  ansible
 
 2.0.5) configure o arquivo inventory definindo com o exemplo:
 
@@ -58,7 +58,7 @@ retorna a versão do besu
 
 $ pantheon --version
 
-Ainda no shell com o curl consegue testar se esta funcionando:
+Ainda no shell com o curl consegue testar se está funcionando:
  
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://localhost:4545
  
