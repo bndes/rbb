@@ -58,10 +58,13 @@ retorna a versão do besu
 $ pantheon --version
 
 Ainda no shell com o curl consegue testar se esta funcionando:
-
+ 
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"admin_nodeInfo","params":[],"id":1}' http://localhost:4545
+ 
 Verificar se conectou com os outros nós:
+ 
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"admin_peers","params":[],"id":1}' http://localhost:4545
+ 
 Verificar se já está sincronizado (deve retornar false quando sincronizar)
 $ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}' http://localhost:4545
 
