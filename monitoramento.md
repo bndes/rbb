@@ -76,5 +76,8 @@ Não existe nenhuma restrição para seleção de ferramenta de gestão de incid
 Além de servir para geração de incidentes, as métricas listadas também podem ser apresentadas em dashboards. Caso as instituições participantes optem pela adoção do Grafana, existe um modelo disponível gerado pelo BNDES. 
 
 
+![Captura de tela de 2021-12-13 13-56-52](https://user-images.githubusercontent.com/71888455/146039396-ff30f6e3-aa6a-454f-81c4-0860e2dcb49b.png)
+
+
 
 
