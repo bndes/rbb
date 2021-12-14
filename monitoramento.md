@@ -51,13 +51,13 @@ Inclui visão em alto nível dos nós
 
 # Tipos de Métricas
 
-Servidores e Processos 
+1.Servidores e Processos 
 
 Monitora o uso de CPU e uso de espaço em Disco. Também engloba uso da JVM pelo processo do Besu.
 Cada instituição já deve ter padrões estabelecidos para essas métricas.
 
 
-Especifica da RBB
+2.Especifica da RBB
 
 Monitora sincronização, conectividade e uso da rede.
 Importante alinhamento nas métricas e limites para incidentes.
