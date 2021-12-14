@@ -20,8 +20,11 @@ GG- global para detecção de incidentes na rede inteira _ Saúde da rede
 
 GL- Global para detecção de incidentes locais
 Para obter dados gerados por nós de outras instituições da rede, uma instituição pode
+
     (a) buscar um subconjunto dos dados diretamente de todos os nós da rede e/ou 
+    
     (b) buscar dados do monitoramento GG. 
+    
 Buscar diretamente nos diversos nós da rede preserva a descentralização e minimiza possíveis erros uma vez que o dado é recuperado no local em que se originou.
 
 
