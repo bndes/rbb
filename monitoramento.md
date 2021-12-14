@@ -80,8 +80,6 @@ Além de servir para geração de incidentes, as métricas listadas também pode
 
 
 
-![Captura de tela de 2021-12-14 13-39-09](https://user-images.githubusercontent.com/71888455/146040753-790b6914-e555-4af3-8612-aafd4d1ccf3f.png)
-
 
 
 
