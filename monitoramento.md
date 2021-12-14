@@ -9,8 +9,11 @@ Toda instituição participante deve poder monitorar localmente os dados de todo
 # Tipos de Monitoração
 
 LL- Local para detecção de incidentes
+
 GL- Global para detecção de incidentes locais
+
 MN- Global longo Prazo – Monitoramento de negócio 
+
 GG- global para detecção de incidentes na rede inteira _ Saúde da rede
 
 #  Premissas II 
