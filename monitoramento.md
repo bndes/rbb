@@ -36,15 +36,14 @@ Existe uma equipe técnica responsável por cuidar da saúde global da rede, inc
 
 #  De onde extrair as métricas 
 
-Besu e Server
+1. Besu e Server
 
 Foco em estado dos nós e servidores
+
 Contém visão em alto nível da rede
 
 
-
-
-Diretamente na rede Blockchain 
+2. Diretamente na rede Blockchain 
 
 Foco em endereços, smart contracts e transações. 
 Inclui visão em alto nível dos nós
