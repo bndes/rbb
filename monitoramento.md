@@ -63,6 +63,21 @@ Monitora sincronização, conectividade e uso da rede.
 Importante alinhamento nas métricas e limites para incidentes.
 
 
+![Captura de tela de 2021-12-14 15-58-25](https://user-images.githubusercontent.com/71888455/146213676-cbdc0ab7-5bfd-400e-acf1-ad3b95709f8d.png)
+
+![Captura de tela de 2021-12-14 15-58-54](https://user-images.githubusercontent.com/71888455/146213746-08a5d304-653d-46fe-bbc7-868eeb1ea374.png)
+
+![Captura de tela de 2021-12-14 15-59-08](https://user-images.githubusercontent.com/71888455/146213948-671d882c-1f70-43eb-a0bb-3be42dae5090.png)
+
+![Captura de tela de 2021-12-14 15-59-24](https://user-images.githubusercontent.com/71888455/146214013-b56ecf68-1a9c-47c6-af37-225016ffcbf8.png)
+
+![Captura de tela de 2021-12-15 12-17-46](https://user-images.githubusercontent.com/71888455/146214095-6aae336d-d28c-4b09-a38e-51fa2d24903a.png)
+
+![Captura de tela de 2021-12-14 16-06-07](https://user-images.githubusercontent.com/71888455/146214229-4cfc1b12-c9a8-4da1-ad8e-f49013d465b2.png)
+
+![Captura de tela de 2021-12-14 16-06-23](https://user-images.githubusercontent.com/71888455/146214233-7a48ce44-29da-4fc8-a8bd-768d8c6d7421.png)
+
+
 # SLA
 
 Nós validadores devem estar operacionais pelo menos ?% do tempo.
