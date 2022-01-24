@@ -76,7 +76,7 @@ em qual bloco isso vai começar a valer. Exemplo estamos usando o protocolo berl
 "config": {
      ...
     "constantinopleFixBlock": 0,
-    "berlinBlock":974000
+    "berlinBlock": 17974000
     ...
 }
 
