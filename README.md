@@ -44,8 +44,8 @@ A Governança da RBB é feita através de dois comitês:
 
 A implantação da RBB será feita de forma gradativa, conforme determinado em seu [Plano de Trabalho](), que tem previstas as seguintes atividades:
 
-- Implantação da rede laboratório *(em execução)*
-- Elaboração do regulamento da RBB *(em execução)*
+- Implantação da rede laboratório 
+- Elaboração do regulamento da RBB 
 - Estruturação do piloto
 - Operação assistida do piloto
 - Estruturação da produção
