@@ -6,6 +6,22 @@ A Rede Blockchain Brasil (RBB) é uma rede de instituições, de abrangência na
 
 A RBB foi fundada pelo **Banco Nacional de Desenvolvimento Econômico e Social** (BNDES) e o **Tribunal de Contas da União** (TCU), através de um [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf), [assinado em 12/04/2022](https://www.in.gov.br/web/dou/-/extrato-do-acordo-de-cooperacao-n-d-121.2.0014.22-393697725). Instituições que desejarem participar da rede deverão submeter sua solicitação à **Governança da RBB**, através de [Termo de Adesão](documentos/Termo_de_Adesao_RBB.docx) e assinatura de [Termo de Confidencialidade](documentos/Termo_de_Confidencialidade_RBB.docx).
 
+## Histórico
+
+A ideia de criar a Rede Blockchain Brasil nasceu no workshop que precedeu a [segunda edição](https://www.bndes.gov.br/wps/portal/site/home/conhecimento/seminarios/II-forum-blockchaingov) do [Fórum BlockchainGov](https://itsrio.org/pt/projetos/blockchaingov/), realizado nas dependências do BNDES em 2019. Organizado em parceria pelo BNDES e pelo [Instituto de Tecnologia e Sociedade (ITS)](https://itsrio.org/), o workshop gerou uma discussão relevante entre instituições públicas com experiência em uso prático da tecnologia.
+
+A percepção geral era que havia uma duplicação de esforços no uso da tecnologia pelo governo. Em geral, para cada caso de uso, a organização interessada precisava superar diversas barreiras legais, organizacionais e técnicas. Embora faça sentido em alguns casos, a necessidade de resolver os mesmos problemas a cada aplicação acaba inibindo a inovação. Adicionalmente, a existência de várias redes inibe a possibilidade de integração entre diversas iniciativas, além de reuso de soluções entre diferentes organizações.
+
+## Modelo
+
+Experiências internacionais como a [LACChain](https://www.lacchain.net) - rede para a América Latina liderada pelo BID, [Alastria](https://alastria.io/) e [EBSI (European Blockchain Service Infrastructure)](https://ec.europa.eu/digital-building-blocks/wikis/display/EBSI/Home) inspiraram a RBB a buscar o caminho de ser uma rede público-permissionada: "pública" porque poderá ser acessada por qualquer pessoa; "permissionada" porque os nós participantes do consenso precisam de permissão para participar. As redes público-permissionadas são uma solução adequada para aplicações de interesse público.
+
+Blockchains públicas são potencialmente muito interessantes para implantações focadas em transparência e confiança. Tal percepção é corroborada pelo [Acórdão 1613/2020 do TCU](https://pesquisa.apps.tcu.gov.br/#/redireciona/acordao-completo/%22ACORDAO-COMPLETO-2406748%22) que aponta como um dos seus maiores potenciais da tecnologia a implantação de medidas anticorrupção e pró-transparência. A possibilidade de implementar processos transparentes e que obedeçam ao princípio de _compliance by design_ é uma grande oportunidade para organizações públicas. Porém, o uso de redes que melhor suportam estas características por instituições públicas apresenta barreiras de diversas naturezas, como por exemplo a aquisição de criptomoedas para remuneração do processamento na rede.
+
+Nas blockchains permissionadas, em geral privadas, os nós que realizam a validação das transações são conhecidos e previamente autorizados, de acordo com os requisitos e propósitos da rede, permitindo a determinação de responsabilidades e tratando a realização do processamento na rede como um compromisso de seus participantes. Porém, tais blockchains não permitem o acesso às informações pelo público em geral.
+
+Já nas blockchains público-permissionadas, é possível buscar um melhor modelo para aplicações de interesse público: a entrega de soluções de transparência e confiança através de redes públicas; e o menor custo e menor desafio tecnológico e regulatório das redes permissionadas.
+
 ## Organização
 
 As instituições participantes da RBB podem ser classificadas como:
@@ -28,7 +44,7 @@ As instituições participantes da RBB podem ser classificadas como:
 A Governança da RBB é feita através de dois comitês:
 
 - **Comitê de Governança**, que é responsável por:
-  - Desenvolver e atualizar o [Regulamento da RBB]();
+  - Desenvolver e atualizar o Regulamento da RBB;
   - Decidir sobre aceitação de novos participantes;
   - Definir critérios para aceitação de casos de uso a serem suportados pela RBB;
   - Definir critérios para aceitação de usuários na RBB;
@@ -57,10 +73,6 @@ O Plano de Trabalho tem previsão de ser executado em 60 meses a partir da assin
 
 ## Tecnologia
 
-A RBB é uma rede público-permissionada. Isso significa que os nós que enviam transações e os nós que realizam a validação das transações são conhecidos e previamente autorizados, de acordo os requisitos e propósitos da RBB. Por outro lado, os nós que realizam apenas leitura das informações não precisam de tal autorização.
-
-As redes público-permissionadas são uma solução adequada para aplicações de interesse público. É possível manter conformidade, aderência à legislação vigente, transparência para o público e independência de custos de taxas sobre transações, pagas em moedas virtuais altamente voláteis, que remuneram o processamento nas redes públicas.
-
 A implementação de blockchain utilizada na RBB é a do projeto de código aberto [Hyperledger Besu](https://besu.hyperledger.org), que é baseada na rede [Ethereum](https://ethereum.org).
 
 ## Topologia
@@ -77,11 +89,11 @@ A RBB se baseou no *framework* da [LACChain](https://www.lacchain.net), para def
     - Participam do protocolo de consenso e são responsáveis pela geração de novos blocos.
     - Conectam-se entre si e com os nós conectores.
 - Nós Satélites: Não desempenham papel essencial no correto funcionamento da rede. Podem se conectar e desconectar da rede sem que isso prejudique o funcionamento da mesma.
-- **Nós Registradores** (*Writer Nodes*): Podem submeter transações para a rede.
-  - Enviam transações aos nós conectores, que por sua vez as repassam aos nós validadores.
-  - Conectam-se com nós conectores designados.
-- **Nós Observadores** (*Observer Nodes*): Só podem ler as informações registradas na rede.
-  - Podem conectar-se apenas com nós conectores que estiverem abertos para permitir a leitura de blocos.
-    - Observação: Atualmente a RBB ainda **não** suporta nós conectores com essa possibilidade.
+  - **Nós Registradores** (*Writer Nodes*): Podem submeter transações para a rede.
+    - Enviam transações aos nós conectores, que por sua vez as repassam aos nós validadores.
+    - Conectam-se com nós conectores designados.
+  - **Nós Observadores** (*Observer Nodes*): Só podem ler as informações registradas na rede.
+    - Podem conectar-se apenas com nós conectores que estiverem abertos para permitir a leitura de blocos.
+      - Observação: Atualmente a RBB ainda **não** suporta nós conectores com essa possibilidade.
 
 ![Topologia da RBB](imagens/Topologia_RBB.png "Topologia da RBB")
