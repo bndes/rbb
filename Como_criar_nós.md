@@ -2,9 +2,9 @@ A RBB implementada em Hyperledeger Besu é uma rede público-permissionada. Foi 
 
 
 # Passo 1 - Ambiente Físico
-O procedimento da Lacchain contém configuração mínima de hardware: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md
+A configuração mínima de hardware pode ser vista [aqui](instalacao-rbb-node/DEPLOY_NODE.md).
 
-A recomendação do BID é uma VM por nó, sem docker, e que seja um SO **Ubuntu 18.4** ou **CentOS7**. 
+A recomendação do BID é uma VM por nó, sem docker, e que seja um SO **Ubuntu 18.4** ou **CentOS7**.
 
 O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado.
 
@@ -14,20 +14,20 @@ Verifique se o relógio do seu servidor está com a hora correta. É recomendáv
 
 Há quatro tipos de nós: Boot, Validator, Writer e Observer. Cada instituição participante pode ter zero, um ou mais nós de um mesmo tipo.
 
-As VMs precisam ter IPs públicos para serem acessíveis na Internet. Além disso, precisam ter o mesmo IP outbound e inbound. 
+As VMs precisam ter IPs públicos para serem acessíveis na Internet. Além disso, precisam ter o mesmo IP outbound e inbound.
 
-Para instalar os nós, seguir o procedimento da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md, até a parte "Checking your connection". Orion será instalado, mas não inicializado. Não será possível verificar a conexão ainda. 
+Para instalar os nós, seguir [este procedimento](instalacao-rbb-node/DEPLOY_NODE.md), até a parte "Checking your connection". Orion será instalado, mas não inicializado. Não será possível verificar a conexão ainda.
 
 Ao fim da instalação, veja como conferir o resultado com este [procedimento](detalhamento_comandos_Besu.md).
 
-É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain. O ChainID da RBB já está configurado nos scripts para 648629. 
+É possível configurar mais de um nó ao mesmo tempo utilizando o script do Ansible descrito pela Lacchain. O ChainID da RBB já está configurado nos scripts para 648629.
 
 Todas as VMS do BNDES estão DMZ de blockchain do BNDES, uma vez que todos os nós podem receber conexões externas.
 
 
 # Passo 3 - Filtros de Rede
 
-A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A topologia da rede será análoga a da Lacchain: https://github.com/lacchain/bndes-network/blob/master/TOPOLOGY_AND_ARCHITECTURE.md
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A [topologia da rede será análoga a da Lacchain](instalacao-rbb-node/TOPOLOGY_AND_ARCHITECTURE.md).
 
 ![GitHub Logo](./network_diagram_rbb.png)
 
@@ -55,7 +55,7 @@ Para a porta 123 (udp):
 Para obter os detalhes de IPs de máquinas -> favor entrar em contato com blockchaingov@bndes.gov.br.
 
 Algumas boas práticas para este passo:
-- Sugere-se aumentar a resilência dos nós da rede criando conexões interna entre os nós da mesma instituição. 
+- Sugere-se aumentar a resilência dos nós da rede criando conexões interna entre os nós da mesma instituição.
 - Sugere-se aumentar a resilência dos nós conectando diferentes nós da rede por diferentes provedores de rede.
 - Sugere-se fortemente alocar aos nós internos máquinas com IPs públicos que não será modificado no futuro. Uma mudança de IP implica em reconfigurações de regras de firewall e reconexão dos nós com novos e-nodes.
 
@@ -63,13 +63,13 @@ Algumas boas práticas para este passo:
 # Passo 4 - Gestão de chaves
 
 O processo de instalação de cada nó gera a chave privada em ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. A chave pode ser regerada posteriormente, se necessário, mas isso impactará o enode do nó. Perceba que a chave privada é salva sem criptografia.
-É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando ``admin_nodeInfo``. 
+É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando ``admin_nodeInfo``.
 
 A conta blockchain associada ao nó está salva em ``/root/lacchain/data/nodeAddress``. Ela será necessária no momento do permissionamento (Passos 5 e 6).
 
 Além das chaves dos nós, no futuro podem ser criadas chaves privadas para permissionamento (ver passo 5) ou para o uso de smart contracts específicos.
 
-É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc. 
+É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc.
 
 # Passo 5 - Permissionamento dos novos nós
 
@@ -90,7 +90,7 @@ Adicionar manualmente os novos nós em nós já sincronizados da rede pela API r
 
 # Passo 7 - Verificar Conexão na Rede
 
-Siga o procedimento de **"Checking your connection"** da Lacchain: https://github.com/lacchain/bndes-network/blob/master/DEPLOY_NODE.md. 
+Siga o [procedimento de **"Checking your connection"**](instalacao-rbb-node/DEPLOY_NODE.md).
 
 O comando a seguir permite verificar que o nó está sincronizado com os outros nós da rede: ``curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":51}' http://localhost:4545``
 
@@ -103,8 +103,8 @@ Opcionalmente, esse link também pode ajudar: https://github.com/lacchain/besu-n
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/Add-Validators/ (ver seção de IBFT2.0 com votação).
 Algumas observações importantes:
-* É uma boa prática utilizar ``ibft_getSignerMetrics`` para verificar se existem validadores não-ativos antes de iniciar a votação (https://besu.hyperledger.org/en/stable/Reference/API-Methods/#ibft_getsignermetrics). 
-* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede. 
+* É uma boa prática utilizar ``ibft_getSignerMetrics`` para verificar se existem validadores não-ativos antes de iniciar a votação (https://besu.hyperledger.org/en/stable/Reference/API-Methods/#ibft_getsignermetrics).
+* Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede.
 * Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
 * A votação precisa ocorrer dentro de um período de uma mesma "época", e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h.
 * A forma como essa atividade é realizada usualmente é enviando um email a todos os participantes da RBB combinando um horário para votação de todas as instituições que possuam nós validadores.
@@ -113,20 +113,18 @@ Algumas observações importantes:
 
 # Passo 9 (opcional) - Instalação de Dapp de permissionamento
 
-O Dapp de permissionamento é um frontend que permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós. 
+O Dapp de permissionamento é um frontend que permite visualizar quem são as contas Administradoras da rede, visualizar as regras de permissionamento para contas e para nós.
 
-A Lacchain fez pequenas mehorias no Dapp de permissionamento da plataforma Besu. Para instalar o Dapp siga o seguinte procedimento: https://github.com/lacchain/permissioning-smart-contracts
+A Lacchain fez pequenas melhorias no Dapp de permissionamento da plataforma Besu. Para instalar o Dapp siga o seguinte procedimento: https://github.com/lacchain/permissioning-smart-contracts
 
 Atenção: é necessário implantar o branch beta1.
 
 Observação: O dapp apresenta as informações truncadas, mas é possível copiar e colar para ver a informação completa. Além disso, atenção porque o dapp exibe a informação de Public_key com um string "0x" no metade do valor. Ex.: a public key
-0xd2c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d6717322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c390 é exibida como 
+0xd2c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d6717322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c390 é exibida como
 0xd2c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d67170x322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c390.
 
-O Dapp está instalado internamente no BNDES na url https://rbb-permissioning.dsv.bndes.net/
-
-Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada. 
-É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask. 
+Para criar novas regras de permissionamento, é necessário ter uma conta blockchain autorizada.
+É possível utilizar qualquer forma de geração de conta Ethereum, como via Metamask.
 
 Endereço do contrato de permissionamento de nós: 0x0000000000000000000000000000000000009999
 
@@ -139,12 +137,13 @@ Embora exista, o contrato de permissionamento de contas ainda não está sendo u
 
 Para cada um dos nós, verifique no arquivo `/root/lacchain/config.toml`, o valor atribuído à variável `bootnodes`.
 
-Por exemplo, 
+Por exemplo,
 
-``
+```
 bootnodes=[  "enode://c1c9170ace6301fe416b636c0f91816b7a9184c29562b55dfbcbbb48305d6717322c07a1e0d0432b89c1bef468f93963cd94a4ec2d90cd5d53f6e16b3767c328@200.225.100.107:60606",
 "enode://91ca844776cc9bf69cd4eadaeefdf105815b61ec7ba0fef0ab3fc0c954a8af3bfbbdbc9975ca8cd6d1bd366bcd69df2066f2ed17bed4d1c53164d46e94afa03b@35.188.197.198:60606"
-]``
+]
+```
 
 Essa variável indica quais Bootnodes podem ser utilizados quando o nó iniciar. Idealmente quanto mais bootnodes você listar mais resiliente seus nós estarão. Assim, idealmente você deve incluir o máximo de bootnodes possíveis considerando a lista total de bootnodes da RBB. Para obter a lista de todos os boot nodes da rede você pode perguntar a alguma outra instituição ou instalar o dapp de permissionamento referenciado no passo anterior.
 
@@ -173,11 +172,9 @@ Em caso de dúvidas ou comentários, por favor, enviem e-mail para blockchaingov
 
 # Comentário adicionais
 
-BNDES e BID conversaram sobre algumas possibilidades de aumentar a resilência dos nós. Infelizmente, não é possível configurar mais de um IP para o mesmo nó (dado que o IP é usado para o enode) ou fazer um DNS para deixar os nós independentes de IP. Uma possibilidade natural é configurar vários nós de um mesmo tipo e usar um Load Balancer de forma a deixar os vários IPs transparente para o usuário. 
+BNDES e BID conversaram sobre algumas possibilidades de aumentar a resilência dos nós. Infelizmente, não é possível configurar mais de um IP para o mesmo nó (dado que o IP é usado para o enode) ou fazer um DNS para deixar os nós independentes de IP. Uma possibilidade natural é configurar vários nós de um mesmo tipo e usar um Load Balancer de forma a deixar os vários IPs transparente para o usuário.
 
 
 Caso tenha erros durante a instalação e precise aumentar o nível de log do Besu, basta acrescentar `--logging DEBUG` no `start-pantheon.sh` e restartar o Besu. Depois de resolvido, remova essa mudança de forma a minimizar o tamanho de log gerado. Veja mais em: https://besu.hyperledger.org/en/stable/HowTo/Monitor/Logging/.
 
 Algumas vezes o Besu pode parar de sincronizar sem razão aparente. Um motivo pode ser falta de espaço de armazenamento no servidor.
-
-

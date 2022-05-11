@@ -16,7 +16,7 @@ Recommended hardware features for the nodes in the test-net:
 
 * **RAM Memory**: 4 GB
 
-* **Hard Disk**: 30 GB SSD
+* **Hard Disk**: 60 GB SSD
 
 * **Operating System**: Ubuntu 16.04, Ubuntu 18.04, Centos7, always 64 bits
 
@@ -62,7 +62,7 @@ Make sure you have SSH access to the node you're setting up. This step will vary
 		```
 		If your VM is Centos7 then use:
 		```shell
-		$ scp /your/local/path/to/downloaded/jdk-11.0.x_linux-x64_bin.rpm remote_user@remote_host: 
+		$ scp /your/local/path/to/downloaded/jdk-11.0.x_linux-x64_bin.rpm remote_user@remote_host:
 		```
 	3.  Log into your remote machine by using something like this:
 		```shell
@@ -131,7 +131,7 @@ Consider the following points:
 	$ ansible-playbook -i inventory --private-key=~/.ssh/id_rsa -u remote_user site-lacchain-writer.yml
 	```
 
-* Obs.: Ansible uses SSH to make the connection. .shh/id_rsa is the private key file to enable your local machine accesses the remote machine. 
+* Obs.: Ansible uses SSH to make the connection. .shh/id_rsa is the private key file to enable your local machine accesses the remote machine.
 
 * At the end of the installation, if everything worked a PANTHEON service will be created in the case of a **validator node** managed by Systemctl with **stopped** status.
 
@@ -172,10 +172,10 @@ Once your node is ready, you can start it up with this command in **remote machi
   * You can update **Besu**, by preparing your inventory as described below.
 
   * Note that an update will not remove any data from the blockchain itself. It is only an update on software programs.
-  
+
 	```shell
 	[writer] #here put the role you are gong to update
-	35.193.123.227 
+	35.193.123.227
 	```
 
 	Optionally you can choose the sha_commit of the version you want to update refered to Orion; with Besu is is only neede to specify the version:
@@ -184,12 +184,12 @@ Once your node is ready, you can start it up with this command in **remote machi
 	35.193.123.227 besu_release_version='1.4.4' orion_release_version='1.5.2'
 	```
 	Current Besu versions obtained from: https://pegasys.tech/solutions/hyperledger-besu/
-	Tested BESU versions: 
+	Tested BESU versions:
 	1.4.4
 	1.3.6
 
 	Current orion commit sha versions obtained from: https://github.com/PegaSysEng/orion/releases
-	Tested orion versions: 
+	Tested orion versions:
 	1.5.2
 	1.3.2
 	1.4.0
@@ -198,21 +198,21 @@ Once your node is ready, you can start it up with this command in **remote machi
 
 	Now according to the role your node has, type one of the following commands on your terminal:
 	```shell
-	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-writer.yml 
+	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-writer.yml
 	```
 
 	```shell
-	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-bootnode.yml 
+	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-bootnode.yml
 	```
 
 	```shell
-	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-validator.yml 
+	$ ansible-playbook -i inventory --private-key=~/.ssh/id_ecdsa -u remote_user site-lacchain-update-validator.yml
 	```
 
 ## Clock
 
-Ensure that the clock of your institution is synchronizing with trustful online NTP servers. 
-BNDES is synchronizing with NTP.Br. 
+Ensure that the clock of your institution is synchronizing with trustful online NTP servers.
+BNDES is synchronizing with NTP.Br.
 
 ## Checking your connection
 
@@ -245,10 +245,10 @@ If any of these two checks doesn't work, try to restart the pantheon service:
 $ service pantheon restart
 ```
 
-You can also check the connection using [Besu Health Check](https://github.com/lacchain/besu-healthcheck) 
+You can also check the connection using [Besu Health Check](https://github.com/lacchain/besu-healthcheck)
 
 If that doesn't solve the problem, contact us at blockchaingov@bndes.gov.br.
-	
+
 ## Contact
 
 For any issues, you can either go to [issues](https://github.com/lacchain/bndes-network/issues) or e-mail us at blockchaingov@bndes.gov.br. Any feedback is more than welcome!
