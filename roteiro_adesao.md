@@ -12,7 +12,7 @@ Os solicitantes à RBB devem:
   - Apresentar Estatuto ou Contrato Social, acompanhado dos atos constitutivos e/ou modificativos, oficialmente arquivados e publicados.
   - Ata da Assembleia Geral e, se for o caso, Ata da Reunião do Conselho de Administração em que houver sido eleita a diretoria em exercício, oficialmente arquivadas e publicadas. No caso de não haver diretoria, apresentar a Ata referente ao órgão de administração.
   - No caso de entidade de direito privado sem fins lucrativos, apresentar um relato da experiência da entidade na tecnologia blockchain de tal forma a atender a Cláusula II, Parágrafo IV, Inciso III do [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf).
-  - Quando cabível, preencher [declaração](documentos/Declaração_Parte_Relacionada.docx) de que não é Parte Relacionada às Empresas do Sistema BNDES (em observância à Política para Transações com Partes Relacionadas do Sistema BNDES). Ser Parte Relacionada não impede a adesão à RBB.
+  - Quando cabível, preencher [declaração](documentos/Declaração_Parte_Relacionada.doc) de que não é Parte Relacionada às Empresas do Sistema BNDES (em observância à Política para Transações com Partes Relacionadas do Sistema BNDES). Ser Parte Relacionada não impede a adesão à RBB.
 - Estados, municípios ou distrito federal ou qualquer órgão ou entidade da administração pública direta federal, estadual, municipal e distrital, autarquias e fundações de direito público federais, estaduais, distritais ou municipais ou órgão ou entidade do poder legislativo ou do poder judiciário devem:
   - Apresentar Decreto ou Ato de criação do órgão/Lei instituidora, além de cópia do Estatuto/Regimento Interno. 
   - Apresentar Ato do Chefe do Poder Executivo de nomeação do dirigente/representante legal.
