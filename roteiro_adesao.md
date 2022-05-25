@@ -6,6 +6,7 @@ Os solicitantes à RBB devem:
 - Preencher, assinar e apresentar o [Termo de Adesão](documentos/Termo_de_Adesao_RBB.docx). Sobre o seu preenchimento:
   - O Termo de Adesão deverá especificar se o novo aderente será um **Partícipe Parceiro** ou um **Partícipe Associado**, conforme detalhado no  [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf), Cláusula II, Parágrafo I. 
   - Preencher a designação de representantes para acompanhar o Acordo, conforme o [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf), Cláusula II, Inciso X.
+    - Caso seja enviado o modelo anterior de Termo de Adesão, sem a indicação do representante, poderá ser usado o [modelo de carta de indicação de representante](documentos/Modelo-Carta-indicação-representante.doc).
 - Os representantes indicados no item anterior devem assinar o [Termo de Confidencialidade](documentos/Termo_de_Confidencialidade_RBB.docx).
   - O Termo de Confidencialidade pode ser apresentado posteriormente à aceitação do novo partícipe.
 - Entidades nacionais de direito privado sem fins lucrativos ou empresas estatais, federais, estaduais, municipais e distritais devem:
