@@ -1,6 +1,7 @@
 # Roteiro para solicitação de adesão à RBB
 
 Nos procedimentos abaixo, todos os documentos são digitais e suas assinaturas, quando requeridas, deverão seguir as especificações da ICP-Brasil. Os documentos solicitados podem ser enviados para o e-mail blockchaingov@bndes.gov.br (não obrigatório).
+
 Os solicitantes à RBB devem: 
 - Preencher, assinar e apresentar o [Termo de Adesão](documentos/Termo_de_Adesao_RBB.docx). Sobre o seu preenchimento:
   - O Termo de Adesão preenchido deverá especificar se o novo aderente será um **Partícipe Parceiro** ou um **Partícipe Associado**, conforme detalhado no  [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf), Cláusula II, Parágrafo I. 
@@ -16,6 +17,6 @@ Os solicitantes à RBB devem:
   - Apresentar Decreto ou Ato de criação do órgão/Lei instituidora, além de cópia do Estatuto/Regimento Interno. 
   - Apresentar Ato do Chefe do Poder Executivo de nomeação do dirigente/representante legal.
   - Se o Partícipe Aderente for Estado, Distrito Federal e Município ou qualquer órgão ou entidade de sua Administração Pública Direta, deverá ser apresentada, ainda:
-    - A respectiva Constituição (Estados) ou Lei Orgânica (Distrito Federal ou Municípios) e eventuais emendas, acompanhada de declaração do representante do Partícipe Aderente informando que não houve alterações posteriores no texto.
-    - Certidão Negativa de Débitos relativos aos Tributos Federais e à Dívida Ativa da União (CND) ou Certidão Positiva com Efeitos de Negativa de Débitos relativos aos Tributos Federais e à Dívida Ativa da União (CPEND), expedida conjuntamente pela Secretaria da Receita Federal do Brasil (RFB) e pela Procuradoria-Geral da Fazenda Nacional (PGFN), por meio de INTERNET, a ser extraída no endereço www.receita.fazenda.gov.br ou www.pgfn.fazenda.gov.br 
+- A respectiva Constituição (Estados) ou Lei Orgânica (Distrito Federal ou Municípios) e eventuais emendas, acompanhada de declaração do representante do Partícipe Aderente informando que não houve alterações posteriores no texto.
+  - Certidão Negativa de Débitos relativos aos Tributos Federais e à Dívida Ativa da União (CND) ou Certidão Positiva com Efeitos de Negativa de Débitos relativos aos Tributos Federais e à Dívida Ativa da União (CPEND), expedida conjuntamente pela Secretaria da Receita Federal do Brasil (RFB) e pela Procuradoria-Geral da Fazenda Nacional (PGFN), por meio de INTERNET, a ser extraída no endereço www.receita.fazenda.gov.br ou www.pgfn.fazenda.gov.br 
   - Comprovação da regularidade previdenciária relacionada ao regime próprio de previdência social, mediante a apresentação do Certificado de Regularidade Previdenciária   - Apresentar CRP, expedido pelo Ministério da Previdência e Assistência Social, por meio da INTERNET, nos endereços www.previdenciasocial.gov.br ou www.receita.fazenda.gov.br ou declaração, conforme Anexo II, firmada pelos representantes legais do Partícipe Aderente.
