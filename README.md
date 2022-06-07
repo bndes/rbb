@@ -97,3 +97,5 @@ A RBB se baseou no *framework* da [LACChain](https://www.lacchain.net), para def
       - Observação: Atualmente a RBB ainda **não** suporta nós conectores com essa possibilidade.
 
 ![Topologia da RBB](imagens/Topologia_RBB.png "Topologia da RBB")
+
+####### Em caso de duvidas e sugestões enviar um email para blockchaingov.gov.br
