@@ -99,4 +99,4 @@ A RBB se baseou no *framework* da [LACChain](https://www.lacchain.net), para def
 ![Topologia da RBB](imagens/Topologia_RBB.png "Topologia da RBB")
 
 ## Contato
-Em caso de duvidas e sugestões enviar um email para blockchaingov.gov.br
+Em caso de duvidas e sugestões enviar um email para [Links]blockchaingov.gov.br
