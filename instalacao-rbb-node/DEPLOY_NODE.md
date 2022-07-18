@@ -44,8 +44,8 @@ To configure and install Pantheon, you must clone this git repository in your **
 Obs: The old name of Hyperldger Besu is Pantheon and this tutorial will use the two names as synonyms.
 
 ```shell
-$ git clone https://github.com/lacchain/bndes-network
-$ cd bndes-network/
+$ git clone https://github.com/RBBNet/rbb.git
+$ cd rbb/instalacao-rbb-node
 ```
 
 ### Obtain SSH access to your remote machine ###
