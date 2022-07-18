@@ -98,5 +98,13 @@ A RBB se baseou no *framework* da [LACChain](https://www.lacchain.net), para def
 
 ![Topologia da RBB](imagens/Topologia_RBB.png "Topologia da RBB")
 
+## Instalação
+
+Enquanto a RBB estiver em estágio de piloto ou em laboratório, para instalar nós, será necessário aderir o Acordo de Cooperação. 
+
+O roteiro de instalação técnico encontra-se [nesse link](Como_criar_nós.md). 
+
+
 ## Contato
+
 Em caso de dúvidas e sugestões, entre em contato através do e-mail [blockchaingov@bndes.gov.br](#).
