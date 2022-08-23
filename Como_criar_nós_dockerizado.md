@@ -57,7 +57,23 @@ Executar os comandos:
  
  Utilize ``` docker-compose logs -f ``` para visualizar os logs dos nós.
   
-# Passo 4 - Gestão de chaves
+  
+# Passo 4 - Verificar Conexão na Rede
+
+Execute da seguinte forma:
+```bash
+# commands/node-rpc <NODE> <MÉTODO> <PARÂMETROS>
+# Exemplos:
+
+# consulta informações do node
+commands/node-rpc boot1 admin_nodeInfo
+
+# consulta peers conectados
+commands/node-rpc writer2 admin_peers
+```
+
+  
+# Passo 5 - Gestão de chaves
 
 O processo de instalação de cada nó gera a chave privada em XXX ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. Perceba que a chave privada é salva sem criptografia. É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando XXX ``admin_nodeInfo``.
 
@@ -65,15 +81,12 @@ A conta blockchain associada ao nó está salva em XXX ``/root/lacchain/data/nod
 
 É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc.
 
-# Passo 5 - Permissionamento dos novos nós
+# Passo 6 - Permissionamento dos novos nós
 
 É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada por uma instituição participante da RBB com conta blockchain de permissionamento. Entre em contato informando os e-nodes e as contas blockchain dos nós instalados.
 
-# Passo 7 - Verificar Conexão na Rede
 
-
-
-# Passo 8 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novo nós do tipo validador)
+# Passo 7 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novo nós do tipo validador)
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/Add-Validators/ (ver seção de IBFT2.0 com votação).
 Algumas observações importantes:
