@@ -38,17 +38,17 @@ Para a porta 123 (udp):
 
 # Passo 3 - Scripts do Docker
 
-Baixar o arquivo rbb-setup.tgz
-
-Criar um diretório: ``mkdir <nome-do-diretorio>``
-
-Descompactar o tgz neste diretório: 
+Criar um diretório: 
 ```
+mkdir <nome-do-diretorio>
 cd <nome-do-diretorio>
-tar xzf rbb-setup.tgz
 ```
 
-Caso uma das portas entre as utilizadas (XXX, XXX, XXX e XXX) não estejam disponíveis no host, ajustar o mapeamento no arquivo <nome-do-diretorio>/infra.json.
+Baixar o arquivo rbb-setup.tgz neste diretório.
+
+Descompactar o arquivo rbb-setup.tgz: ``tar xzf rbb-setup.tgz``
+
+Caso uma das portas entre as utilizadas (10000, 10001, 10010, 10011 e 10012) não estejam disponíveis no host, ajustar o mapeamento no arquivo ``<nome-do-diretorio>/infra.json``.
 
 Preencher, no mesmo arquivo, o campo "organization" para indicar o nome/apelido da organização que será apresentado na monitoração atual, que é realizada pelo BID.
 
