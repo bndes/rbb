@@ -47,8 +47,15 @@ Caso uma das portas entre as utilizadas (XXX, XXX, XXX e XXX) não estejam dispo
 Preencher, no mesmo arquivo, o campo "organization" para indicar o nome/apelido da organização que será apresentado na monitoração atual, que é realizada pelo BID.
 
 Executar os comandos:
+ ```
   VALIDATOR_COUNT=1 BOOT_COUNT=1 WRITER_COUNT=1 commands/blockchain-setup
+ ```
+ E, em seguida:
+ ```
   docker-compose up -d
+ ```
+ 
+ Utilize ``` docker-compose logs -f ``` para visualizar os logs dos nós.
   
 # Passo 4 - Gestão de chaves
 
