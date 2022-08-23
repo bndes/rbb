@@ -8,7 +8,7 @@ A configuração mínima de hardware pode ser vista [aqui](instalacao-rbb-node/D
 
 O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado. 
 
-Deve estar instalado o Docker versão mínima XXX. 
+Deve estar instalado o Docker versão mínima 18.09.9.
 
 Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido (pela porta *123/udp*), por exemplo, o pool.ntp.br. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
 
@@ -38,11 +38,17 @@ Para a porta 123 (udp):
 
 # Passo 3 - Scripts do Docker
 
-Baixar os scripts de XXX. 
+Baixar o arquivo rbb-setup.tgz
 
-Descompactar em XXX. 
+Criar um diretório: ``mkdir <nome-do-diretorio>``
 
-Caso uma das portas entre as utilizadas (XXX, XXX, XXX e XXX) não estejam disponíveis no host, ajustar o mapeamento no arquivo XXX/infra.json.
+Descompactar o tgz neste diretório: 
+```
+cd <nome-do-diretorio>
+tar xzf rbb-setup.tgz
+```
+
+Caso uma das portas entre as utilizadas (XXX, XXX, XXX e XXX) não estejam disponíveis no host, ajustar o mapeamento no arquivo <nome-do-diretorio>/infra.json.
 
 Preencher, no mesmo arquivo, o campo "organization" para indicar o nome/apelido da organização que será apresentado na monitoração atual, que é realizada pelo BID.
 
@@ -75,9 +81,9 @@ commands/node-rpc writer2 admin_peers
   
 # Passo 5 - Gestão de chaves
 
-O processo de instalação de cada nó gera a chave privada em XXX ``/root/lacchain/data/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. Perceba que a chave privada é salva sem criptografia. É possível conferir a chave pública do seu nó no log (nível INFO) ou executando o comando XXX ``admin_nodeInfo``.
+O processo de instalação de cada nó gera a chave privada em ``${CONFIG_ROOT}/nodes/${NODE_NAME}/key``. Essa chave privada está associada a chave pública do nó, que compõe o seu enode. Perceba que a chave privada é salva sem criptografia. É possível conferir a chave pública do seu nó em ``${CONFIG_ROOT}/nodes/${NODE_NAME}/key.pub`` ou executando o comando ``commands/node-rpc ${NODE_NAME} admin_nodeInfo``.
 
-A conta blockchain associada ao nó está salva em XXX ``/root/lacchain/data/nodeAddress``. Ela será necessária no momento do permissionamento (passo seguinte).
+A conta blockchain associada ao nó está salva em ``${CONFIG_ROOT}/nodes/${NODE_NAME}/node.address``. Ela será necessária no momento do permissionamento (passo seguinte).
 
 É necessário ter um mecanismo interno para gerir essas chaves privadas: onde armazenar a chave, quem tem acesso, mecanismo de recuperação etc.
 
@@ -92,7 +98,7 @@ Se novos validadores forem adicionados é necessário disparar uma votação de 
 Algumas observações importantes:
 * É uma boa prática utilizar ``ibft_getSignerMetrics`` para verificar se existem validadores não-ativos antes de iniciar a votação (https://besu.hyperledger.org/en/stable/Reference/API-Methods/#ibft_getsignermetrics).
 * Os comandos devem ser disparados usando os consoles dos validadores que atualmente participam do algoritmo de consenso da rede.
-* Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: XXX ``/root/lacchain/data/nodeAddress``. Caso esse arquivo esteja inválido por algum motivo, é possível regerá-lo usando ``pantheon --data-path=/root/lacchain/data public-key export-address --to=/root/lacchain/data/nodeAddress!``.
+* Será necessário informar as contas blockchain (nodeAddress) dos novos validadores, que podem ser encontradas em: ``${CONFIG_ROOT}/nodes/${NODE_NAME}/node.address``.
 * A votação precisa ocorrer dentro de um período de uma mesma "época" e o tamanho da época é definida no arquivo genesis. Considerando as configurações atuais da rede, cada época dura cerca de 16h.
 * A forma como essa atividade é realizada usualmente é enviando um email a todos os participantes da RBB combinando um horário para votação de todas as instituições que possuam nós validadores.
 * Se a votação for bem sucedida, será possível ver no block explorer que o(s) novo(s) validador(es) está(ão) gerando e assinando nós na rede.
