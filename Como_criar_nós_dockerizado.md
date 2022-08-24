@@ -4,9 +4,16 @@ Este roteiro guia na criação de nós para o laboratório da RBB usando docker.
 
 # Passo 1 - Ambiente Físico
 
-A configuração mínima de hardware pode ser vista [aqui](instalacao-rbb-node/DEPLOY_NODE.md).
+## Requisitos mínimos do sistema
 
-O BNDES instalou com **RedHat 7**, por similaridade com CentOS7. Embora não fosse uma plataforma oficialmente homologada pela Lacchain, nenhum problema foi encontrado. 
+Recursos de hardware recomendados para os nós na rede de teste:
+
+* **CPU**: 4 cores
+
+* **Memória RAM**: 8 GB
+
+* **Disco Rígido**: 180 GB SSD
+
 
 Deve estar instalado o Docker versão mínima 18.09.9.
 
@@ -38,6 +45,14 @@ Para a porta 123 (udp):
 
 # Passo 3 - Scripts do Docker
 
+### Instalação do jq ###
+
+```
+curl -#SLo/usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+chmod a+x /usr/local/bin/jq
+```
+
+### Passo a passo para a instalação ###
 Criar um diretório: 
 ```
 mkdir <nome-do-diretorio>
