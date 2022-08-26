@@ -14,7 +14,12 @@ Recursos de hardware recomendados para os nós na rede de teste:
 
 * **Disco Rígido**: 180 GB SSD
 
+
+# Passo 2 - Scripts Docker
+
 Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido (pela porta *123/udp*), por exemplo, o pool.ntp.br. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
+
+Sugere-se fortemente alocar aos nós internos máquinas com IPs públicos que não será modificado no futuro. Uma mudança de IP implica em reconfigurações de regras de firewall e reconexão dos nós com novos e-nodes.
 
 ## Pré-requisitos necessários
 * Docker, versão mínima 18.09.9
@@ -27,33 +32,7 @@ curl -#SLo/usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-
 chmod a+x /usr/local/bin/jq
 ```
 
-# Passo 2 - Filtros de rede
-Serão utilizadas 3 portas para comunicação dos nós com os outros nós da rede, os da empresa e os de fora da empresa. 
-
-A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A [topologia da rede será análoga a da Lacchain](instalacao-rbb-node/TOPOLOGY_AND_ARCHITECTURE.md).
-
-![GitHub Logo](./network_diagram_rbb.png)
-
-As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
-
-Para a porta 60606 (TCP e UDP):
-- R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
-- R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
-- R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
-- R4 - Todos os validadores da instituição precisam se conectar a todos os validadores de outras instituições
-- R5 - Todos os validadores de outras instituições precisam se conectar a todos os validadores da instituição
-
-Para a porta 4545:
-- O writer node deve também ter aberta a porta aberta 4545 (ou 443, em evolução) para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
-
-Para a porta 123 (udp):
-- Todos os nós precisam estar com seus relógios sincronizados com um servidor NTP confiável
-
-- Sugere-se fortemente alocar aos nós internos máquinas com IPs públicos que não será modificado no futuro. Uma mudança de IP implica em reconfigurações de regras de firewall e reconexão dos nós com novos e-nodes.
-
-# Passo 3 - Scripts do Docker
-
-### Passo a passo para a instalação ###
+## Instalação dos nós ##
 Criar um diretório: 
 ```
 mkdir <nome-do-diretorio>
@@ -79,6 +58,26 @@ Executar os comandos:
  
  Utilize ``` docker-compose logs -f ``` para visualizar os logs dos nós.
   
+  
+# Passo 3 - Filtros de rede
+Serão utilizadas 3 portas para comunicação dos nós com os outros nós da rede, os da empresa e os de fora da empresa. 
+
+A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A [topologia da rede será análoga a da Lacchain](instalacao-rbb-node/TOPOLOGY_AND_ARCHITECTURE.md).
+
+![GitHub Logo](./network_diagram_rbb.png)
+
+As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
+
+Para a porta 60606 (TCP e UDP):
+- R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
+- R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
+- R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
+- R4 - Todos os validadores da instituição precisam se conectar a todos os validadores de outras instituições
+- R5 - Todos os validadores de outras instituições precisam se conectar a todos os validadores da instituição
+
+Para a porta 4545:
+- O writer node deve também ter aberta a porta aberta 4545 (ou 443, em evolução) para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
+
   
 # Passo 4 - Verificar Conexão na Rede
 
