@@ -14,10 +14,18 @@ Recursos de hardware recomendados para os nós na rede de teste:
 
 * **Disco Rígido**: 180 GB SSD
 
-
-Deve estar instalado o Docker versão mínima 18.09.9.
-
 Verifique se o relógio do seu servidor está com a hora correta. É recomendável que ele esteja sincronizado com um servidor NTP conhecido (pela porta *123/udp*), por exemplo, o pool.ntp.br. Caso contrário, erros na sincronização podem ocorrer com a mensagem "invalid checkpoint headers".
+
+## Pré-requisitos necessários
+* Docker, versão mínima 18.09.9
+* jq
+
+### Instalação do jq ###
+
+```
+curl -#SLo/usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+chmod a+x /usr/local/bin/jq
+```
 
 # Passo 2 - Filtros de rede
 Serão utilizadas 3 portas para comunicação dos nós com os outros nós da rede, os da empresa e os de fora da empresa. 
@@ -45,13 +53,6 @@ Para a porta 123 (udp):
 
 # Passo 3 - Scripts do Docker
 
-### Instalação do jq ###
-
-```
-curl -#SLo/usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-chmod a+x /usr/local/bin/jq
-```
-
 ### Passo a passo para a instalação ###
 Criar um diretório: 
 ```
@@ -59,9 +60,9 @@ mkdir <nome-do-diretorio>
 cd <nome-do-diretorio>
 ```
 
-Baixar o arquivo rbb-setup.tgz neste diretório.
+Baixar o arquivo tgz [clicando aqui](https://github.com/RBBNet/rbb/raw/master/rbb-setup.tgz).
 
-Descompactar o arquivo rbb-setup.tgz: ``tar xzf rbb-setup.tgz``
+Descompactar o arquivo tgz no diretório criado: ``tar xzf rbb-setup.tgz``
 
 Caso uma das portas entre as utilizadas (10000, 10001, 10010, 10011 e 10012) não estejam disponíveis no host, ajustar o mapeamento no arquivo ``<nome-do-diretorio>/infra.json``.
 
