@@ -71,6 +71,10 @@ Observação: O piloto será uma rede de produção, com a utilização de dados
 
 O Plano de Trabalho tem previsão de ser executado em 60 meses a partir da assinatura do [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf) entre BNDES e TCU.
 
+## Governança
+
+Informações sobre a [governança da RBB](governanca/readme.md). 
+
 ## Tecnologia
 
 A implementação de blockchain utilizada na RBB é a do projeto de código aberto [Hyperledger Besu](https://besu.hyperledger.org), que é baseada na rede [Ethereum](https://ethereum.org).
