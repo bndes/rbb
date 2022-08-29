@@ -73,7 +73,7 @@ O Plano de Trabalho tem previsão de ser executado em 60 meses a partir da assin
 
 ## Governança
 
-Informações sobre a [governança da RBB](governanca/readme.md). 
+Informações sobre a [governança da RBB](governanca/README.md). 
 
 ## Tecnologia
 
