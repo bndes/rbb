@@ -23,6 +23,7 @@ Sugere-se fortemente alocar aos nós internos máquinas com IPs públicos que n�
 
 ## Pré-requisitos necessários
 * Docker, versão mínima 18.09.9
+* Docker compose, versão mínima 1.22.0
 * jq
 
 ### Instalação do jq ###
@@ -68,15 +69,15 @@ A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como n�
 
 As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
 
-Para a porta 60606 (TCP e UDP):
+Para a porta 10010 e 10011 (TCP e UDP):
 - R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
 - R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
 - R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
 - R4 - Todos os validadores da instituição precisam se conectar a todos os validadores de outras instituições
 - R5 - Todos os validadores de outras instituições precisam se conectar a todos os validadores da instituição
 
-Para a porta 4545:
-- O writer node deve também ter aberta a porta aberta 4545 (ou 443, em evolução) para um conjunto restrito de IPs. Essa porta é equivalente a porta 8545 utilizada no Geth. Ou seja, é a porta que os dApps se comunicam com o nó Writer para enviar transações e fazer consultas. Fica a critério e responsabilidade da instituição instaladora ampliar o conjunto de IPs, por exemplo, para toda sua rede interna ou até mesmo para Internet, de acordo com sua necessidade.
+Para a porta 9091:
+- Todos os nós precisam poder enviar estatísticas via a porta 9091.
 
   
 # Passo 4 - Verificar Conexão na Rede
