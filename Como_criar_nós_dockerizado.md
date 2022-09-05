@@ -61,7 +61,6 @@ Executar os comandos:
   
   
 # Passo 3 - Filtros de rede
-Serão utilizadas 3 portas para comunicação dos nós com os outros nós da rede, os da empresa e os de fora da empresa. 
 
 A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como nós. As conexões peer-to-peer são na porta 60606 TCP/UDP. A [topologia da rede será análoga a da Lacchain](instalacao-rbb-node/TOPOLOGY_AND_ARCHITECTURE.md).
 
@@ -69,15 +68,15 @@ A figura abaixo reflete a topologia da rede quando só havia BNDES e BID como n�
 
 As seguintes regras de abertura de firewall devem ser consideradas para uma instituição que terá nós da RBB.
 
-Para a porta 10010 e 10011 (TCP e UDP):
-- R1 - Conexão entre nós internos de sua rede da instituição: validadores e boot | boot e writers
-- R2 - Todos os nós da instituição precisam se conectar aos boots de outras instituições
-- R3 - Todos os boots de outras instituições precisam se conectar a todos os nós da instituição
-- R4 - Todos os validadores da instituição precisam se conectar a todos os validadores de outras instituições
-- R5 - Todos os validadores de outras instituições precisam se conectar a todos os validadores da instituição
-
-Para a porta 9091:
-- Todos os nós precisam poder enviar estatísticas via a porta 9091.
+- Todos os validators devem conseguir se conectar. Por isso, para seus validators:
+   - Permitir conexão (inbound) na porta 10011 a partir dos outros validators que integram a RBB.
+   - Permitir conexão (outbound) para as IP:PORTAs dos outros validators que integram a RBB.
+- Todos os boots devem permitir que os outros nós boots e validators se conectem a ele. Por isso, para seus boots:
+   - Permitir conexão (inbound) na porta 10010 a partir dos outros nós (boots e validators) que integram a RBB.
+   - Permitir conexão (outbound) para as IP:PORTAs dos boots que integram a RBB.
+- Os writer nodes não precisam aceitar conexões externas.
+- Todos os nós devem enviar informações de monitoração para o BID.
+    - Permitir conexões (outbound) para 35.184.17.253:9091.
 
   
 # Passo 4 - Verificar Conexão na Rede
