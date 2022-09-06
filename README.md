@@ -112,3 +112,11 @@ O roteiro de instalação técnico encontra-se [nesse link](Como_criar_nós.md).
 ## Contato
 
 Em caso de dúvidas e sugestões, entre em contato através do e-mail [blockchaingov@bndes.gov.br](#).
+
+## Aviso Legal sobre a participação do Tribunal de Contas da União – TCU
+
+O Tribunal de Contas da União - TCU, órgão de controle externo do governo federal, auxilia o Congresso Nacional na missão de acompanhar a execução orçamentária e financeira do país e contribuir com o aperfeiçoamento da Administração Pública em benefício da sociedade. Para isso, tem como visão ser referência na promoção de uma Administração Pública efetiva, ética, ágil e responsável.
+
+No âmbito da Rede Blockchain Brasil (RBB), o TCU exerce o papel de partícipe fundador, conforme Acordo de Cooperação número D-121.2.0014.22, celebrado em abril de 2022 junto ao BNDES – Banco Nacional de Desenvolvimento Econômico e Social. O acordo estabelece as prerrogativas de cada tipo de partícipe (partícipes fundadores e partícipes aderentes), suas funções, atribuições e poderes. 
+
+Vale destacar, entretanto, que **o TCU, por meio de seus representantes formalmente indicados, exerce na RBB papel meramente administrativo, sem qualquer vínculo com as atividades de Controle Externo** advindas de sua função constitucional. A despeito de ser fundador, o TCU atua na Rede como qualquer outro partícipe, resguardadas as funções e poderes de partícipe fundador, descritas no supracitado acordo de cooperação. Portanto, **o TCU, nessa condição, não chancela, corrobora, atesta a validade ou emite opinião prévia sobre as atividades exercidas por partícipes da RBB que porventura sejam passíveis das ações de Controle Externo**. 
