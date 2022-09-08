@@ -107,7 +107,7 @@ A conta blockchain associada ao nó está salva em ``${CONFIG_ROOT}/nodes/${NODE
 É necessário permissionar o(s) novo(s) nó(s) para participar na rede. Essa ação é realizada por uma instituição participante da RBB com conta blockchain de permissionamento. Entre em contato informando os e-nodes e as contas blockchain dos nós instalados.
 
 
-# Passo 7 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novo nós do tipo validador)
+# Passo 7 - Inclusão de nós Validadores no Algoritmo de Consenso  (apenas para novos nós do tipo validador)
 
 Se novos validadores forem adicionados é necessário disparar uma votação de forma a incluí-los no algoritmo de consenso. Para isso, deve-se seguir o procedimento https://besu.hyperledger.org/en/stable/HowTo/Configure/Consensus-Protocols/Add-Validators/ (ver seção de IBFT2.0 com votação).
 Algumas observações importantes:
