@@ -24,3 +24,5 @@ Reuniões formais realizadas.
     - Sérgio Marques de Viveiros - BNDES
     - Gladstone Moises Arantes Junior - BNDES
   - [Ata assinada digitalmente](2022-11-01-Ata-Reunião-Governança-RBB-Assinada.pdf)
+    - Aceitas as adesões de Prodest, Dataprev, CPqD e RNP.
+    - Criação de Discord do projeto: https://discord.gg/sHSygnAUVk
