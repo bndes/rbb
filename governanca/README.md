@@ -23,4 +23,4 @@ Reuniões formais realizadas.
     - Luciana Giuliani de Oliveira Reis - BNDES
     - Sérgio Marques de Viveiros - BNDES
     - Gladstone Moises Arantes Junior - BNDES
-  - [Ata assinada digitalmente](XXX)
+  - [Ata assinada digitalmente](2022-11-01-Ata-Reunião-Governança-RBB-Assinada.pdf)
