@@ -3,8 +3,9 @@
 Os Partícipes da RBB têm se reunido informalmente há vários meses. 
 
 A partir da assinatura do Acordo de Cooperação entre o BNDES e o TCU no dia 12/04/2022 (além do cumprimento de alguns requisitos formais), foram iniciadas as 
-reuniões formais da Governança da RBB. Inicialmente, estas incluem apenas o BNDES e o TCU, que são os Partícipes Patronos. A partir do exame e formalização das 
-adesões dos Partícipes Aderentes, estes passam a participar das reuniões de Governança da RBB. 
+reuniões formais da Governança da RBB. Inicialmente, estas incluíam apenas o BNDES e o TCU, que são os Partícipes Patronos. A partir do exame documental e formalização das adesões dos Partícipes Aderentes, estes passam a participar das reuniões de Governança da RBB. 
+
+No momento, esta é a [lista de partícipes](participes.md) da RBB, assim como seus representantes.
 
 Reuniões formais realizadas. 
 
