@@ -9,10 +9,18 @@ adesões dos Partícipes Aderentes, estes passam a participar das reuniões de G
 Reuniões formais realizadas. 
 
 - 22/08/2022
-  - Representates das instituições presentes:
+  - Representates das instituições participantes:
     - Rainério Rodrigues Leite - TCU
     - Sérgio Marques de Viveiros - BNDES
     - Gladstone Moises Arantes Junior - BNDES
   - Ouvintes presentes:
     - Eldon Teixeira Coutinho - TCU
   - [Ata assinada digitalmente](2022-08-22-Ata-Reunião-Governança-RBB-Assinado.pdf)
+- 01/11/2022
+  - Representantes das instituições participantes:
+    - Rainério Rodrigues Leite - TCU
+    - Eldon Teixeira Coutinho - TCU
+    - Luciana Giuliani de Oliveira Reis - BNDES
+    - Sérgio Marques de Viveiros - BNDES
+    - Gladstone Moises Arantes Junior - BNDES
+  - [Ata assinada digitalmente](XXX)
