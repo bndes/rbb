@@ -71,6 +71,8 @@ Observação: O piloto será uma rede de produção, com a utilização de dados
 
 O Plano de Trabalho tem previsão de ser executado em 60 meses a partir da assinatura do [Acordo de Cooperação](documentos/ACT_TCU_BNDES_RBB.pdf) entre BNDES e TCU.
 
+Embora a iniciativa da RBB tenha sido oficialmente criada com a assinatura do Acordo em 12/04/2022, uma rede de laboratório e um grupo de debates já existem desde 2021. Várias [iniciativas e discussões técnicas](iniciativas.md) importantes ocorreram nesse período, antecipando discussões e projetos que deverão ser realizados, agora, dentro da estrutura formal. 
+
 ## Governança
 
 Informações sobre a [governança da RBB](governanca/README.md). 
