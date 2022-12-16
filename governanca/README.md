@@ -27,3 +27,20 @@ Reuniões formais realizadas.
   - [Ata assinada digitalmente](2022-11-01-Ata-Reunião-Governança-RBB-Assinada.pdf)
     - Aceitas as adesões de Prodest, Dataprev, CPqD e RNP.
     - Criação de Discord do projeto: https://discord.gg/sHSygnAUVk
+- 29/11/2022
+  - Representantes das instituições participantes:
+    - Rainério Rodrigues Leite - TCU
+    - Eldon Teixeira Coutinho - TCU
+    - Luciana Giuliani de Oliveira Reis - BNDES
+    - Sérgio Marques de Viveiros - BNDES
+    - Gladstone Moises Arantes Junior - BNDES
+    - Felipe Braga Carneiro Leão - Dataprev
+    - Claudemir Custódio Brum - Dataprev
+    - José Reynaldo Formigoni Filho - CPQD
+    - Leandro Neumann Ciuffo - RNP
+  - [Ata assinada digitalmente](2022-11-29-Ata-Reunião-Governança-RBB-Assinada.pdf)
+    - Aprovado o Regulamento da RBB. 
+    - Os Comitês criados pelo Regulamento (Comitê Executivo e Comitê Técnico) iniciam suas operações tendo o BNDES como coordenador.
+    - Será produzido um modelo de carta para designação dos representantes no Comitê Técnico.
+
+
