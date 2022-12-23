@@ -20,7 +20,7 @@
   - Leandro Neumann Ciuffo
 
 
-# Reuniões formais realizadas. 
+# Reuniões do Comitê Executivo realizadas. 
 
 - 29/11/2022
   - Representantes das instituições participantes:
