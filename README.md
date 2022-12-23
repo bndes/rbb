@@ -22,7 +22,7 @@ Nas blockchains permissionadas, em geral privadas, os nós que realizam a valida
 
 Já nas blockchains público-permissionadas, é possível buscar um melhor modelo para aplicações de interesse público: a entrega de soluções de transparência e confiança através de redes públicas; e o menor custo e menor desafio tecnológico e regulatório das redes permissionadas.
 
-## Organização
+## Formas de Participação
 
 As instituições participantes da RBB podem ser classificadas como:
 
