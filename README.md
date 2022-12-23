@@ -41,21 +41,6 @@ As instituições participantes da RBB podem ser classificadas como:
   - Têm os mesmos direitos e deveres dos partícipes aderentes associados;
   - Têm direito a voto de desempate e vetar as propostas apresentadas.
 
-A Governança da RBB é feita através de dois comitês:
-
-- **Comitê de Governança**, que é responsável por:
-  - Desenvolver e atualizar o Regulamento da RBB;
-  - Decidir sobre aceitação de novos participantes;
-  - Definir critérios para aceitação de casos de uso a serem suportados pela RBB;
-  - Definir critérios para aceitação de usuários na RBB;
-  - Analisar e definir esforços necessários para a melhor operação e evolução da RBB.
-
-- **Comitê Técnico**, que é responsável por:
-  - Acompanhar, revisar e avaliar o funcionamento da RBB;
-  - Propor ao Comitê de Governança ajustes, alterações ou iniciativas de inovação nos processos ou nos componentes técnicos da RBB;
-  - Apoiar o Comitê de Governança no acompanhamento de projetos e iniciativas em andamento;
-  - Apoiar o Comitê de Governança com levantamento e análises de dados demandados para tomada de decisões.
-
 ## Projeto
 
 A implantação da RBB será feita de forma gradativa, conforme determinado em seu Plano de Trabalho, que tem previstas as seguintes atividades:
