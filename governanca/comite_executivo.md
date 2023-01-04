@@ -9,8 +9,8 @@
   - Rainério Rodrigues Leite
   - Eldon Teixeira Coutinho
 - Prodest
-  - Giovanni Zanol de Araújo
   - Leandro Barbieri
+  - Flávio Eduardo Babilon Milanesi
 - Dataprev
   - Felipe Braga Carneiro Leão
   - Claudemir Custódio Brum
