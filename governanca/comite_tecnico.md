@@ -11,6 +11,10 @@
 - RNP 
   - Luiz Eduardo Folly de Campos - Titular. 
   - [Carda de indicação ao Comitê Técnico](2023-01-03-Indicação-Representante-RNP.pdf).
+- CPQD
+  - Elder Bruno Evaristo Correa - Titular.
+  - Luciano Souza Jesus - Suplente.
+  - [Carda de indicação ao Comitê Técnico](2023-01-06-Indicação-Representante-CPQD.pdf).
 
 # Indicação de Representante para o Comitê Técnico da RBB
 
