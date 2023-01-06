@@ -7,7 +7,7 @@
 - TCU
   - Eldon Teixeira Coutinho - Titular.
   - Valter Rogerio Messias - Suplente.
-  - [Carta de indicação ao Comitê Técnico](2023-01-05-Indicação-Representantes-TCU.pdf).
+  - [Ofício de indicação ao Comitê Técnico](2023-01-05-Indicação-Representantes-TCU.pdf).
 - RNP 
   - Luiz Eduardo Folly de Campos - Titular. 
   - [Carda de indicação ao Comitê Técnico](2023-01-03-Indicação-Representante-RNP.pdf).
