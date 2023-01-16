@@ -10,11 +10,15 @@
   - [Ofício de indicação ao Comitê Técnico](2023-01-05-Indicação-Representantes-TCU.pdf).
 - RNP 
   - Luiz Eduardo Folly de Campos - Titular. 
-  - [Carda de indicação ao Comitê Técnico](2023-01-03-Indicação-Representante-RNP.pdf).
+  - [Carta de indicação ao Comitê Técnico](2023-01-03-Indicação-Representante-RNP.pdf).
 - CPQD
   - Elder Bruno Evaristo Correa - Titular.
   - Luciano Souza Jesus - Suplente.
-  - [Carda de indicação ao Comitê Técnico](2023-01-06-Indicação-Representantes-CPQD.pdf).
+  - [Carta de indicação ao Comitê Técnico](2023-01-06-Indicação-Representantes-CPQD.pdf).
+- Dataprev
+  - Claudemir Custódio Brum - Titular.
+  - Danilo Gonçalves Lyra - Suplente.
+  - [Carta de indicação ao Comitê Técnico](2023-01-10-Indicação-Representantes-Dataprev.pdf).
 
 # Indicação de Representante para o Comitê Técnico da RBB
 
