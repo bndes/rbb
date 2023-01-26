@@ -23,3 +23,10 @@
 # Indicação de Representante para o Comitê Técnico da RBB
 
 Este é o [modelo de carta](Modelo-Carta-Indicação-Comitê-Técnico.docx) para indicação ao Comitê Técnico da RBB.
+
+# Reuniões do Comitê Técnico realizadas 
+
+- 24/01/2023
+  -  Primeira reunião realizada.
+  -  Objetivo principal: estruturar um plano de ação para o piloto da RBB.
+  -  [Apresentação](2023-01-24-Reunião Comitê Técnico.pptx)
