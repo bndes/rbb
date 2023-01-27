@@ -17,6 +17,7 @@
   - [Carta de indicação ao Comitê Técnico](2023-01-06-Indicação-Representantes-CPQD.pdf).
 - Dataprev
   - Claudemir Custódio Brum - Titular.
+  - Julio Cesar Faria Cornacchia - Suplente
   - Danilo Gonçalves Lyra - Suplente.
   - [Carta de indicação ao Comitê Técnico](2023-01-10-Indicação-Representantes-Dataprev.pdf).
 
