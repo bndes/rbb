@@ -27,6 +27,12 @@ Este é o [modelo de carta](Modelo-Carta-Indicação-Comitê-Técnico.docx) para
 
 # Reuniões do Comitê Técnico realizadas 
 
+- 31/01/2023
+  - Segunda reunião realizada.
+  - Objetivos principais:
+    - Apresentar propostas para algumas das atividades levantadas na reunião anterior.
+    - Definir responsáveis pelas frentes.
+    -  [Apresentação realizada na reunião](2023-01-31-Reunião-Comitê-Técnico.pptx)
 - 24/01/2023
   -  Primeira reunião realizada.
   -  Objetivo principal: estruturar um plano de ação para o piloto da RBB.
