@@ -19,7 +19,7 @@
   - Claudemir Custódio Brum - Titular.
   - Julio Cesar Faria Cornacchia - Suplente
   - Danilo Gonçalves Lyra - Suplente.
-  - [Carta de indicação ao Comitê Técnico](2023-01-10-Indicação-Representantes-Dataprev.pdf).
+  - [Carta de indicação ao Comitê Técnico](2023-01-19-Indicação-Representantes-Dataprev.pdf).
 
 # Indicação de Representante para o Comitê Técnico da RBB
 
