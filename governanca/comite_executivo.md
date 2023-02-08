@@ -22,6 +22,22 @@
 
 # Reuniões do Comitê Executivo realizadas. 
 
+- 19/01/2023
+  - Representantes das instituições participantes:
+    - Rainério Rodrigues Leite - TCU
+    - Eldon Teixeira Coutinho - TCU
+    - Luciana Giuliani de Oliveira Reis - BNDES
+    - Sérgio Marques de Viveiros - BNDES
+    - Gladstone Moises Arantes Junior - BNDES
+    - Felipe Braga Carneiro Leão - Dataprev
+    - Claudemir Custódio Brum - Dataprev
+    - José Reynaldo Formigoni Filho - CPQD
+    - Leandro Neumann Ciuffo - RNP
+    - Flávio Eduardo Babilon Milanesi - Prodest
+  - [Ata assinada digitalmente](2023-01-19-RBB-Ata-Reuniao-Comite-Executivo-Assinada.pdf)
+  - Destaques:
+    - Aprovada adesão da Prodemge ao Acordo da RBB.
+    - Aprovado uso de assinaturas gov.br para documentos recebidos ou produzidos pela RBB.
 - 29/11/2022
   - Representantes das instituições participantes:
     - Rainério Rodrigues Leite - TCU
@@ -34,6 +50,7 @@
     - José Reynaldo Formigoni Filho - CPQD
     - Leandro Neumann Ciuffo - RNP
   - [Ata assinada digitalmente](2022-11-29-Ata-Reunião-Governança-RBB-Assinada.pdf)
+  - Destaques:
     - Aprovado o Regulamento da RBB. 
     - Os Comitês criados pelo Regulamento (Comitê Executivo e Comitê Técnico) iniciam suas operações tendo o BNDES como coordenador.
     - Será produzido um modelo de carta para designação dos representantes no Comitê Técnico.
@@ -46,6 +63,7 @@
     - Sérgio Marques de Viveiros - BNDES
     - Gladstone Moises Arantes Junior - BNDES
   - [Ata assinada digitalmente](2022-11-01-Ata-Reunião-Governança-RBB-Assinada.pdf)
+  - Destaques:
     - Aceitas as adesões de Prodest, Dataprev, CPqD e RNP.
     - Criação de Discord do projeto: https://discord.gg/sHSygnAUVk
 - 22/08/2022
