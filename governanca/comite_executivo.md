@@ -18,6 +18,9 @@
   - José Reynaldo Formigoni Filho
 - RNP
   - Leandro Neumann Ciuffo
+- Prodemge
+  - Mônica Rocha de Azara
+  - Carlos Leonardo dos Santos Mendes
 
 
 # Reuniões do Comitê Executivo realizadas. 
