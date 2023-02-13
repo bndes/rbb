@@ -20,6 +20,10 @@
   - Julio Cesar Faria Cornacchia - Suplente
   - Danilo Gonçalves Lyra - Suplente.
   - [Carta de indicação ao Comitê Técnico](2023-01-19-Indicação-Representantes-Dataprev.pdf).
+- Prodemge
+  - Fabrício Resende Gonçalves - Titular. 
+  - Carlos Leonardo dos Santos Mendes - Suplente. 
+  - [Carta de indicação ao Comitê Técnico](2023-02-13-Indicação-Representantes-Prodemge.pdf).
 
 # Indicação de Representante para o Comitê Técnico da RBB
 
