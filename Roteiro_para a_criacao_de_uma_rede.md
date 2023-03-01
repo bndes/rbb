@@ -1,34 +1,81 @@
 # Roteiro para a criação de uma rede
 
-Para os roteiros a seguir algumas premissas precisam ser válidas, são elas:
+## Atividades em paralelo para todas as instituições
 
-1. Não haverá discovery para validador e boot nodes.
-2. Sendo assim, serão necessários 2 arquivos static-nodes.json. Um para o validador e outro para o boot.
-    * O static-nodes.json para o validador conterá apenas enodes do tipo validador e boot.
-    * O static-nodes.json para o boot conterá apenas enodes do tipo validador, boot, boot-observer e writer.
+### Pré-requisitos
 
-## Sugestão de roteiro para a criação de uma rede local na mesma máquina virtual (VM) sem permissionamento
+### Gerar enodes e endereços
+- Para cada participante, gerar concomitantemente aos outros participantes, os endereços e as chaves públicas e privadas dos próprios nós.
+[Utilizar um comando para a geração dos endereços e chaves]
 
-1. Gerar os endereços e as chaves públicas e privadas dos próprios nós; [Utilizar um comando para essa etapa]
-2. Dado um template de genesis.json, os endereços dos validadores e os enodes dos validadores e boots criados na etapa anterior, respectivamente, gerar no genesis.json o extradata e gerar o arquivo static-nodes.json correspondente ao validador e correspondente ao boot; [Utilizar um comando para gerar o genesis.json e os arquivos static-nodes.json conforme descrito nesta etapa]
-3. Levantar os nós; [Utilizar um comando para essa etapa]
+- Compartilhar enodes e endereços no arquivo XXXX. 
 
-## Sugestão de roteiro para a criação de uma rede local em diferentes máquinas virtuais sem permissionamento
+## Atividades da instituição genesis
+Explicar que uma das instituições deverá realizar atividades específicas sozinha, levantando os primeiros nós, inclusive. 
 
-1. Para cada máquina virtual, gerar concomitantemente às outras VMs, os endereços e as chaves públicas e privadas dos próprios nós. Deve-se informar nesta etapa quais tipos de nós se quer executar em cada VM; [Utilizar um comando para a geração dos endereços e chaves]
-2. Em apenas uma máquina virtual e dado um template de genesis.json, os endereços dos validadores e os enodes dos validadores e boots criados na etapa anterior, respectivamente, gerar no genesis.json o extradata e gerar o arquivo static-nodes.json correspondente ao validador e correspondente ao boot; [Utilizar um comando para gerar o genesis.json e os arquivos static-nodes.json conforme descrito nesta etapa]
-3. Caso necessário, adicionar nas regras de Firewall de cada VM, os IPs e portas dos outros nós;
-4. Em cada máquina virtual, inserir uma cópia do genesis.json e do static-nodes.json - correspondente ao nó a ser iniciado na VM - gerados na 2ª etapa;
-5. Levantar os nós; [Utilizar um comando para essa etapa]
+### Atividades prévias
+- Compartilhar o genesis.json gerado pelo validador com todas as instituições.
+- Executar sub-roteiro "Ajustar genesis e static-nodes".
+- Executar sub-roteiro "Levantar os nós".
 
-## Sugestão de roteiro para a criação de uma rede conjunta com permissionamento
+### Implantar os smart contracts de permissionamento 
+Implantar com todos os nós já permissionados.
 
-1. Para cada participante, gerar concomitantemente aos outros participantes, os endereços e as chaves públicas e privadas dos próprios nós; [Utilizar um comando para a geração dos endereços e chaves]
-2. Adicionar em um arquivo compartilhado com os outros participantes da rede, os endereços e enodes de todos os próprios nós gerados na etapa anterior;
-3. Após todos terem informado os enodes, endereços, IPs e portas dos nós no arquivo compartilhado, adicionar nas regras de Firewall, os IPs e portas de todos os outros nós;
-4. Apenas um participante (o primeiro validador a ser iniciado) e dado um template de genesis.json, o endereço desse validador e uma lista de enodes dos validadores e boots (as listas são obtidas pelo arquivo compartilhado, mencionado na 2ª etapa), respectivamente, deve-se gerar no genesis.json o extradata e gerar o arquivo static-nodes.json correspondente ao validador e correspondente ao boot; [Utilizar um comando para gerar o genesis.json e os arquivos static-nodes.json conforme descrito nesta etapa]
-5. Para todos os outros participantes, inserir uma cópia do genesis.json e do static-nodes.json correspondente ao nó a ser iniciado na VM.
-6. Levantar os nós; [Utilizar um comando para essa etapa]
+### Atividades complementares
+- Executar sub-roteiro "Levantar DApp de permissionamento".
+- Executar sub-roteiro "Levantar monitoração".
+- Executar sub-roteiro "Levantar block explorer".
+
+## Para cada outra instituição da rede
+
+- Executar sub-roteiro "Ajustar genesis e static-nodes".
+
+### Ajuste de regras de firewall
+- Abrir as próprias regras de firewall.
+
+### Atividades de cada membro que já estava na rede
+- Para cada um dos membros que já esteja na rede.
+   - Adicionar regras de firewall. 
+   - Incluir novo validador no static-node do seu validador.
+
+### Atividades após os ajustes de firewall
+- Executar sub-roteiro "Levantar os nós".
+- Executar sub-roteiro "Levantar DApp de permissionamento".
+- Executar sub-roteiro "Levantar monitoração".
+- Executar sub-roteiro "Levantar block explorer".
+
+## Sub-roteiros
+
+### Ajustar genesis e static-nodes
+- Substituir os genesis gerados pelo genesis que foi compartilhado.
+- Incluir no genesis do próprio boot a lista de todos os boots. 
+- Criar um static-nodes para o próprio validador com os validadores das outras instituições e o próprio boot (usando IP interno).
+- Criar um static-nodes para o próprio writer com o próprio boot (usando IP interno).
+
+### Levantar os nós
+Comandos a serem executados (docker up, eu acho).
+
+### Levantar DApp de permissionamento
+
+### Levantar monitoração
+
+### Levantar block explorer
+
+
+
+
+
+
+==================================================================================================
+==================================================================================================
+==================================================================================================
+- 
+- Dado um template de genesis.json, o endereço desse validador e uma lista de enodes dos validadores e boots (as listas são obtidas pelo arquivo compartilhado, mencionado na 2ª etapa), respectivamente, deve-se gerar no genesis.json o extradata e gerar o arquivo static-nodes.json correspondente ao validador e correspondente ao boot; [Utilizar um comando para gerar o genesis.json e os arquivos static-nodes.json conforme descrito nesta etapa]
+
+
+4. Após todos terem informado os enodes, endereços, IPs e portas dos nós no arquivo compartilhado, adicionar nas regras de Firewall, os IPs e portas de todos os outros nós;
+5. 6. Para todos os outros participantes, inserir uma cópia do genesis.json e do static-nodes.json correspondente ao nó a ser iniciado na VM.
+7. Levantar os nós; [Utilizar um comando para essa etapa]
 
 ## Sugestão de roteiro para a adição de um nó em uma rede conjunta
 
