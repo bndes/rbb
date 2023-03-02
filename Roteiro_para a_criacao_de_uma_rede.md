@@ -22,7 +22,7 @@ Explicar que uma das instituições deverá realizar atividades específicas soz
 Implantar com todos os nós já permissionados.
 
 ### Atividades complementares
-- Executar sub-roteiro "Levantar DApp de permissionamento".
+- Executar sub-roteiro "[Levantar DApp de permissionamento](#levantar-dapp-de-permissionamento)".
 - Executar sub-roteiro "Levantar monitoração".
 - Executar sub-roteiro "Levantar block explorer".
 
