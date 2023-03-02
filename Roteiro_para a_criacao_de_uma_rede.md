@@ -15,20 +15,20 @@ Explicar que uma das instituições deverá realizar atividades específicas soz
 
 ### Atividades prévias
 - Compartilhar o genesis.json gerado pelo validador com todas as instituições.
-- Executar sub-roteiro "Ajustar genesis e static-nodes".
-- Executar sub-roteiro "Levantar os nós".
+- Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
+- Executar sub-roteiro "[Levantar os nós](#levantar-os-n%C3%B3s)".
 
 ### Implantar os smart contracts de permissionamento 
 Implantar com todos os nós já permissionados.
 
 ### Atividades complementares
 - Executar sub-roteiro "[Levantar DApp de permissionamento](#levantar-dapp-de-permissionamento)".
-- Executar sub-roteiro "Levantar monitoração".
-- Executar sub-roteiro "Levantar block explorer".
+- Executar sub-roteiro "[Levantar monitoração](#levantar-monitora%C3%A7%C3%A3o)".
+- Executar sub-roteiro "[Levantar block explorer](#levantar-block-explorer)".
 
-## Para cada outra instituição da rede
+## Atividades para cada outra instituição da rede
 
-- Executar sub-roteiro "Ajustar genesis e static-nodes".
+- Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
 
 ### Ajuste de regras de firewall
 - Abrir as próprias regras de firewall.
@@ -39,10 +39,10 @@ Implantar com todos os nós já permissionados.
    - Incluir novo validador no static-node do seu validador.
 
 ### Atividades após os ajustes de firewall
-- Executar sub-roteiro "Levantar os nós".
-- Executar sub-roteiro "Levantar DApp de permissionamento".
-- Executar sub-roteiro "Levantar monitoração".
-- Executar sub-roteiro "Levantar block explorer".
+- Executar sub-roteiro "[Levantar os nós](#levantar-os-n%C3%B3s)".
+- Executar sub-roteiro "[Levantar DApp de permissionamento](#levantar-dapp-de-permissionamento)".
+- Executar sub-roteiro "[Levantar monitoração](#levantar-monitora%C3%A7%C3%A3o)".
+- Executar sub-roteiro "[Levantar block explorer](#levantar-block-explorer)".
 
 ## Sub-roteiros
 
