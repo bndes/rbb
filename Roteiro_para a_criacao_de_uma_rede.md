@@ -10,6 +10,11 @@
 
 - Compartilhar enodes e endereços no arquivo XXXX. 
 
+### Ajustar regras de firewall
+- Abrir regras para que o validator fale com todos os validators.
+- Abrir regras para que o boot fale com todos os boots.
+- Abrir regras para que writers externos falem com todos os boots.
+
 ## Atividades da instituição genesis
 Explicar que uma das instituições deverá realizar atividades específicas sozinha, levantando os primeiros nós, inclusive. 
 
@@ -30,13 +35,9 @@ Implantar com todos os nós já permissionados.
 
 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
 
-### Ajuste de regras de firewall
-- Abrir as próprias regras de firewall.
-
 ### Atividades de cada membro que já estava na rede
 - Para cada um dos membros que já esteja na rede.
-   - Adicionar regras de firewall. 
-   - Incluir novo validador no static-node do seu validador.
+   - Adicionar regras de firewall.
 
 ### Atividades após os ajustes de firewall
 - Executar sub-roteiro "[Levantar os nós](#levantar-os-n%C3%B3s)".
