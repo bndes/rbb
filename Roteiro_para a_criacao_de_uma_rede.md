@@ -4,7 +4,7 @@
 
 ### Pré-requisitos
 
-Antes de executar os procedimentos de levantamendo do nó, precisaremos antes instalar algumas aplicações:
+Antes de executar os procedimentos abaixo, é necessário a instalação das seguintes aplicações:
 
 - Docker
 - Truffle (Caso estiver em uma rede corporativa, instale até a versão 5.3.3 pois a mesma não conflita com o proxy da rede.)
