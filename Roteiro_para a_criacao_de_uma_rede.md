@@ -4,6 +4,14 @@
 
 ### Pré-requisitos
 
+Antes de executar os procedimentos de levantamendo do nó, precisaremos antes instalar algumas aplicações:
+
+- Docker
+- Truffle (Caso estiver em uma rede corporativa, instale até a versão 5.3.3 pois a mesma não conflita com o proxy da rede.)
+- Git
+- Node.js
+
+
 ### Gerar enodes e endereços
 - Para cada participante, gerar concomitantemente aos outros participantes, os endereços e as chaves públicas e privadas dos próprios nós.
 [Utilizar um comando para a geração dos endereços e chaves]
