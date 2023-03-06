@@ -6,10 +6,10 @@
 
 Antes de executar os procedimentos abaixo, é necessário a instalação das seguintes aplicações:
 
-- Docker
-- Truffle (*Caso estiver em uma rede corporativa, instale até a versão 5.3.3 pois a mesma não conflita com o proxy da rede.*)
-- Git
-- Node.js
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/) (*Caso estiver em uma rede corporativa, instale até a versão 5.3.3 pois a mesma não conflita com o proxy da rede.*)
+- [Git](https://git-scm.com/downloads)
+- [Node.js](https://nodejs.org/en/download/)
 
 
 ### Gerar enodes e endereços
