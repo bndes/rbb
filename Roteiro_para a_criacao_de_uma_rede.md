@@ -52,10 +52,10 @@ Vamos considerar que o nome da rede é atribuída à variável $rede, o que ser�
 
 Logo, sugere-se o uso do seguinte arquivo: https://github.com/RBBNet/particpantes/{$rede}/enodes.md, com o formato sugerido abaixo:
 
-| Membro    | Tipo de Nó    |Enode                                       |Account            |
-|-----------|---------------|--------------------------------------------|-------------------|
-|BNDES      | Boot          |`enode://91ca8......3b@<IP address>:<port>` |                   |
-|TCU        | Validator     |`enode://2b5......0c59@<IP address>:<port>` |0x5bcd....a4861984b|
+| Membro    | Tipo de Nó    |Enode                                     |Account            |
+|-----------|---------------|------------------------------------------|-------------------|
+|BNDES      | Boot          |`enode://91c......3b@<IP address>:<port>` |                   |
+|TCU        | Validator     |`enode://2b5......59@<IP address>:<port>` |0x5bcd....a4861984b|
 
 ### 1.5 - Ajustar regras de firewall
 
