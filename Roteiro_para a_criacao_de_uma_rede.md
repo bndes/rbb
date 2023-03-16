@@ -43,14 +43,19 @@ Itens gerados:
    
 ### 1.4 - Compartilhar enodes e endereços
 
-Insira no [arquivo](https://github.com/RBBNet/participantes/blob/main/NoIp.md) compartilhado os `enodes` e os `endereços (Account)`  de cada máquina para que todas as instituições conheçam as informações um dos outros, como no exemplo abaixo:
+Insira num arquivo compartilhado os `enodes` e os `endereços (Account)` de cada máquina para que todas as instituições conheçam as informações umas das outras. 
 
-| Membro    | Papel    |Enode     |Account    |
-|-----------|----------|----------|-----------|
-|BID        | Boot     |`enode://91ca8......3b@35.188.197.198:60606`||
-|BID        | Validator 1|`enode://2b5......0c59@34.68.63.164:60606`|0x5bcd....a4861984b|
-|BID        | Validator 2|`enode://1e6......cbc0@34.71.181.215:60606`|0x285....97d9dfc3e7|
+#### Sugestão de compartilhamento
+Uma opção é usar usar um arquivo no repositório https://github.com/RBBNet/participantes, privado apenas para os participantes da rede. Nele, deve haver uma pasta que corresponda à rede que está sendo implantada. Esta pasta conterá alguns arquivos compartilhados pelo grupo. 
 
+Vamos considerar que o nome da rede é atribuída à variável $rede, o que será útil em alguns momentos. Assim, se rede em implantação é a rede de laboratório, temos $rede="lab". Se é a rede piloto, $rede="piloto". 
+
+Logo, sugere-se o uso do seguinte arquivo: https://github.com/RBBNet/particpantes/{$rede}/enodes.md, com o formato sugerido abaixo:
+
+| Membro    | Tipo de Nó    |Enode                                       |Account            |
+|-----------|---------------|--------------------------------------------|-------------------|
+|BNDES      | Boot          |`enode://91ca8......3b@<IP address>:<port>` |                   |
+|TCU        | Validator     |`enode://2b5......0c59@<IP address>:<port>` |0x5bcd....a4861984b|
 
 ### 1.5 - Ajustar regras de firewall
 
