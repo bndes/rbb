@@ -1,49 +1,106 @@
+# Roteiro EM DESENVOLVIMENTO
+
 # Roteiro para a criação de uma rede
 
-## Atividades em paralelo para todas as instituições
+Esse roteiro tem como objetivo levantar uma cópia compatível com a RBB do zero. 
 
-### Pré-requisitos
+Após a existência de uma versão inicial da rede, a adição de novas instituições **deverá seguir outro roteiro**. 
+
+É fácil confundir, pois o roteiro tem como premissas que as instituições entrarão na rede uma a uma. Porém, não é possível usar o roteiro para adesão de uma instituição após a existência da rede porque, a seção 1 é para ser executada por todas as instituições em paralelo. Uma nova instituição após a rede já existir não terá executado aqueles passos.  
+
+## 1 - Atividades iniciais a serem executadas em paralelo para todas as instituições
+
+As atividades desta seção devem ser executadas no início da implantação da rede por todas as instituições que irão aderir a esta.
+
+### 1.1 - Pré-requisitos
 
 Antes de executar os procedimentos abaixo, é necessário a instalação das seguintes aplicações:
 
 - [Docker](https://www.docker.com/products/docker-desktop/)
-- [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/) (*Caso estiver em uma rede corporativa, instale até a versão 5.3.3 pois a mesma não conflita com o proxy da rede.*)
 - [Git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/en/download/)
 
+### 1.2 - Clonar esse repositório
 
-### Gerar enodes e endereços
+Execute os comandos:
+```bash
+git clone https://github.com/RBBNet/start-network
+cd start-network
+```
+
+### 1.3 - Gerar enodes e endereços
 - Para cada participante, gerar concomitantemente aos outros participantes, os endereços e as chaves públicas e privadas dos próprios nós.
-[Utilizar um comando para a geração dos endereços e chaves]
 
-- Compartilhar enodes e endereços no arquivo XXXX. 
+Execute o comando/script <span style="color: yellow">-----</span> para gerar.
 
-### Ajustar regras de firewall
-- Abrir regras para que o validator fale com todos os validators.
-- Abrir regras para que o boot fale com todos os boots.
-- Abrir regras para que writers externos falem com todos os boots.
+Itens gerados:
+- Par de chave pública/privada (`key.pub / key`)
+	- Caminho da chave privada: `./nodes/<nome-do-nó>/`<font color="green">key</font>
+	- Caminho da chave pública: *`./nodes/<nome-do-nó>/`*<font color="green">key.pub</font>
+- Endereço do nó
+	- Localizado em: `./nodes/<nome-do-nó>/node.address`
+- Enode (`<chave-pública>@<ip>:<porta>`)
+   
+### 1.4 - Compartilhar enodes e endereços
 
-## Atividades da instituição genesis
-Explicar que uma das instituições deverá realizar atividades específicas sozinha, levantando os primeiros nós, inclusive. 
+Insira no [arquivo](https://github.com/RBBNet/participantes/blob/main/NoIp.md) compartilhado os `enodes` e os `endereços (Account)`  de cada máquina para que todas as instituições conheçam as informações um dos outros, como no exemplo abaixo:
 
-### Atividades prévias
-- Compartilhar o genesis.json gerado pelo validador com todas as instituições.
-- Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
-- Executar sub-roteiro "[Levantar os nós](#levantar-os-n%C3%B3s)".
+| Membro    | Papel    |Enode     |Account    |
+|-----------|----------|----------|-----------|
+|BID        | Boot     |`enode://91ca8......3b@35.188.197.198:60606`||
+|BID        | Validator 1|`enode://2b5......0c59@34.68.63.164:60606`|0x5bcd....a4861984b|
+|BID        | Validator 2|`enode://1e6......cbc0@34.71.181.215:60606`|0x285....97d9dfc3e7|
 
-### Implantar os smart contracts de permissionamento 
+
+### 1.5 - Ajustar regras de firewall
+
+IP externo do validator `(origem)` <--> IP de todos os validators das outras instituições `(destino)`  
+IP do boot node `(origem)` <--> IP de todos os boot nodes das outras instituições `(destino)`  
+IP do boot node `(origem)` <---> IP de todos os writers **apenas dos partícipes parceiros** `(destino)`  
+
+
+## 2 - Atividades a serem executadas no início da rede, pela instituição inicial
+Os passos 
+Caso você **não** seja a instituição inicial pule para a [seção 3](#3---atividades-para-cada-outra-institui%C3%A7%C3%A3o-da-rede).
+
+A instituição inicial desempenhará as primeiras atividades da rede. É ela quem levantará os primeiros nós antes de todos os outros.
+
+Com a execução do script da seção anterior, foram gerados arquivos. Dentre eles, o genesis.json que se encontra no caminho `.env.configs/genesis.json`. 
+
+### 2.1 - Compartilhar genesis.json
+Compartilhe o arquivo `genesis.json` com as outras instituições de acordo com o tipo de rede que está levantando no seguinte diretório do github:
+Caso esteja levantando uma rede para **laboratório**, use [este](https://github.com/RBBNet/participantes/tree/main/lab) diretório.
+Caso esteja levantando uma rede **piloto**, use [este](https://github.com/RBBNet/participantes/tree/main/piloto) diretório.
+
+### 2.2 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
+
+### 2.3 - Levantar nós
+
+```bash
+docker-compose up -d
+```
+
+### 2.4 - Implantar os smart contracts de permissionamento 
 Implantar com todos os nós já permissionados.
 
-### Atividades complementares
+### 2.5 - Atividades complementares
 - Executar sub-roteiro "[Levantar DApp de permissionamento](#levantar-dapp-de-permissionamento)".
 - Executar sub-roteiro "[Levantar monitoração](#levantar-monitora%C3%A7%C3%A3o)".
 - Executar sub-roteiro "[Levantar block explorer](#levantar-block-explorer)".
 
-## Atividades para cada outra instituição da rede
 
-- Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
+## 3 - Atividades a serem executadas durante a entrada de cada instituição na rede (com exceção da primeira)
 
-### Atividades de cada membro que já estava na rede
+Após o início da rede pela instituição inicial, as outras instituições vão entrar uma a uma. Os passos dessa seção serão executados a cada instituição que adere. 
+
+Observe, porém, que, durante a adesão de uma instituição, há atividades que serão executadas por **todas as instituições**. Logo, esta não é uma seção apenas da institução que está aderindo e, sim, a seção a ser seguida durante a adesão de cada instituição. O corte é temporal, portanto.
+
+
+### 3.1 - Instituição aderente 
+
+Executar sub-roteiro "[Ajustar genesis e static-nodes](#ajustar-genesis-e-static-nodes)".
+
+### 3.2 - Atividades de cada membro que já estava na rede
 - Para cada um dos membros que já esteja na rede.
    - Adicionar regras de firewall.
 
@@ -53,16 +110,56 @@ Implantar com todos os nós já permissionados.
 - Executar sub-roteiro "[Levantar monitoração](#levantar-monitora%C3%A7%C3%A3o)".
 - Executar sub-roteiro "[Levantar block explorer](#levantar-block-explorer)".
 
-## Sub-roteiros
+## 4 - Sub-roteiros
 
-### Ajustar genesis e static-nodes
-- Substituir os genesis gerados pelo genesis que foi compartilhado.
+### 4.1 - Ajustar genesis e static-nodes
 - Incluir no genesis do próprio boot a lista de todos os boots. 
 - Criar um static-nodes para o próprio validador com os validadores das outras instituições e o próprio boot (usando IP interno).
 - Criar um static-nodes para o próprio writer com o próprio boot (usando IP interno).
 
-### Levantar os nós
-Comandos a serem executados (docker up, eu acho).
+#### 4.1.1 - Ajustes no genesis.json do boot 
+
+Inclua no genesis.json os enodes de todos os outros boots da rede.
+
+**Modelo:**
+```json
+"bootnodes" : [ 
+"enode://<chave-pública-SEM-0x>@<ip>:<porta>", 
+"enode://<chave-pública-SEM-0x>@<ip>:<porta>" 
+]
+```
+
+No arquivo genesis.json ficará da seguinte maneira: 👇  
+![Conteúdo exemplo do arquivo genesis.json](https://i.imgur.com/MPgJljO.png)
+
+##### 4.1.2 - Ajuestes nos static-nodes
+
+Ajustar o arquivo `.env.configs/statis-nodes.json` dos writers e validators.
+
+#### Nós validators
+
+Nos **validators**, inclua no arquivo `static-nodes.json` todos os enodes dos outros validators com o **IP externo** e o enode do bootnode com o **IP interno**.
+
+**Modelo:**
+```json
+[ 
+"enode://<chave-pública-SEM-0x>@<ip-público>:<porta>", 
+"enode://<chave-pública-SEM-0x>@<ip-público>:<porta>",
+...
+"enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
+]
+```
+
+#### Nós writers
+
+Da mesma forma, nos **writers** inclua no arquivo `static-nodes.json` o enode do boot interno usando o **IP interno**.
+
+(Validador interno --> demais validadores) `usar IP público`
+(Validador interno --> bootnode interno) `usar IP privado`
+(Writer interno --> bootnode interno) `usar IP privado`
+
+![](https://i.imgur.com/BwHFxsf.png)
+
 
 ### Levantar DApp de permissionamento
 
