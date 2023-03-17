@@ -67,10 +67,10 @@ O diagrama a seguir pode ser útil na compreensão dos próximos passos.
 
 ![](https://i.imgur.com/BwHFxsf.png) 
 
-**As seguintes regras de firewall deverão ser configuradas:**
+**As seguintes regras de firewall deverão ser configuradas:**  
 IP externo do validator `(origem)` <--> IP de todos os validators das outras instituições `(destino)`  
 IP do boot node `(origem)` <--> IP de todos os boot nodes das outras instituições `(destino)`  
-IP do boot node `(origem)` <---> IP de todos os writers **apenas dos partícipes parceiros** `(destino)`  
+IP do boot node `(origem)` <---> IP de todos os writers **apenas dos partícipes parceiros** `(destino)`    
 
 
 ## 2 - Atividades a serem executadas no início da rede, pela instituição inicial
