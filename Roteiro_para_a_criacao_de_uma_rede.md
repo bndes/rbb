@@ -95,11 +95,11 @@ docker-compose up -d
 
 Implantar com todos os nós já permissionados.
 
-### 2.5 - Atividades complementares
-- Executar sub-roteiro "[Levantar DApp de permissionamento](#levantar-dapp-de-permissionamento)".
-- Executar sub-roteiro "[Levantar monitoração](#levantar-monitora%C3%A7%C3%A3o)".
-- Executar sub-roteiro "[Levantar block explorer](#levantar-block-explorer)".
+### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)".
 
+### 2.6 - Executar sub-roteiro "[Levantar monitoração](#43---levantar-monitora%C3%A7%C3%A3o)".
+
+### 2.7 - Executar sub-roteiro "[Levantar block explorer](#44---levantar-block-explorer)".
 
 ## 3 - Atividades a serem executadas durante a entrada de cada instituição na rede (com exceção da primeira)
 
@@ -112,11 +112,11 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 ```bash
 docker-compose up -d
 ```
-### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---Levantar-DApp-de-permissionamento)".
+### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)".
 
-### 3.4 - Executar sub-roteiro "[Levantar monitoração](#43------Levantar-monitora%C3%A7%C3%A3o)".
+### 3.4 - Executar sub-roteiro "[Levantar monitoração](#43---levantar-monitora%C3%A7%C3%A3o)".
 
-### 3.5 - Executar sub-roteiro "[Levantar block explorer](#44---Levantar-block-explorer)".
+### 3.5 - Executar sub-roteiro "[Levantar block explorer](#44---levantar-block-explorer)".
 
 ## 4 - Sub-roteiros
 
