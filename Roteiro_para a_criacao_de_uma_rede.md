@@ -20,7 +20,7 @@ Antes de executar os procedimentos abaixo, é necessário a instalação das seg
 - [Git](https://git-scm.com/downloads)
 - [Node.js](https://nodejs.org/en/download/)
 
-### 1.2 - Clonar esse repositório
+### 1.2 - Clonar o repositório `start-network`
 
 Execute os comandos:
 ```bash
