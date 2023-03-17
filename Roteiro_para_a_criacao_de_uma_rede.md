@@ -75,7 +75,7 @@ IP do boot node `(origem)` <---> IP de todos os writers **apenas dos partícipes
 
 ## 2 - Atividades a serem executadas no início da rede, pela instituição inicial
 
-Caso você **não** seja a instituição inicial pule para a [seção 3](#3---atividades-para-cada-outra-institui%C3%A7%C3%A3o-da-rede).
+Caso você **não** seja a instituição inicial pule para a [seção 3](#3---atividades-a-serem-executadas-durante-a-entrada-de-cada-institui%C3%A7%C3%A3o-na-rede-com-exce%C3%A7%C3%A3o-da-primeira).
 
 A instituição inicial desempenhará as primeiras atividades da rede. É ela quem levantará os primeiros nós antes de todos os outros e, em especial, é a responsável por implantar os *smart contracts* de permissionamento.
 
