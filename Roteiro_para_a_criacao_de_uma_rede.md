@@ -1,4 +1,5 @@
 # Roteiro para a criação de uma rede
+![](https://i.imgur.com/9YXJZ2s.png)
 
 Este roteiro tem como objetivo levantar uma cópia compatível com a RBB do zero. 
 
@@ -177,4 +178,7 @@ Da mesma forma, nos **writers** inclua no arquivo `.env.configs/statis-nodes.jso
 ### 4.3 - Levantar monitoração
 
 ### 4.4 - Levantar block explorer
+
+
+
 
