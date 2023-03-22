@@ -25,6 +25,24 @@
 
 # Reuniões do Comitê Executivo realizadas. 
 
+- 16/02/2023
+  - Representantes das instituições participantes:
+    - Eldon Teixeira Coutinho - TCU
+    - Luciana Giuliani de Oliveira Reis - BNDES
+    - Sérgio Marques de Viveiros - BNDES
+    - Gladstone Moises Arantes Junior - BNDES
+    - Felipe Braga Carneiro Leão - Dataprev
+    - Claudemir Custódio Brum - Dataprev
+    - José Reynaldo Formigoni Filho - CPQD
+    - Leandro Neumann Ciuffo - RNP
+    - Flávio Eduardo Babilon Milanesi - Prodest
+    - Leandro Barbieri - Prodest
+    - Carlos Leonardo dos Santos Mendes - Prodemge
+    - Mônica Rocha de Azara - Prodemge
+  - [Ata assinada digitalmente](2023-02-16-RBB-Ata-Reunião-Comitê-Executivo-Assinada.pdf)
+  - Destaques:
+    - Relatos sobre as iniciativas em andamento no Comitê Técnico.
+    - Ajustes no Regulamento para aceitação de assinaturas gov.br. 
 - 19/01/2023
   - Representantes das instituições participantes:
     - Rainério Rodrigues Leite - TCU
