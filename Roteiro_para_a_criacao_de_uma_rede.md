@@ -52,19 +52,31 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
 Levantar apenas 1 nó Validator em uma VM:
 
 ```bash
-VALIDATOR_COUNT=1 BOOT_COUNT=0 WRITER_COUNT=0 commands/blockchain-setup
+VALIDATOR_COUNT=1 \
+BOOT_COUNT=0 \
+WRITER_COUNT=0 \
+commands/blockchain-setup
+
 ```
 
 Levantar apenas 1 nó Boot em uma VM:
 
 ```bash
-VALIDATOR_COUNT=0 BOOT_COUNT=1 WRITER_COUNT=0 commands/blockchain-setup
+VALIDATOR_COUNT=0 \
+BOOT_COUNT=1 \
+WRITER_COUNT=0 \
+commands/blockchain-setup
+
 ```
 
 Levantar apenas 1 nó Writer em uma VM:
 
 ```bash
-VALIDATOR_COUNT=0 BOOT_COUNT=0 WRITER_COUNT=1 commands/blockchain-setup
+VALIDATOR_COUNT=0 \
+BOOT_COUNT=0 \
+WRITER_COUNT=1 \
+commands/blockchain-setup
+
 ```
 
 Itens gerados:
