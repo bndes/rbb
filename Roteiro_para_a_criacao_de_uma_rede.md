@@ -54,8 +54,6 @@ Levantar apenas 1 nó Validator em uma VM:
 
 ```csharp
 VALIDATOR_COUNT=1 \
-BOOT_COUNT=0 \
-WRITER_COUNT=0 \
 commands/blockchain-setup
 
 ```
@@ -63,9 +61,7 @@ commands/blockchain-setup
 Levantar apenas 1 nó Boot em uma VM:
 
 ```csharp
-VALIDATOR_COUNT=0 \
 BOOT_COUNT=1 \
-WRITER_COUNT=0 \
 commands/blockchain-setup
 
 ```
@@ -73,8 +69,6 @@ commands/blockchain-setup
 Levantar apenas 1 nó Writer em uma VM:
 
 ```csharp
-VALIDATOR_COUNT=0 \
-BOOT_COUNT=0 \
 WRITER_COUNT=1 \
 commands/blockchain-setup
 
@@ -120,13 +114,13 @@ O diagrama a seguir pode ser útil na compreensão dos próximos passos.
 
 - Todos os validators devem conseguir se conectar entre si. Por isso, para seus validators:
   - Permita conexão (inbound) no `IP_Externo:Porta` do seu validator a partir dos outros validators que integram a RBB.
-  - Permita conexão (outbound) para os `IP_Externos:Portas` dos outros validators que integram a RBB.
+  - Permita conexão (outbound) para os `IPs_Externos:Portas` dos outros validators que integram a RBB.
 - Todos os boots devem conseguir se conectar entre si. Por isso, para seus boots:
   - Permita conexão (inbound) no `IP_Externo:Porta` do seu boot a partir dos outros boots que integram a RBB.
-  - Permita conexão (outbound) para os `IP_Externos:Portas` dos outros boots que integram a RBB.
+  - Permita conexão (outbound) para os `IPs_Externos:Portas` dos outros boots que integram a RBB.
 - Todos os boots devem conseguir se conectar com os writers (**apenas dos partícipes parceiros**). Por isso, para seus boots:
   - Permita conexão (inbound) no `IP_Externo:Porta` do seu boot a partir dos writers (**apenas dos partícipes parceiros**) que integram a RBB.
-  - Permita conexão (outbound) para os `IP_Externos:Portas` dos writers (**apenas dos partícipes parceiros**) que integram a RBB.
+  - Permita conexão (outbound) para os `IPs_Externos:Portas` dos writers (**apenas dos partícipes parceiros**) que integram a RBB.
 
 ## 2 - Atividades a serem executadas no início da rede pela instituição inicial
 
@@ -134,9 +128,9 @@ A instituição inicial desempenhará as primeiras atividades da rede. É ela qu
 
 Caso você **não** seja a instituição inicial pule para a [seção 3](#3---atividades-a-serem-executadas-durante-a-entrada-de-cada-institui%C3%A7%C3%A3o-na-rede-com-exce%C3%A7%C3%A3o-da-primeira).
 
-### 2.1 - Compartilhar genesis.json
+### 2.1 - Compartilhar genesis.json do nó validator
 
-A execução do script da seção anterior gerou alguns arquivos. Dentre eles, o `genesis.json` que se encontra no caminho `.env.configs/genesis.json`.  Compartilhe-o com as outras instituições, incluindo-o na seguinte localização do Github:
+A execução do script da seção anterior gerou alguns arquivos. Dentre eles, o `genesis.json` que se encontra no caminho `.env.configs/genesis.json`. Compartilhe o arquivo `genesis.json` **apenas do nó validator** com as outras instituições, incluindo-o na seguinte localização do Github:
 
 `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/genesis.json`
 
