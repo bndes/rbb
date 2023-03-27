@@ -33,13 +33,16 @@ Antes de executar os procedimentos abaixo, é necessário instalar as seguintes 
   chmod a+x /usr/local/bin/jq
   ```
 
-### 1.2 - Clonar o repositório `start-network`
+### 1.2 - Baixar o repositório `start-network`
 
 Execute os seguintes comandos:
 
 ```bash
-git clone https://github.com/RBBNet/start-network
+curl https://github.com/RBBNet/start-network/releases/download/0.1/start-network.tar.gz -LO
+tar zxf start-network.tar.gz
+rm start-network.tar.gz
 cd start-network
+
 ```
 
 Daqui para frente, considere que todos os comandos são executados dentro do diretório start-network.
