@@ -1,7 +1,7 @@
 
 # Roteiro para a criação de uma rede
 <picture>
-  <img src="https://i.imgur.com/C4FMtOZ.png">
+  <img src="https://i.imgur.com/C4FMtOZ.png"></img>
 </picture>
 
 Este roteiro tem como objetivo levantar uma cópia compatível com a RBB do zero.
