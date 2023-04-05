@@ -1,5 +1,6 @@
 
 # Roteiro para a criação de uma rede
+
 <picture>
   <img src="https://i.imgur.com/C4FMtOZ.png"></img>
 </picture>
@@ -147,7 +148,58 @@ docker-compose up -d
 
 ### 2.4 - Implantar os smart contracts de permissionamento
 
-Implantar com todos os nós já permissionados.
+#### 2.4.1 - Pré-requisitos
+
+- [Node.js](https://nodejs.org/en/download/)
+
+- [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/)
+
+  - Em um ambiente corporativo, instale a versão 5.3.3 do Truffle com o seguinte comando:
+
+    ```bash
+    npm install -g truffle@5.3.3
+    ```
+
+    As versões acima da 5.3.3 não funcionam em um ambiente corporativo.
+
+#### 2.4.2 - Preparar o Deploy
+
+- Baixe o arquivo ZIP em: <https://github.com/RBBNet/rbb/blob/master/permissioningDeploy.zip>
+
+- Descompacte o arquivo em um diretório e acesse o diretório `permissioningDeploy`.
+
+```bash
+unzip permissioningDeploy.zip
+cd permissioningDeploy
+```
+
+- Crie um arquivo .env e defina as variáveis de ambiente neste arquivo conforme template abaixo:
+
+```.env
+NODE_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000009999
+ACCOUNT_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000008888
+BESU_NODE_PERM_ACCOUNT=627306090abaB3A6e1400e9345bC60c78a8BEf57
+BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
+BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
+CHAIN_ID=1337
+INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
+```
+
+Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
+
+Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
+
+Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
+
+Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
+
+Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`.
+
+#### 2.4.3 - Executar o Deploy
+
+```bash
+truffle migrate --reset --network besu
+```
 
 ### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
 
@@ -230,6 +282,24 @@ Modelo:
 Da mesma forma, nos **writers** inclua no arquivo `.env.configs/statis-nodes.json` o enode do boot interno usando o **IP interno**.
 
 ### 4.2 - Levantar DApp de permissionamento
+
+- Baixe o arquivo ZIP em: <https://github.com/RBBNet/rbb/blob/master/permissioningDapp.zip>
+
+- Descompacte o arquivo em um diretório que estará acessível pelo servidor web.
+
+```bash
+unzip permissioningDapp.zip
+```
+
+- Adicione um arquivo "config.json" no diretório `permissioningDapp` contendo as seguintes informações:
+
+```json
+{
+        "accountIngressAddress":  "<Endereço do contrato account ingress>",
+        "nodeIngressAddress": "<Endereço do contrato node ingress>",
+        "networkId": "<ChainID da rede>"
+}
+```
 
 ### 4.3 - Levantar monitoração
 
