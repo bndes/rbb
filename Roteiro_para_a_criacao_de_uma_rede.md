@@ -148,19 +148,9 @@ docker-compose up -d
 
 ### 2.4 - Implantar os smart contracts de permissionamento
 
-#### 2.4.1 - Pré-requisitos
+#### 2.4.1 - Pré-requisito
 
 - [Node.js](https://nodejs.org/en/download/)
-
-- [Truffle](https://trufflesuite.com/docs/truffle/how-to/install/)
-
-  - Em um ambiente corporativo, instale a versão 5.3.3 do Truffle com o seguinte comando:
-
-    ```bash
-    npm install -g truffle@5.3.3
-    ```
-
-    As versões acima da 5.3.3 não funcionam em um ambiente corporativo.
 
 #### 2.4.2 - Preparar o Deploy
 
@@ -171,6 +161,12 @@ docker-compose up -d
 ```bash
 unzip permissioningDeploy.zip
 cd permissioningDeploy
+```
+
+- Execute o seguinte comando para instalar as dependências:
+
+```bash
+yarn install
 ```
 
 - Crie um arquivo .env e defina as variáveis de ambiente neste arquivo conforme template abaixo:
@@ -198,7 +194,7 @@ Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos o
 #### 2.4.3 - Executar o Deploy
 
 ```bash
-truffle migrate --reset --network besu
+yarn truffle migrate --reset --network besu
 ```
 
 ### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
