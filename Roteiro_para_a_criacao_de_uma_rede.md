@@ -17,80 +17,68 @@ As atividades desta seção devem ser executadas no início da implantação da 
 
 ### 1.1 - Pré-requisitos
 
-Antes de executar os procedimentos abaixo, é necessário instalar as seguintes aplicações:
-
 - [Docker](https://www.docker.com/products/docker-desktop/)
-- [Git](https://git-scm.com/downloads)
-- Curl
-  
-  ```bash
-  apt-get install curl
-  ```
-
-- Jq
+- cURL
 
   ```bash
-  curl -#SLo/usr/local/bin/jq https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-  chmod a+x /usr/local/bin/jq
+  sudo apt install curl
   ```
 
 ### 1.2 - Baixar o repositório `start-network`
 
-Execute os seguintes comandos:
+- Execute os seguintes comandos:
 
-```bash
-curl https://github.com/RBBNet/start-network/releases/download/0.1/start-network.tar.gz -LO
-tar zxf start-network.tar.gz
-rm start-network.tar.gz
-cd start-network
-
-```
+  ```bash
+  curl -LO https://github.com/RBBNet/start-network/releases/download/0.1/start-network.tar.gz
+  tar xzf start-network.tar.gz
+  rm start-network.tar.gz
+  cd start-network
+  ```
 
 Daqui para frente, considere que todos os comandos são executados dentro do diretório start-network.
 
-### 1.3 - Gerar enodes e endereços
+### 1.3 - Preparar arquivos
 
 Todos os participantes deverão gerar, ao mesmo tempo, os endereços e as chaves públicas e privadas dos próprios nós.
 
-Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do nó correspondente ao tipo de nó a ser levantado na VM. Exemplo:
+Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do nó correspondente ao tipo de nó a ser levantado na VM, além de outros arquivos necessários para iniciar os nós. Exemplo:
 
-Levantar apenas 1 nó Validator em uma VM:
+- Levantar apenas 1 nó Validator em uma VM:
 
-```csharp
-VALIDATOR_COUNT=1 \
-commands/blockchain-setup
+  ```bash
+  ./rbb-cli node create validator
+  ./rbb-cli config render-templates
+  ```
 
-```
+- Levantar apenas 1 nó Boot em uma VM:
 
-Levantar apenas 1 nó Boot em uma VM:
+  ```bash
+  ./rbb-cli node create boot
+  ./rbb-cli config render-templates
+  ```
 
-```csharp
-BOOT_COUNT=1 \
-commands/blockchain-setup
+- Levantar apenas 1 nó Writer em uma VM:
 
-```
+  ```bash
+  ./rbb-cli node create writer
+  ./rbb-cli config render-templates
+  ```
 
-Levantar apenas 1 nó Writer em uma VM:
-
-```csharp
-WRITER_COUNT=1 \
-commands/blockchain-setup
-
-```
-
-Itens gerados:
+Após a execução dos comandos acima alguns itens foram gerados e devem ser mencionados:
 
 - Par de chaves pública/privada:
   - Caminho da chave privada: `.env.configs/nodes/<nome-do-nó>/key`
   - Caminho da chave pública: `.env.configs/nodes/<nome-do-nó>/key.pub`
 - Endereço do nó (account):
-  - Localizado em: `.env.configs/nodes/<nome-do-nó>/node.address`
-- Enode:
-  - É uma string que serve de identificador para o nó e que será usado no roteiro.
-  - Sua formação é o que segue: `enode://<chave-pública-SEM-0x>@<ip>:<porta>`.
-  - Observe que o IP utilizado poderá ser diferente para o mesmo nó, pois haverá situações onde serão usados o IP externo e, outras, onde serão usados os IPs internos. Este roteiro chamará atenção para cada caso.
+  - Localizado em: `.env.configs/nodes/<nome-do-nó>/node.id`
+- docker-compose.yml
 
 ### 1.4 - Compartilhar enodes e endereços
+
+O enode é uma string que serve de identificador para o nó e que será usado neste roteiro.
+
+- Sua formação é o que segue: `enode://<chave-pública-SEM-0x>@<ip>:<porta>`.
+- Observe que o IP utilizado poderá ser diferente para o mesmo nó, pois haverá situações onde serão usados o IP externo e, outras, onde serão usados os IPs internos. Este roteiro chamará atenção para cada caso.
 
 As instituições devem compartilhar num arquivo, os `enodes` e os `endereços (account)` de cada nó para que todas as instituições conheçam as informações de todos os nós da rede e possam conectar esses nós conforme a topologia da rede.
 
@@ -134,9 +122,15 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
 ### 2.1 - Compartilhar genesis.json do nó validator
 
-A execução do script da seção anterior gerou alguns arquivos. Dentre eles, o `genesis.json` que se encontra no caminho `.env.configs/genesis.json`. Compartilhe o arquivo `genesis.json` **apenas do nó validator** com as outras instituições, incluindo-o na seguinte localização do Github:
+- **Apenas no nó validator**, execute o seguinte comando para criar um arquivo `genesis.json` com o validator definido no extradata:
 
-`https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/genesis.json`
+  ```bash
+  ./rbb-cli genesis create --validators validator
+  ```
+
+- Disponibilize o arquivo `genesis.json` do nó validator, localizado em `.env.configs/genesis.json`, com as outras instituições no seguinte caminho do repositório:
+
+  `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/genesis.json`
 
 ### 2.2 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#41---ajustar-genesis-e-static-nodes)"
 
@@ -154,42 +148,42 @@ docker-compose up -d
 
 #### 2.4.2 - Preparar o Deploy
 
-- Baixe o arquivo ZIP em: <https://github.com/RBBNet/rbb/blob/master/permissioningDeploy.zip>
+- Execute os seguintes comandos:
 
-- Descompacte o arquivo em um diretório e acesse o diretório `permissioningDeploy`.
-
-```bash
-unzip permissioningDeploy.zip
-cd permissioningDeploy
-```
+  ```bash
+  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDeploy.tar.gz
+  tar xzf permissioningDeploy.tar.gz
+  rm permissioningDeploy.tar.gz
+  cd permissioningDeploy
+  ```
 
 - Execute o seguinte comando para instalar as dependências:
 
-```bash
-yarn install
-```
+  ```bash
+  yarn install
+  ```
 
 - Crie um arquivo .env e defina as variáveis de ambiente neste arquivo conforme template abaixo:
 
-```.env
-NODE_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000009999
-ACCOUNT_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000008888
-BESU_NODE_PERM_ACCOUNT=627306090abaB3A6e1400e9345bC60c78a8BEf57
-BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
-BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
-CHAIN_ID=1337
-INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
-```
+  ```.env
+  NODE_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000009999
+  ACCOUNT_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000008888
+  BESU_NODE_PERM_ACCOUNT=627306090abaB3A6e1400e9345bC60c78a8BEf57
+  BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
+  BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
+  CHAIN_ID=1337
+  INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
+  ```
 
-Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
+  Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
 
-Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
+  Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
 
-Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
+  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
 
-Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
+  Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
 
-Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`.
+  Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`.
 
 #### 2.4.3 - Executar o Deploy
 
@@ -229,9 +223,10 @@ docker-compose up -d
 
 As seguintes atividades serão executadas nesse sub-roteiro:
 
-- Incluir no genesis.json do boot a lista de todos os boots (usando IPs externos).
-- Criar um arquivo static-nodes.json no validator com os validators das outras instituições (usando IPs externos) e com o boot da própria instituição (usando IP interno).
-- Criar um arquivo static-nodes.json no writer apenas com o boot da própria instituição (usando IP interno).
+- Inclusão do arquivo genesis.json.
+- Inclusão da lista de todos os boots (usando IPs externos) no genesis.json do boot.
+- Criação de um arquivo static-nodes.json no validator com os validators das outras instituições (usando IPs externos) e com o boot da própria instituição (usando IP interno).
+- Criação de um arquivo static-nodes.json no writer apenas com o boot da própria instituição (usando IP interno).
 
 Os passos acima serão detalhados a seguir.
 
@@ -239,63 +234,78 @@ Os enodes que serão inseridos nos arquivos genesis.json e static-nodes.json pod
 
 #### 4.1.1 - Ajustes no genesis.json do boot
 
-Inclua na seção apropriada (conforme modelo) do arquivo `.env.configs/genesis.json`, os enodes de todos os **outros** boots da rede.
+- Inclua em `.env.configs/`, o arquivo `genesis.json` localizado em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/genesis.json`.
 
-Modelo:
+- Inclua na seção apropriada (conforme modelo) do arquivo `.env.configs/genesis.json`, os enodes de todos os **outros** boots da rede.
 
-```json
-"bootnodes" : 
-[ 
-"enode://<chave-pública-SEM-0x>@<ip>:<porta>", 
-"enode://<chave-pública-SEM-0x>@<ip>:<porta>" 
-]
-```
+  Modelo:
 
-O arquivo genesis.json do bootnode deve seguir conforme o exemplo abaixo:  
-![Conteúdo exemplo do arquivo genesis.json](https://i.imgur.com/MPgJljO.png)
+  ```json
+  "bootnodes" : 
+  [ 
+  "enode://<chave-pública-SEM-0x>@<ip>:<porta>", 
+  "enode://<chave-pública-SEM-0x>@<ip>:<porta>" 
+  ]
+  ```
+
+  O arquivo genesis.json do bootnode deve seguir conforme o exemplo abaixo:  
+  ![Conteúdo exemplo do arquivo genesis.json](https://i.imgur.com/MPgJljO.png)
 
 #### 4.1.2 - Ajustes nos static-nodes
 
-Ajuste o arquivo `.env.configs/statis-nodes.json` dos writers e validators da seguinte forma:
+Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
 
 #### **Nós validators**
 
-Nos **validators**, inclua no arquivo `.env.configs/statis-nodes.json` todos os enodes dos outros validators (usando **IPs externos**) e o enode do bootnode da própria instituição (usando **IP interno**).
+- Desabilite a descoberta de nós com o seguinte comando:
 
-Modelo:
+  ```bash
+  ./rbb-cli config set nodes.validator.environment.BESU_DISCOVERY_ENABLED false
+  ```
 
-```json
-[ 
-"enode://<chave-pública-SEM-0x>@<ip-público>:<porta>", 
-"enode://<chave-pública-SEM-0x>@<ip-público>:<porta>",
-...
-"enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
-]
-```
+- Nos **validators**, inclua no arquivo `volumes/<nome-do-nó-validator>/static-nodes.json` todos os enodes dos outros validators (usando **IPs externos**) e o enode do bootnode da própria instituição (usando **IP interno**).
+
+  Modelo:
+
+  ```json
+  [ 
+  "enode://<chave-pública-SEM-0x>@<ip-público>:<porta>", 
+  "enode://<chave-pública-SEM-0x>@<ip-público>:<porta>",
+  ...
+  "enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
+  ]
+  ```
 
 #### **Nós writers**
 
-Da mesma forma, nos **writers** inclua no arquivo `.env.configs/statis-nodes.json` o enode do boot interno usando o **IP interno**.
+- Desabilite a descoberta de nós com o seguinte comando:
 
-### 4.2 - Levantar DApp de permissionamento
+  ```bash
+  ./rbb-cli config set nodes.writer.environment.BESU_DISCOVERY_ENABLED false
+  ```
 
-- Baixe o arquivo ZIP em: <https://github.com/RBBNet/rbb/blob/master/permissioningDapp.zip>
+- Da mesma forma, nos **writers**, inclua no arquivo `volumes/<nome-do-nó-writer>/static-nodes.json` o enode do boot interno usando o **IP interno**.
 
-- Descompacte o arquivo em um diretório que estará acessível pelo servidor web.
+### 4.2 - Levantar dApp de permissionamento
 
-```bash
-unzip permissioningDapp.zip
-```
+- Execute os seguintes comandos em um diretório que estará acessível pelo servidor web:
+
+  ```bash
+  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDapp.tar.gz
+  tar xzf permissioningDapp.tar.gz
+  rm permissioningDapp.tar.gz
+  cd permissioningDapp
+  ```
 
 - Adicione um arquivo "config.json" no diretório `permissioningDapp` contendo as seguintes informações:
 
-```json
-{
-        "accountIngressAddress":  "<Endereço do contrato account ingress>",
-        "nodeIngressAddress": "<Endereço do contrato node ingress>",
-        "networkId": "<ChainID da rede>"
-}
-```
+  ```json
+  {
+          "accountIngressAddress":  "<Endereço do contrato account ingress>",
+          "nodeIngressAddress": "<Endereço do contrato node ingress>",
+          "networkId": "<ChainID da rede>"
+  }
+  ```
 
 ### 4.3 - Levantar monitoração
 
