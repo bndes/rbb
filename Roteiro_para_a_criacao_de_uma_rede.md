@@ -33,6 +33,7 @@ As atividades desta seção devem ser executadas no início da implantação da 
   tar xzf start-network.tar.gz
   rm start-network.tar.gz
   cd start-network
+  
   ```
 
 Daqui para frente, considere que todos os comandos são executados dentro do diretório start-network.
