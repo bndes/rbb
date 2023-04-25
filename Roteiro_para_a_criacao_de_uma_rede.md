@@ -141,6 +141,20 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 docker-compose up -d
 ```
 
+- Outros comandos úteis:
+
+  - Utilize o seguinte comando para visualizar o log do nó:
+
+    ```bash
+    docker-compose logs -f
+    ```
+
+  - Utilize o seguinte comando para interromper o nó:
+
+    ```bash
+    docker-compose down
+    ```
+
 ### 2.4 - Implantar os smart contracts de permissionamento
 
 #### 2.4.1 - Pré-requisito
@@ -204,11 +218,25 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 
 ### 3.1 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#41---ajustar-genesis-e-static-nodes)"
 
-### 3.2 - Levantar os nós
+### 3.2 - Iniciar os nós
 
 ```bash
 docker-compose up -d
 ```
+
+- Outros comandos úteis:
+
+  - Utilize o seguinte comando para visualizar o log do nó:
+
+    ```bash
+    docker-compose logs -f
+    ```
+
+  - Utilize o seguinte comando para interromper o nó:
+
+    ```bash
+    docker-compose down
+    ```
 
 ### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
 
@@ -285,7 +313,15 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
   ./rbb-cli config set nodes.writer.environment.BESU_DISCOVERY_ENABLED false
   ```
 
-- Da mesma forma, nos **writers**, inclua no arquivo `volumes/<nome-do-nó-writer>/static-nodes.json` o enode do boot interno usando o **IP interno**.
+- Nos **writers**, inclua no arquivo `volumes/<nome-do-nó-writer>/static-nodes.json` o enode do boot interno usando o **IP interno**.
+
+  Modelo:
+
+  ```json
+  [ 
+  "enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
+  ]
+  ```
 
 ### 4.2 - Levantar dApp de permissionamento
 
