@@ -135,7 +135,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
 ### 2.2 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#41---ajustar-genesis-e-static-nodes)"
 
-### 2.3 - Levantar nós
+### 2.3 - Iniciar os nós
 
 ```bash
 docker-compose up -d
