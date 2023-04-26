@@ -63,12 +63,14 @@ Os *smart contracts* de permissionamento contidos no `genesis.json` também ser�
       tar xzf permissioningDeploy.tar.gz
       rm permissioningDeploy.tar.gz
       cd permissioningDeploy
+      
       ```
 
     - Execute o seguinte comando para instalar as dependências:
 
       ```bash
       yarn install
+      
       ```
 
     - Crie um arquivo `.env` e defina as variáveis de ambiente neste arquivo conforme template abaixo:
@@ -104,6 +106,7 @@ Os *smart contracts* de permissionamento contidos no `genesis.json` também ser�
 
     ```bash
     yarn truffle migrate --reset --network besu
+    
     ```
 
   - Copiar todos os novos endereços dos *smart contracts* de permissionamento.
