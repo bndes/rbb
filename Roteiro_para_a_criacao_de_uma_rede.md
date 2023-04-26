@@ -185,7 +185,7 @@ docker-compose up -d
   
   ```
 
-- Crie um arquivo .env e defina as variáveis de ambiente neste arquivo conforme template abaixo:
+- Crie um arquivo `.env` e defina as variáveis de ambiente neste arquivo conforme template abaixo:
 
   ```.env
   NODE_INGRESS_CONTRACT_ADDRESS=0x0000000000000000000000000000000000009999
@@ -193,13 +193,14 @@ docker-compose up -d
   BESU_NODE_PERM_ACCOUNT=627306090abaB3A6e1400e9345bC60c78a8BEf57
   BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
   BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
-  CHAIN_ID=1337
+  CHAIN_ID=648629
   INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
   ```
 
   Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
 
   Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
+  > ⚠️ **Atenção!** Certifique-se de utilizar uma chave privada devidamente protegida.
 
   Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
 
