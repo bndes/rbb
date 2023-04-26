@@ -22,6 +22,7 @@ As atividades desta seção devem ser executadas no início da implantação da 
 
   ```bash
   sudo apt install curl
+  
   ```
 
 ### 1.2 - Baixar o repositório `start-network`
@@ -42,40 +43,36 @@ Daqui para frente, considere que todos os comandos são executados dentro do dir
 
 Todos os participantes deverão gerar, ao mesmo tempo, os endereços e as chaves públicas e privadas dos próprios nós.
 
-Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do nó correspondente ao tipo de nó a ser levantado na VM, além de outros arquivos necessários para iniciar os nós. Exemplo:
+Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do nó correspondente ao tipo de nó a ser levantado na VM. Exemplo:
 
-- Levantar apenas 1 nó Validator em uma VM:
+- Gerar chaves e endereço de apenas 1 nó Validator em uma VM:
 
   ```bash
   ./rbb-cli node create validator
-  ./rbb-cli config render-templates
   
   ```
 
-- Levantar apenas 1 nó Boot em uma VM:
+- Gerar chaves e endereço de apenas 1 nó Boot em uma VM:
 
   ```bash
   ./rbb-cli node create boot
-  ./rbb-cli config render-templates
   
   ```
 
-- Levantar apenas 1 nó Writer em uma VM:
+- Gerar chaves e endereço de apenas 1 nó Writer em uma VM:
 
   ```bash
   ./rbb-cli node create writer
-  ./rbb-cli config render-templates
   
   ```
 
-Após a execução dos comandos acima alguns itens foram gerados e devem ser mencionados:
+Após a execução dos comandos acima os seguintes itens foram gerados:
 
 - Par de chaves pública/privada:
   - Caminho da chave privada: `.env.configs/nodes/<nome-do-nó>/key`
   - Caminho da chave pública: `.env.configs/nodes/<nome-do-nó>/key.pub`
 - Endereço do nó (account):
   - Localizado em: `.env.configs/nodes/<nome-do-nó>/node.id`
-- docker-compose.yml
 
 ### 1.4 - Compartilhar enodes e endereços
 
@@ -142,6 +139,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 ### 2.3 - Iniciar os nós
 
 ```bash
+./rbb-cli config render-templates
 docker-compose up -d
 
 ```
@@ -197,7 +195,6 @@ docker-compose up -d
   BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
   CHAIN_ID=1337
   INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
-  
   ```
 
   Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
@@ -232,6 +229,7 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 ### 3.2 - Iniciar os nós
 
 ```bash
+./rbb-cli config render-templates
 docker-compose up -d
 
 ```
@@ -289,7 +287,6 @@ Os enodes que serão inseridos nos arquivos genesis.json e static-nodes.json pod
   "enode://<chave-pública-SEM-0x>@<ip>:<porta>", 
   "enode://<chave-pública-SEM-0x>@<ip>:<porta>" 
   ]
-  
   ```
 
   O arquivo genesis.json do bootnode deve seguir conforme o exemplo abaixo:  
@@ -304,20 +301,20 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
 - Desabilite a descoberta de nós com o seguinte comando:
 
   ```bash
-  ./rbb-cli config set nodes.validator.environment.BESU_DISCOVERY_ENABLED false
+  ./rbb-cli config set nodes.validator.environment.BESU_DISCOVERY_ENABLED=false
   
   ```
 
-- Nos **validators**, inclua no arquivo `volumes/<nome-do-nó-validator>/static-nodes.json` todos os enodes dos outros validators (usando **IPs externos**) e o enode do bootnode da própria instituição (usando **IP interno**).
+- Nos **validators**, inclua no arquivo `volumes/validator/static-nodes.json` todos os enodes dos outros validators (usando **IPs externos**) e o enode do bootnode da própria instituição (usando **IP interno**).
 
   Modelo:
 
   ```json
   [ 
-  "enode://<chave-pública-SEM-0x>@<ip-público>:<porta>", 
-  "enode://<chave-pública-SEM-0x>@<ip-público>:<porta>",
+  "enode://<chave-pública-SEM-0x>@<ip-externo>:<porta>", 
+  "enode://<chave-pública-SEM-0x>@<ip-externo>:<porta>",
   ...
-  "enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
+  "enode://<chave-pública-SEM-0x>@<ip-interno>:<porta>"
   ]
   ```
 
@@ -326,17 +323,17 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
 - Desabilite a descoberta de nós com o seguinte comando:
 
   ```bash
-  ./rbb-cli config set nodes.writer.environment.BESU_DISCOVERY_ENABLED false
+  ./rbb-cli config set nodes.writer.environment.BESU_DISCOVERY_ENABLED=false
   
   ```
 
-- Nos **writers**, inclua no arquivo `volumes/<nome-do-nó-writer>/static-nodes.json` o enode do boot interno usando o **IP interno**.
+- Nos **writers**, inclua no arquivo `volumes/writer/static-nodes.json` o enode do boot interno usando o **IP interno**.
 
   Modelo:
 
   ```json
   [ 
-  "enode://<chave-pública-SEM-0x>@<ip-privado>:<porta>"
+  "enode://<chave-pública-SEM-0x>@<ip-interno>:<porta>"
   ]
   ```
 
