@@ -77,7 +77,7 @@ Os *smart contracts* de permissionamento contidos no `genesis.json` também ser�
       BESU_NODE_PERM_ACCOUNT=627306090abaB3A6e1400e9345bC60c78a8BEf57
       BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
       BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
-      CHAIN_ID=1337
+      CHAIN_ID=648629
       INITIAL_ADMIN_ACCOUNTS=<lista-de-admins>
       INITIAL_ALLOWLISTED_ACCOUNTS=<lista-de-contas>
       INITIAL_ALLOWLISTED_NODES=<lista-de-enodes>
@@ -86,6 +86,7 @@ Os *smart contracts* de permissionamento contidos no `genesis.json` também ser�
       Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
 
       Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
+      > ⚠️ **Atenção!** Certifique-se de utilizar uma chave privada devidamente protegida.
 
       Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
 
