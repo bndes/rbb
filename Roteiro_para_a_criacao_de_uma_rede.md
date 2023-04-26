@@ -49,6 +49,7 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   ```bash
   ./rbb-cli node create validator
   ./rbb-cli config render-templates
+  
   ```
 
 - Levantar apenas 1 nó Boot em uma VM:
@@ -56,6 +57,7 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   ```bash
   ./rbb-cli node create boot
   ./rbb-cli config render-templates
+  
   ```
 
 - Levantar apenas 1 nó Writer em uma VM:
@@ -63,6 +65,7 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   ```bash
   ./rbb-cli node create writer
   ./rbb-cli config render-templates
+  
   ```
 
 Após a execução dos comandos acima alguns itens foram gerados e devem ser mencionados:
@@ -127,6 +130,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
   ```bash
   ./rbb-cli genesis create --validators validator
+  
   ```
 
 - Disponibilize o arquivo `genesis.json` do nó validator, localizado em `.env.configs/genesis.json`, com as outras instituições no seguinte caminho do repositório:
@@ -139,6 +143,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
 ```bash
 docker-compose up -d
+
 ```
 
 - Outros comandos úteis:
@@ -147,12 +152,14 @@ docker-compose up -d
 
     ```bash
     docker-compose logs -f
+    
     ```
 
   - Utilize o seguinte comando para interromper o nó:
 
     ```bash
     docker-compose down
+    
     ```
 
 ### 2.4 - Implantar os smart contracts de permissionamento
@@ -170,12 +177,14 @@ docker-compose up -d
   tar xzf permissioningDeploy.tar.gz
   rm permissioningDeploy.tar.gz
   cd permissioningDeploy
+  
   ```
 
 - Execute o seguinte comando para instalar as dependências:
 
   ```bash
   yarn install
+  
   ```
 
 - Crie um arquivo .env e defina as variáveis de ambiente neste arquivo conforme template abaixo:
@@ -188,6 +197,7 @@ docker-compose up -d
   BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
   CHAIN_ID=1337
   INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
+  
   ```
 
   Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
@@ -204,6 +214,7 @@ docker-compose up -d
 
 ```bash
 yarn truffle migrate --reset --network besu
+
 ```
 
 ### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
@@ -222,6 +233,7 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 
 ```bash
 docker-compose up -d
+
 ```
 
 - Outros comandos úteis:
@@ -230,12 +242,14 @@ docker-compose up -d
 
     ```bash
     docker-compose logs -f
+    
     ```
 
   - Utilize o seguinte comando para interromper o nó:
 
     ```bash
     docker-compose down
+    
     ```
 
 ### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
@@ -275,6 +289,7 @@ Os enodes que serão inseridos nos arquivos genesis.json e static-nodes.json pod
   "enode://<chave-pública-SEM-0x>@<ip>:<porta>", 
   "enode://<chave-pública-SEM-0x>@<ip>:<porta>" 
   ]
+  
   ```
 
   O arquivo genesis.json do bootnode deve seguir conforme o exemplo abaixo:  
@@ -290,6 +305,7 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
 
   ```bash
   ./rbb-cli config set nodes.validator.environment.BESU_DISCOVERY_ENABLED false
+  
   ```
 
 - Nos **validators**, inclua no arquivo `volumes/<nome-do-nó-validator>/static-nodes.json` todos os enodes dos outros validators (usando **IPs externos**) e o enode do bootnode da própria instituição (usando **IP interno**).
@@ -311,6 +327,7 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
 
   ```bash
   ./rbb-cli config set nodes.writer.environment.BESU_DISCOVERY_ENABLED false
+  
   ```
 
 - Nos **writers**, inclua no arquivo `volumes/<nome-do-nó-writer>/static-nodes.json` o enode do boot interno usando o **IP interno**.
@@ -332,6 +349,7 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
   tar xzf permissioningDapp.tar.gz
   rm permissioningDapp.tar.gz
   cd permissioningDapp
+  
   ```
 
 - Adicione um arquivo "config.json" no diretório `permissioningDapp` contendo as seguintes informações:
