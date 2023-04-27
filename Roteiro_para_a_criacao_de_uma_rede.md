@@ -65,6 +65,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   ./rbb-cli node create writer
   
   ```
+  
+  - Ainda na VM do nó writer, execute o comando abaixo para definir a porta da VM pela qual serão feitas chamadas RPC para o nó. No exemplo abaixo é mapeado a porta 10001 da VM (host) para a porta 8545 do nó (container), a porta 8545 do nó é a porta padrão para chamadas RPC via HTTP:
+
+    ```bash
+    ./rbb-cli config set nodes.writer.ports+=[\"10001:8545\"]
+    
+    ```
 
 Após a execução dos comandos acima os seguintes itens foram gerados:
 
@@ -136,29 +143,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
 ### 2.2 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#41---ajustar-genesis-e-static-nodes)"
 
-### 2.3 - Iniciar os nós
-
-```bash
-./rbb-cli config render-templates
-docker-compose up -d
-
-```
-
-- Outros comandos úteis:
-
-  - Utilize o seguinte comando para visualizar o log do nó:
-
-    ```bash
-    docker-compose logs -f
-    
-    ```
-
-  - Utilize o seguinte comando para interromper o nó:
-
-    ```bash
-    docker-compose down
-    
-    ```
+### 2.3 - Executar sub-roteiro "[Levantar os nós](#42---levantar-os-nós)"
 
 ### 2.4 - Implantar os smart contracts de permissionamento
 
@@ -215,11 +200,11 @@ yarn truffle migrate --reset --network besu
 
 ```
 
-### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
+### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#43---levantar-dapp-de-permissionamento)"
 
-### 2.6 - Executar sub-roteiro "[Levantar monitoração](#43---levantar-monitora%C3%A7%C3%A3o)"
+### 2.6 - Executar sub-roteiro "[Levantar monitoração](#44---levantar-monitora%C3%A7%C3%A3o)"
 
-### 2.7 - Executar sub-roteiro "[Levantar block explorer](#44---levantar-block-explorer)"
+### 2.7 - Executar sub-roteiro "[Levantar block explorer](#45---levantar-block-explorer)"
 
 ## 3 - Atividades a serem executadas durante a entrada de cada instituição na rede (com exceção da primeira)
 
@@ -227,35 +212,13 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 
 ### 3.1 - Executar sub-roteiro "[Ajustar genesis e static-nodes](#41---ajustar-genesis-e-static-nodes)"
 
-### 3.2 - Iniciar os nós
+### 3.2 - Executar sub-roteiro "[Levantar os nós](#42---levantar-os-nós)"
 
-```bash
-./rbb-cli config render-templates
-docker-compose up -d
+### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#43---levantar-dapp-de-permissionamento)"
 
-```
+### 3.4 - Executar sub-roteiro "[Levantar monitoração](#44---levantar-monitora%C3%A7%C3%A3o)"
 
-- Outros comandos úteis:
-
-  - Utilize o seguinte comando para visualizar o log do nó:
-
-    ```bash
-    docker-compose logs -f
-    
-    ```
-
-  - Utilize o seguinte comando para interromper o nó:
-
-    ```bash
-    docker-compose down
-    
-    ```
-
-### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#42---levantar-dapp-de-permissionamento)"
-
-### 3.4 - Executar sub-roteiro "[Levantar monitoração](#43---levantar-monitora%C3%A7%C3%A3o)"
-
-### 3.5 - Executar sub-roteiro "[Levantar block explorer](#44---levantar-block-explorer)"
+### 3.5 - Executar sub-roteiro "[Levantar block explorer](#45---levantar-block-explorer)"
 
 ---
 
@@ -338,7 +301,31 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
   ]
   ```
 
-### 4.2 - Levantar dApp de permissionamento
+### 4.2 - Levantar os nós
+
+```bash
+./rbb-cli config render-templates
+docker-compose up -d
+
+```
+
+- Outros comandos úteis:
+
+  - Utilize o seguinte comando para visualizar o log do nó:
+
+    ```bash
+    docker-compose logs -f
+    
+    ```
+
+  - Utilize o seguinte comando para interromper o nó:
+
+    ```bash
+    docker-compose down
+    
+    ```
+
+### 4.3 - Levantar dApp de permissionamento
 
 - Execute os seguintes comandos em um diretório que estará acessível pelo servidor web:
 
@@ -360,6 +347,6 @@ Ajuste o arquivo `static-nodes.json` dos writers e validators da seguinte forma:
   }
   ```
 
-### 4.3 - Levantar monitoração
+### 4.4 - Levantar monitoração
 
-### 4.4 - Levantar block explorer
+### 4.5 - Levantar block explorer
