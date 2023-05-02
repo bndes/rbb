@@ -51,6 +51,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   ./rbb-cli node create validator
   
   ```
+  
+  - Ainda na VM do nó validator, execute o comando abaixo para definir a porta da VM pela qual serão feitas chamadas RPC para o nó. No exemplo abaixo é mapeado a porta 10001 da VM (host) para a porta 8545 do nó (container), a porta 8545 do nó é a porta padrão para chamadas RPC via HTTP:
+
+    ```bash
+    ./rbb-cli config set nodes.validator.ports+=[\"10001:8545\"]
+    
+    ```
 
 - Gerar chaves e endereço de apenas 1 nó Boot em uma VM:
 
@@ -59,6 +66,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   
   ```
 
+  - Ainda na VM do nó boot, execute o comando abaixo para definir a porta da VM pela qual serão feitas chamadas RPC para o nó:
+
+    ```bash
+    ./rbb-cli config set nodes.boot.ports+=[\"10001:8545\"]
+    
+    ```
+
 - Gerar chaves e endereço de apenas 1 nó Writer em uma VM:
 
   ```bash
@@ -66,7 +80,7 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
   
   ```
   
-  - Ainda na VM do nó writer, execute o comando abaixo para definir a porta da VM pela qual serão feitas chamadas RPC para o nó. No exemplo abaixo é mapeado a porta 10001 da VM (host) para a porta 8545 do nó (container), a porta 8545 do nó é a porta padrão para chamadas RPC via HTTP:
+  - Ainda na VM do nó writer, execute o comando abaixo para definir a porta da VM pela qual serão feitas chamadas RPC para o nó:
 
     ```bash
     ./rbb-cli config set nodes.writer.ports+=[\"10001:8545\"]
@@ -83,10 +97,10 @@ Após a execução dos comandos acima os seguintes itens foram gerados:
 
 ### 1.4 - Compartilhar enodes e endereços
 
-O enode é uma string que serve de identificador para o nó e que será usado neste roteiro.
+O enode é uma string que serve de identificador para o nó e que será utilizado neste roteiro.
 
 - Sua formação é o que segue: `enode://<chave-pública-SEM-0x>@<ip>:<porta>`.
-- Observe que o IP utilizado poderá ser diferente para o mesmo nó, pois haverá situações onde serão usados o IP externo e, outras, onde serão usados os IPs internos. Este roteiro chamará atenção para cada caso.
+- Observe que o IP utilizado poderá ser diferente para o mesmo nó, pois haverá situações onde serão utilizados o IP externo e, outras, onde serão utilizados os IPs internos. Este roteiro chamará atenção para cada caso.
 
 As instituições devem compartilhar num arquivo, os `enodes` e os `endereços (account)` de cada nó para que todas as instituições conheçam as informações de todos os nós da rede e possam conectar esses nós conforme a topologia da rede.
 
@@ -187,7 +201,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
   Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
   > ⚠️ **Atenção!** Certifique-se de utilizar uma chave privada devidamente protegida.
 
-  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu writer conforme o template.
+  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu validator conforme o template. Os nós não estarão conectados por conta do permissionamento, por isso, e apenas nesse momento, será utilizada a porta RPC do validator e não do writer para enviar transações.
 
   Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
 
