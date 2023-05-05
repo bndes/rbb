@@ -93,7 +93,7 @@ A RBB se baseou no *framework* da [LACChain](https://www.lacchain.net), para def
 
 Enquanto a RBB estiver em estágio de piloto ou em laboratório, para instalar nós, será necessário aderir o Acordo de Cooperação. 
 
-O roteiro de instalação técnico encontra-se [nesse link](Como_criar_nós.md). 
+O roteiro de instalação técnico encontra-se [nesse link](Roteiro_para_a_criacao_de_uma_rede.md). 
 
 
 ## Contato
