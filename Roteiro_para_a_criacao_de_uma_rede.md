@@ -367,7 +367,7 @@ docker-compose up -d
 
 #### Sirato Block Explorer:
 
-##### no boot node, ou no node de monitoramento:
+- Executar no boot node, no node de monitoramento, ou no node que irá executar o block explorer:
 
 ```bash
 git clone https://github.com/web3labs/sirato-free.git
@@ -377,7 +377,7 @@ cd sirato-free/docker-compose
 NODE_ENDPOINT=http://<ip-boot-node>:<porta-rpc> PORT=<porta-blockexplorer> docker-compose -f docker-compose.yml -f sirato-extensions/docker-compose-besu.yml up
 ```
 
-##### Acessar no browser remoto:
+- Acessar no browser remoto:
 
 ```bash
 http://boot-node-ip:blockexplorer-port
