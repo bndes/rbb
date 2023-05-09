@@ -364,3 +364,17 @@ docker-compose up -d
 ### 4.4 - Levantar monitoração
 
 ### 4.5 - Levantar block explorer
+
+#### Sirato Block Explorer:
+
+##### no boot node, ou no node de monitoramento:
+
+git clone https://github.com/web3labs/sirato-free.git
+
+cd sirato-free/docker-compose
+
+NODE_ENDPOINT=http://<boot-node-ip>:<rpc-port> PORT=<blockexplorer-port> docker-compose -f docker-compose.yml -f sirato-extensions/docker-compose-besu.yml up
+
+##### Acessar no browser remoto:
+
+http://boot-node-ip:blockexplorer-port
