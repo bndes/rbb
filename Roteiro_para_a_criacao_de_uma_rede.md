@@ -109,7 +109,7 @@ Para isso, deve-se usar um arquivo no seguinte repositório privado apenas para 
 Para exemplificar, considere que o nome da rede é atribuída à variável
 rede, o que será útil em alguns momentos. Se a rede em implantação é a rede de laboratório, temos $rede=**"lab"**. Se é a rede piloto, $rede=**"piloto"**.
 
-Assim, a lista de enodes ficará no arquivo em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`, com o formato sugerido abaixo. Observe que os enodes nessa lista usarão **sempre** os IPs **externos**.
+Assim, a lista de enodes ficará no arquivo em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`, com o formato sugerido abaixo. Observe que os enodes nessa lista usarão **sempre** os IPs **externos**.
 
 | Membro    | Tipo de Nó    |Enode                                     |Account            |
 |-----------|---------------|------------------------------------------|-------------------|
@@ -205,7 +205,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 
   Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
 
-  Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`.
+  Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`.
 
 #### 2.4.3 - Executar o Deploy
 
@@ -249,7 +249,7 @@ As seguintes atividades serão executadas nesse sub-roteiro:
 
 Os passos acima serão detalhados a seguir.
 
-Os enodes que serão inseridos nos arquivos genesis.json e static-nodes.json podem ser obtidos no seguinte arquivo anteriormente compartilhado: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.json`.
+Os enodes que serão inseridos nos arquivos genesis.json e static-nodes.json podem ser obtidos no seguinte arquivo anteriormente compartilhado: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`.
 
 #### 4.1.1 - Ajustes no genesis.json do boot
 
