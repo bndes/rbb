@@ -30,7 +30,7 @@ As atividades desta seção devem ser executadas no início da implantação da 
 - Execute os seguintes comandos:
 
   ```bash
-  curl -LO https://github.com/RBBNet/start-network/releases/download/0.3/start-network.tar.gz
+  curl -LO https://github.com/RBBNet/start-network/releases/download/v0.4.0-permv1/start-network.tar.gz
   tar xzf start-network.tar.gz
   rm start-network.tar.gz
   cd start-network
