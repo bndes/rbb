@@ -170,7 +170,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 - Execute os seguintes comandos:
 
   ```bash
-  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDeploy.tar.gz
+  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/v0.2.0/permissioningDeploy.tar.gz
   tar xzf permissioningDeploy.tar.gz
   rm permissioningDeploy.tar.gz
   cd permissioningDeploy
@@ -193,7 +193,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
   BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
   BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
   CHAIN_ID=648629
-  INITIAL_ALLOWLISTED_NODES=enode://c35c3...d615f@1.2.3.4:30303,enode://f42c13...fc456@1.2.3.5:30303
+  INITIAL_ALLOWLISTED_NODES=enode://7ef6...d416|0|0x000000000000|Boot|BNDES,enode://d350...70d2|1|0x000000000000|Validator|BNDES,enode://971d...5c3c|2|0x000000000000|Writer|BNDES
   ```
 
   Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
@@ -201,16 +201,20 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
   Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
   > ⚠️ **Atenção!** Certifique-se de utilizar uma chave privada devidamente protegida.
 
-  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu validator conforme o template. Os nós não estarão conectados por conta do permissionamento, por isso, e apenas nesse momento, será utilizada a porta RPC do validator e não do writer para enviar transações.
+  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu validator conforme o template. Apenas nesse momento será utilizada a porta RPC do validator - e não do writer - para enviar transações.
 
   Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
 
-  Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira os enodes de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`.
+  Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira as informações de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`. As informações de cada nó devem ser separadas por vírgula e devem ser inseridas da seguinte forma:
+  
+  ```.env
+  enode://<chave-pública-SEM-0x>|<tipo-do-nó-(0: Boot, 1: Validator, 2: Writer, 3: WriterPartner, 4: ObserverBoot, 5: Other)>|<geohash-do-nó>|<nome-do-nó>|<nome-da-instituição>
+  ```
 
 #### 2.4.3 - Executar o Deploy
 
 ```bash
-yarn truffle migrate --reset --network besu
+yarn truffle migrate --reset
 
 ```
 
