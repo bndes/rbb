@@ -1,14 +1,14 @@
 
 # Roteiro para reset do permissionamento após um ataque
 
-Este roteiro tem como objetivo listar os procedimentos necessários para implantar novos *smart contracts* de permissionamento na rede após um ataque que tenha comprometido os *smart contracts* de permissionamento em vigor.
+Este roteiro tem como objetivo listar os procedimentos necessários para recuperar o funcionamento normal da rede após um ataque que tenha comprometido os *smart contracts* de permissionamento em vigor. A recuperação se dá pela  implantação de novos *smart contracts* de permissionamento na rede. 
 
 Se um usuário malicioso tiver posse de uma conta admin dos *smart contracts* de permissionamento, ele poderá:
 
 - Adicionar e remover contas.
 - Adicionar e remover nós.
 - Adicionar e remover admins (exceto a si próprio). De acordo com os *smart contracts* atuais, um admin não pode se remover. Dessa forma, sempre haverá pelo menos um admin no permissionamento, a menos que ele altere as regras de permissionamento.
-- Alterar as regras de permissionamento, ao fazer o Account Ingress e/ou Node Ingress (contidos no `genesis.json`) apontarem para outros *smart contracts*.
+- Alterar as regras de permissionamento, ao fazer o Account Ingress e/ou Node Ingress (contratos de permissionamento contidos no `genesis.json`) apontarem para outros *smart contracts*.
 
 Os *smart contracts* de permissionamento contidos no `genesis.json` também serão comprometidos! Dessa maneira, faz-se necessário realizar novos deploys de *smart contracts* de permissionamento e reiniciar todos os nós com os novos endereços definidos nas variáveis de ambiente relacionadas ao permissionamento. Para tanto, os seguintes passos deverão ser executados:
 
