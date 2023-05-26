@@ -185,7 +185,7 @@ docker-compose up -d
 
   ```bash
   git clone https://github.com/RBBNet/Permissionamento.git
-  cd permissioningDeploy
+  cd Permissionamento
   
   ```
 
@@ -226,7 +226,7 @@ docker-compose up -d
 ### 4.3 - Executar o Deploy
 
 ```bash
-yarn truffle migrate --reset
+yarn truffle migrate --reset --network besu
 
 ```
 
