@@ -170,7 +170,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 - Execute os seguintes comandos:
 
   ```bash
-  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/v0.2.0/permissioningDeploy.tar.gz
+  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/v0.3.0/permissioningDeploy.tar.gz
   tar xzf permissioningDeploy.tar.gz
   rm permissioningDeploy.tar.gz
   cd permissioningDeploy
@@ -214,7 +214,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 #### 2.4.3 - Executar o Deploy
 
 ```bash
-yarn truffle migrate --reset
+yarn truffle migrate --reset --network besu
 
 ```
 
