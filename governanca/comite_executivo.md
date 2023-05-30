@@ -31,6 +31,9 @@
     - Relato sobre contato com representante do Comitê Paralímpico Brasileiro.
     - Adesão da PUC-RJ ao Acordo da RBB.
     - Planejamento para o piloto.
+- 23/03/2023
+  - [Ata assinada digitalmente](2023-03-23-RBB-Ata-Reunião-Comitê-Executivo-Assinada.pdf)
+  - Sem destaques.
 - 16/02/2023
   - [Ata assinada digitalmente](2023-02-16-RBB-Ata-Reunião-Comitê-Executivo-Assinada.pdf)
   - Destaques:
