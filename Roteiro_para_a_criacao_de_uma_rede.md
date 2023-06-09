@@ -30,11 +30,9 @@ As atividades desta seção devem ser executadas no início da implantação da 
 - Execute os seguintes comandos:
 
   ```bash
-  curl -LO https://github.com/RBBNet/start-network/releases/download/v0.4.0-permv1/start-network.tar.gz
-  tar xzf start-network.tar.gz
-  rm start-network.tar.gz
+  curl -#SL https://github.com/RBBNet/start-network/releases/download/v0.4.0-permv1/start-network.tar.gz | tar xz
   cd start-network
-  
+
   ```
 
 Daqui para frente, considere que todos os comandos são executados dentro do diretório start-network.
@@ -59,6 +57,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
     
     ```
 
+  - Execute o comando abaixo para definir o IP externo e a porta da VM pela qual serão feitas conexões P2P com o nó validator. No exemplo abaixo é definido o IP externo do nó e a porta 10303 para conexões P2P. A porta 30303 é a porta padrão para conexões P2P, para este caso, no entanto, é definida uma porta diferente da padrão:
+
+    ```bash
+    ./rbb-cli config set nodes.validator.address=\"<IP-Externo-Validator>:10303\"
+
+    ```
+
 - Gerar chaves e endereço de apenas 1 nó Boot em uma VM:
 
   ```bash
@@ -71,6 +76,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
     ```bash
     ./rbb-cli config set nodes.boot.ports+=[\"10001:8545\"]
     
+    ```
+
+  - Execute o comando abaixo para definir o IP externo e a porta da VM pela qual serão feitas conexões P2P com o nó boot:
+
+    ```bash
+    ./rbb-cli config set nodes.boot.address=\"<IP-Externo-Boot>:10304\"
+
     ```
 
 - Gerar chaves e endereço de apenas 1 nó Writer em uma VM:
@@ -87,6 +99,13 @@ Execute o comando/script abaixo em cada VM para gerar as chaves e o endereço do
     
     ```
 
+  - Execute o comando abaixo para definir o IP interno e a porta da VM pela qual serão feitas conexões P2P com o nó writer:
+
+    ```bash
+    ./rbb-cli config set nodes.boot.address=\"<IP-Interno-Writer>:10305\"
+
+    ```
+
 Após a execução dos comandos acima os seguintes itens foram gerados:
 
 - Par de chaves pública/privada:
@@ -95,7 +114,7 @@ Após a execução dos comandos acima os seguintes itens foram gerados:
 - Endereço do nó (account):
   - Localizado em: `.env.configs/nodes/<nome-do-nó>/node.id`
 
-### 1.4 - Compartilhar enodes e endereços
+### 1.4 - Compartilhar enodes e endereços dos nós
 
 O enode é uma string que serve de identificador para o nó e que será utilizado neste roteiro.
 
@@ -109,14 +128,24 @@ Para isso, deve-se usar um arquivo no seguinte repositório privado apenas para 
 Para exemplificar, considere que o nome da rede é atribuída à variável
 rede, o que será útil em alguns momentos. Se a rede em implantação é a rede de laboratório, temos $rede=**"lab"**. Se é a rede piloto, $rede=**"piloto"**.
 
-Assim, a lista de enodes ficará no arquivo em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`, com o formato sugerido abaixo. Observe que os enodes nessa lista usarão **sempre** os IPs **externos**.
+Assim, a lista de enodes ficará no arquivo em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`, com o formato sugerido abaixo. Observe que os enodes nessa lista usarão **sempre** os IPs **externos**. Para os writers, o IP e porta é necessário **apenas para os writers dos partícipes parceiros**. **Não é necessário** informar o IP e porta dos writers internos nessa lista.
 
 | Membro    | Tipo de Nó    |Enode                                     |Account            |
 |-----------|---------------|------------------------------------------|-------------------|
 |BNDES      | Boot          |`enode://91c......3b@<IP address>:<port>` |                   |
 |TCU        | Validator     |`enode://2b5......59@<IP address>:<port>` |0x5bcd....a4861984b|
 
-### 1.5 - Ajustar regras de firewall
+### 1.5 - Compartilhar endereço de conta de administração
+
+Cada instituição deve possuir um endereço de conta de administração. Para tanto, adicione um endereço de conta de administração na lista localizada em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/adminAddresses.md`. Conforme exemplo abaixo:
+
+| Membro    | Endereço do administrador                  |
+|-----------|--------------------------------------------|
+|BNDES      | 0x38393851d6d26497de390b37b4eb0c1c20a5b0bc |
+|DATAPREV   | 0xc78622f314453aeb349615bff240b6891cefd465 |
+|TCU        | 0x8b708294671a61cb3af2626e45ec8ac228a03dea |
+
+### 1.6 - Ajustar regras de firewall
 
 Como antecipado, este trecho do roteiro diferencia entre os endereços IP externos e internos das instituições. A premissa é que as conexões entre os nós writer, boot e validator de uma instituição se dará por IPs internos e as conexões entre nós de diferentes instituições se dará por IPs externos.
 
@@ -170,9 +199,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 - Execute os seguintes comandos:
 
   ```bash
-  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/v0.3.0/permissioningDeploy.tar.gz
-  tar xzf permissioningDeploy.tar.gz
-  rm permissioningDeploy.tar.gz
+  curl -#SL https://github.com/RBBNet/Permissionamento/releases/download/v0.3.0/permissioningDeploy.tar.gz | tar xz
   cd permissioningDeploy
   
   ```
@@ -193,10 +220,12 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
   BESU_NODE_PERM_KEY=c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3
   BESU_NODE_PERM_ENDPOINT=http://127.0.0.1:8545
   CHAIN_ID=648629
+  INITIAL_ADMIN_ACCOUNTS=0x38393851d6d26497de390b37b4eb0c1c20a5b0bc,0xc78622f314453aeb349615bff240b6891cefd465,0x8b708294671a61cb3af2626e45ec8ac228a03dea
+  INITIAL_ALLOWLISTED_ACCOUNTS=0x38393851d6d26497de390b37b4eb0c1c20a5b0bc,0xc78622f314453aeb349615bff240b6891cefd465,0x8b708294671a61cb3af2626e45ec8ac228a03dea
   INITIAL_ALLOWLISTED_NODES=enode://7ef6...d416|0|0x000000000000|Boot|BNDES,enode://d350...70d2|1|0x000000000000|Validator|BNDES,enode://971d...5c3c|2|0x000000000000|Writer|BNDES
   ```
 
-  Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta admin do permissionamento.
+  Em `BESU_NODE_PERM_ACCOUNT`, conforme o template, insira o endereço da conta a fazer o deploy e a ser a primeira conta de administração do permissionamento.
 
   Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template.
   > ⚠️ **Atenção!** Certifique-se de utilizar uma chave privada devidamente protegida.
@@ -204,6 +233,10 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
   Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP_Interno:Porta` do seu validator conforme o template. Apenas nesse momento será utilizada a porta RPC do validator - e não do writer - para enviar transações.
 
   Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
+
+  Em `INITIAL_ADMIN_ACCOUNTS`, conforme o template, insira os endereços de conta de administração da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/adminAddresses.md`.
+
+  Em `INITIAL_ALLOWLISTED_ACCOUNTS`, conforme o template, insira os endereços de conta de administração da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/adminAddresses.md`. As listas de administração e de conta (endereços de conta permitidos de enviarem transações na rede) são diferentes e independentes. Desta forma, faz-se necessário adicionar os endereços de conta de adminstração também nesta variável de ambiente para que seja possível enviar transações na rede.
 
   Em `INITIAL_ALLOWLISTED_NODES`, conforme o template, insira as informações de todos os nós da lista localizada em: `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md`. As informações de cada nó devem ser separadas por vírgula e devem ser inseridas da seguinte forma:
   
@@ -218,11 +251,11 @@ yarn truffle migrate --reset --network besu
 
 ```
 
-### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#43---levantar-dapp-de-permissionamento)"
+### 2.5 - Executar sub-roteiro "[Levantar DApp de permissionamento](#44---levantar-dapp-de-permissionamento)"
 
-### 2.6 - Executar sub-roteiro "[Levantar monitoração](#44---levantar-monitora%C3%A7%C3%A3o)"
+### 2.6 - Executar sub-roteiro "[Levantar monitoração](#45---levantar-monitora%C3%A7%C3%A3o)"
 
-### 2.7 - Executar sub-roteiro "[Levantar block explorer](#45---levantar-block-explorer)"
+### 2.7 - Executar sub-roteiro "[Levantar block explorer](#46---levantar-block-explorer)"
 
 ## 3 - Atividades a serem executadas durante a entrada de cada instituição na rede (com exceção da primeira)
 
@@ -232,11 +265,15 @@ Após a instituição inicial começar a implantação da rede, as outras instit
 
 ### 3.2 - Executar sub-roteiro "[Levantar os nós](#42---levantar-os-nós)"
 
-### 3.3 - Executar sub-roteiro "[Levantar DApp de permissionamento](#43---levantar-dapp-de-permissionamento)"
+### 3.3 - [SOMENTE VALIDATORS] Solicitar votação no validator
 
-### 3.4 - Executar sub-roteiro "[Levantar monitoração](#44---levantar-monitora%C3%A7%C3%A3o)"
+A votação de validadores é feita apenas por validadores. Caso possua um nó preparado para ser validator, mas ainda sem produzir blocos, avise às outras instituições - que possuem validadores produzindo blocos - para votarem no seu validator. Peça para executar o sub-roteiro "[Votar nos validadores](#43---votar-nos-validadores)".
 
-### 3.5 - Executar sub-roteiro "[Levantar block explorer](#45---levantar-block-explorer)"
+### 3.4 - Executar sub-roteiro "[Levantar DApp de permissionamento](#44---levantar-dapp-de-permissionamento)"
+
+### 3.5 - Executar sub-roteiro "[Levantar monitoração](#45---levantar-monitora%C3%A7%C3%A3o)"
+
+### 3.6 - Executar sub-roteiro "[Levantar block explorer](#46---levantar-block-explorer)"
 
 ---
 
@@ -343,16 +380,24 @@ docker-compose up -d
     
     ```
 
-### 4.3 - Levantar dApp de permissionamento
+### 4.3 - Votar nos validadores
+
+- Através de um validator, execute o seguinte comando **para votar em um outro validator**:
+
+```bash
+curl -X POST --data '{"jsonrpc":"2.0","method":"qbft_proposeValidatorVote","params":["<endereço-do-validator-SEM-0x>",true], "id":1}' <JSON-RPC-endpoint-validator>:<porta>
+```
+
+O endereço dos validadores pode ser obtido em `https://github.com/RBBNet/participantes/tree/main/`**${rede}**`/enodes.md` na coluna "Account".
+
+### 4.4 - Levantar dApp de permissionamento
 
 - Execute os seguintes comandos em um diretório que estará acessível pelo servidor web:
 
   ```bash
-  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDapp.tar.gz
-  tar xzf permissioningDapp.tar.gz
-  rm permissioningDapp.tar.gz
+  curl -#SL https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDapp.tar.gz | tar xz
   cd permissioningDapp
-  
+
   ```
 
 - Adicione um arquivo "config.json" no diretório `permissioningDapp` contendo as seguintes informações:
@@ -365,11 +410,11 @@ docker-compose up -d
   }
   ```
 
-### 4.4 - Levantar monitoração
+### 4.5 - Levantar monitoração
 
-### 4.5 - Levantar block explorer
+### 4.6 - Levantar block explorer
 
-#### Sirato Block Explorer:
+#### Sirato Block Explorer
 
 - Executar no boot node, no node de monitoramento, ou no node que irá executar o block explorer:
 
@@ -379,10 +424,12 @@ git clone https://github.com/web3labs/sirato-free.git
 cd sirato-free/docker-compose
 
 NODE_ENDPOINT=http://<ip-boot-node>:<porta-rpc> PORT=<porta-blockexplorer> docker-compose -f docker-compose.yml -f sirato-extensions/docker-compose-besu.yml up
+
 ```
 
 - Acessar no browser remoto:
 
 ```bash
 http://boot-node-ip:blockexplorer-port
+
 ```
