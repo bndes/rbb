@@ -199,7 +199,7 @@ Caso você **não** seja a instituição inicial pule para a [seção 3](#3---at
 - Execute os seguintes comandos:
 
   ```bash
-  curl -#SL https://github.com/RBBNet/Permissionamento/releases/download/v0.3.0/permissioningDeploy.tar.gz | tar xz
+  curl -#SL https://github.com/RBBNet/Permissionamento/releases/download/v1.0.0-backend-alpha/permissioningDeploy.tar.gz | tar xz
   cd permissioningDeploy
   
   ```
