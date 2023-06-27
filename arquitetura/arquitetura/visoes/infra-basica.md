@@ -1,7 +1,11 @@
-Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB
-<p style="text-align: center">  
-  <img src="../../imagens/work-in-progress-icon.png" alt="wip" style="height: 150px; width:230px;"/>
-</p>
+<table>
+<tr>
+  <td align="center">
+    <img src="../../imagens/work-in-progress-icon.png" alt="wip" align="center" style="height: 75px; width:115px;"/>
+    <p>Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB</p>
+  </td>
+</tr>
+</table>
 
 # Visão de Infraestrutura
 - Visão de runtime que demonstra os elementos básicos da infraestrutura da rede e suas interações.
