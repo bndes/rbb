@@ -27,7 +27,7 @@
 <table style="text-align: center">
 <tr>
   <td style="text-align: center">
-    <img src="imagens/framework-governanca.png" alt="wip" style="height: 35%; width:45%;"/>    
+    <img src="imagens/framework-governanca.png" align="middle" alt="wip" style="height: 35%; width:45%;"/>    
   </td>
 </tr>
 </table>
@@ -36,12 +36,12 @@
 
 As visões arquiteturais apresentam diferentes perspectivas do design do sistema de acompanhamento de compras. 
 
-- [Visão de infraestrutura - infra básica](arquitetura/visoes/infra-basica.md)
-- [Visão de permissionamento](arquitetura/visoes/permissionamento.md)
-- [Visão de monitoração](arquitetura/visoes/monitoracao.md)
-- [Visão de segurança](arquitetura/visoes/seguranca.md)
-- [Visão de DApps](arquitetura/visoes/dapps.md)
-- [Visão de observação](arquitetura/visoes/observacao.md)
+- [Visão de infraestrutura - infra básica](visoes/infra-basica.md)
+- [Visão de permissionamento](visoes/permissionamento.md)
+- [Visão de monitoração](visoes/monitoracao.md)
+- [Visão de segurança](visoes/seguranca.md)
+- [Visão de DApps](visoes/dapps.md)
+- [Visão de observação](visoes/observacao.md)
 
 
 ## ADRs

@@ -1,7 +1,7 @@
 <table style="text-align: center">
 <tr>
   <td style="text-align: center">
-    <img src="../../imagens/work-in-progress-icon.png" alt="wip" align="center" style="height: 75px; width:115px;"/>
+    <img src="../imagens/work-in-progress-icon.png" alt="wip" align="center" style="height: 75px; width:115px;"/>
     <p>Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB</p>
   </td>
 </tr>
@@ -10,14 +10,14 @@
 # Visão de Infraestrutura
 - Visão de runtime que demonstra os elementos básicos da infraestrutura da rede e suas interações.
 
-![Infra básica da rede](../../imagens/infra-rbb-visao-geral.png)
-![Legenda infra básica](../../imagens/legenda-infra-basica.png)
+![Infra básica da rede](../imagens/infra-rbb-visao-geral.png)
+![Legenda infra básica](../imagens/legenda-infra-basica.png)
 
 
 ### Tipos de nós: núcleo (core nodes) e nós satélites (satellite nodes)
 
-![Topologia por tipo de nó](../../imagens/core-satellite.png)
-![Legenda topologia tipo nó](../../imagens/legenda-core-satellite.png)
+![Topologia por tipo de nó](../imagens/core-satellite.png)
+![Legenda topologia tipo nó](../imagens/legenda-core-satellite.png)
 
 ## Catálogo de elementos
 
