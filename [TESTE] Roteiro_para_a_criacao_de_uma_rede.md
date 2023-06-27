@@ -213,7 +213,7 @@ docker-compose up -d
   Em `BESU_NODE_PERM_KEY`, insira a chave privada da conta mencionada acima conforme o template. Por ser este um roteiro somente para testes, a chave privada contida no template poderá ser utilizada.
   > ⚠️ **Atenção!** Não utilize a chave privada do template em ambiente de **produção**.
 
-  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP:Porta` (utilize o IP do container) do seu validator conforme o template. Apenas nesse momento será utilizada a porta RPC do validator - e não do writer - para enviar transações.
+  Em `BESU_NODE_PERM_ENDPOINT`, insira o endereço `IP:Porta` do seu validator (utilize o IP do container, execute ```docker ps``` para localizar o id do container do validator e, em seguida, ```docker inspect <container-id> | grep "IPAddress"``` para obter o IP do container do validator ) conforme o template. Apenas nesse momento será utilizada a porta RPC do validator - e não do writer - para enviar transações.
 
   Em `CHAIN_ID`, insira a chain ID da rede conforme o template. A chain ID pode ser encontrada no arquivo `genesis.json`.
 
@@ -249,9 +249,7 @@ docker-compose restart validator
 - Execute os seguintes comandos em um diretório que estará acessível pelo servidor web:
 
   ```bash
-  curl -LO https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDapp.tar.gz
-  tar xzf permissioningDapp.tar.gz
-  rm permissioningDapp.tar.gz
+  curl -#SL https://github.com/RBBNet/Permissionamento/releases/download/0.1/permissioningDapp.tar.gz | tar xz
   cd permissioningDapp
   
   ```

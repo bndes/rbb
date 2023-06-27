@@ -23,7 +23,11 @@
   - Carlos Leonardo dos Santos Mendes
 
 
-# Reuniões do Comitê Executivo realizadas. 
+# Reuniões do Comitê Executivo realizadas.
+- 01/06/2023
+  - [Ata assinada digitalmente](2023-06-01-RBB-Ata-Reunião-Comitê-Executivo-Assinada.pdf)
+  - Destaques:
+    - Adesão da Secretaria de Estado de Transparência e Controle do Maranhão. 
 - 27/04/2023
   - [Ata assinada digitalmente](2023-04-27-RBB-Ata-Reunião-Comitê-Executivo-Assinada.pdf)
   - Destaques:
