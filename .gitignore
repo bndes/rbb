@@ -1,0 +1,22 @@
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
+
+.factorypath
+.project
+.settings
+
+
+### IntelliJ IDEA ###
+.idea
+**/.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+
+### VS Code ###
+.vscode/
