@@ -1,7 +1,11 @@
-Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB
-<p style="text-align: center">  
-  <img src="imagens/work-in-progress-icon.png" alt="wip" style="height: 150px; width:230px;"/>
-</p>
+<table style="text-align: center">
+<tr>
+  <td style="text-align: center">
+    <img src="imagens/work-in-progress-icon.png" alt="wip" align="center" style="height: 75px; width:115px;"/>
+    <p>Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB</p>
+  </td>
+</tr>
+</table>
 
 # Arquitetura da Rede Blockchain Brasil - RBB
 - RBB é uma rede blockchain do tipo [público-permissionada](https://hal.science/hal-02477405/document)
@@ -19,8 +23,14 @@ Atenção: esta página está em construção e ainda será revisada pelo Comit�
 - A forma com que as visões arquiteturais são definidas neste documento foi influenciada pelo Framework de Governança estabelecido para a RBB.
 
 <br>
-<img src="imagens/framework-governanca.png" width="45%" height="35%" alt="framework de governança da RBB">
 
+<table style="text-align: center">
+<tr>
+  <td style="text-align: center">
+    <img src="imagens/framework-governanca.png" alt="wip" style="height: 35%; width:45%;"/>    
+  </td>
+</tr>
+</table>
 
 ## Arquitetura
 

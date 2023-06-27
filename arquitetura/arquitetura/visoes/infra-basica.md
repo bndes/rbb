@@ -1,6 +1,6 @@
-<table>
+<table style="text-align: center">
 <tr>
-  <td align="center">
+  <td style="text-align: center">
     <img src="../../imagens/work-in-progress-icon.png" alt="wip" align="center" style="height: 75px; width:115px;"/>
     <p>Atenção: esta página está em construção e ainda será revisada pelo Comitê Técnico da RBB</p>
   </td>
