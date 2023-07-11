@@ -1,8 +1,6 @@
-# Monitoramento
+# Roteiro de Instalação do EthStats.
 
-Roteiro do Ethstats.
-
-## Ethstats 
+## EthStats 
 
 Executar o EthStats Lite em nodes do Besu.
 
@@ -165,5 +163,6 @@ Com tudo configurado adequadamente espera-se obter uma tela parecida com a image
 
 ##### EthStats da Rede Teste RBB
 
-![EthStats da Rede Teste RBB](docs/images/ethstats-testerbb.JPG)
+![EthStats da Rede Teste RBB](imagens/ethstats.JPG)
+
 
