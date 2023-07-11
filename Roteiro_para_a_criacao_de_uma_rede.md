@@ -433,3 +433,7 @@ NODE_ENDPOINT=http://<ip-boot-node>:<porta-rpc> PORT=<porta-blockexplorer> docke
 http://boot-node-ip:blockexplorer-port
 
 ```
+
+### 4.7 - Levantar EthStats
+
+[Roteiro de instalação do EthStats](roteiro_monitoramento_ethstats.md)
