@@ -434,6 +434,6 @@ http://boot-node-ip:blockexplorer-port
 
 ```
 
-### 4.7 - Levantar EthStats
+### 4.7 - Executar sub-roteiro "[Roteiro de instalação do EthStats](roteiro_monitoramento_ethstats.md)"
 
-[Roteiro de instalação do EthStats](roteiro_monitoramento_ethstats.md)
+
