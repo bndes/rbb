@@ -19,7 +19,7 @@ Este roteiro guia na criação de nós Boot de observer e observer para o labora
 `Nota: Há possibiliadade do arquivo genesis.json estar disponível no github da RBB.`
 
 
-3. Desabilite o permisisonamento no arquivo docker-compose.yaml alterando as variáveis para false, como no exemplo a seguir: 
+3. Desabilite o permissionamento no arquivo docker-compose.yaml alterando as variáveis para false, como no exemplo a seguir: 
 `BESU_PERMISSIONS_ACCOUNTS_CONTRACT_ENABLED: "false"`
 `BESU_PERMISSIONS_ACCOUNTS_CONTRACT_ENABLED: "false"`
 
@@ -39,7 +39,7 @@ Este roteiro guia na criação de nós Boot de observer e observer para o labora
     }
 `
 
-É importante que no parâmetro bootnodes a chave pública seja do boot de observer, pois o observer realizará conexão apenas com este nó, de maneira nenhuma observer poderá conectar-se com algum nó da rede (boot, writer, validators). Observers são externos à rede. 
+É importante que no parâmetro bootnodes a chave pública seja do boot de observer, pois o observer realizará conexão apenas com este nó, de maneira nenhuma observer poderá conectar-se com outro tipo nó da rede (boot, writer, validators), pois Observers são externos à rede. 
 
-7. Execute o comando `docker-compose up`. Se tudo ocorrer como esperado, observer deve conectar-se ao boot de observer.
+1. Execute o comando `docker-compose up`. Se tudo ocorrer como esperado, observer deve conectar-se ao boot de observer.
    
